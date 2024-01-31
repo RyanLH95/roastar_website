@@ -3,7 +3,7 @@ import '../App.css'
 
 const Logo = () => {
   return (
-    <div className="logo">Roastar Coffee</div>
+    <div className="logo">Roastar Specialty Coffee</div>
   )
 }
 
