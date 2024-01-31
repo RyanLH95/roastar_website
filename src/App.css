@@ -9,10 +9,30 @@
 
 /* navbar.jsx CSS */
 .navbar {
-  background-color: #4ac848;
+  background-color: #3c933b;
+  border-bottom: 1px solid black;
   position: absolute; top: 0px;
   height: 80px;
   width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  justify-content: center;
+  font-size: large;
+}
+
+.nav-list a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 50%;
+  }
 }
 
 .container {
@@ -27,4 +47,9 @@
 /* Banner.jsx */
 .banner {
   position: relative; top: 80px;
+  background-color: black;
+}
+
+.banner-image {
+  position: relative; left: 40px;
 }
