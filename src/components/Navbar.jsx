@@ -10,7 +10,9 @@ const Navbar = () => {
     const navigation = [
       {_id:101, title: 'MENU', href: '/'},
       {_id:102, title: 'SHOP', href: '/Shop'},
-      {_id:103, title: 'CONTACT US', href: '/Contact-Us'},
+      {_id:103, title: 'CAREERS', href: '/Careers'},
+      {_id:104, title: 'CONTACT US', href: '/Contact-Us'},
+      
     ];
 
   return (
@@ -29,6 +31,9 @@ const Navbar = () => {
             ))
           }
         </ul>
+        <div>
+          
+        </div>
       </div>
     </div>
   )
