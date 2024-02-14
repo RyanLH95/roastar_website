@@ -55,16 +55,52 @@
 }
 
 /* Logo.jsx CSS */
-.logo {
-  
-}
+
 
 /* Banner.jsx */
 .banner {
   position: relative; top: 80px;
-  background-color: black;
 }
 
-.banner-image {
-  position: relative; left: 40px;
+.sliderone {
+  position: absolute; left: 0px;
+}
+
+.slogan {
+  color: hsl(49, 87%, 88%);
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 30;
+  margin-right: 500px;
+}
+
+.slogan-writing {
+  position: relative; top: 200px; left: 320px;
+}
+
+/* For Products.jsx */
+.products {
+  position: absolute; bottom: -350px; left: 660px;
+}
+
+.about-us {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.paragraph-one {
+  display: flex;
+  position: relative; left: -400px;
+}
+
+.image-one {
+  position: relative; top: 100px; left: -100px;
+  background-color: blue;
+  height: 300px;
+  width: 300px;
+}
+
+.para-one {
+  position: relative; top: 200px;
 }

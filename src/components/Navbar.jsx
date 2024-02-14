@@ -25,7 +25,7 @@ const Navbar = () => {
               <a href={item?.href} key={item._id}>
                 <li>
                   {item?.title}
-                  <span className={`${item?.href === state && "color: red"}`}></span>
+                  <span className={`${item?.href === state && 'style=color: blue;'}`}></span>
                 </li>
               </a>
             ))
