@@ -71,27 +71,40 @@
   font-size: 50px;
   font-weight: bold;
   z-index: 30;
-  margin-right: 500px;
+  margin-right: 300px;
 }
 
-.slogan-writing {
-  position: relative; top: 200px; left: 320px;
+.slogan-content {
+  position: relative; top: 150px; left: 200px;
+}
+
+.time {
+  position: relative; left: 250px;
+  font-size: 30px;
 }
 
 /* For Products.jsx */
-.products {
-  position: absolute; bottom: -700px; left: 660px;
+.about-us-section {
+  position: absolute; bottom: -630px; left: 500px;
 }
 
 .about-us {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   font-size: 30px;
+  position: absolute; left: 180px;
 }
 
 .paragraph-one {
   display: flex;
-  position: relative; left: -400px;
+  position: relative; left: -200px;
+}
+
+.paragraph-two {
+  gap: 200px;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative; left: -200px;
 }
 
 .image-one {
@@ -99,6 +112,13 @@
   background-color: blue;
   height: 300px;
   width: 300px;
+}
+
+.image-two {
+  position: relative; top: 100px; left: -100px;
+  background-color: blue;
+  height: 300px;
+  width: 600px;
 }
 
 .para-one {

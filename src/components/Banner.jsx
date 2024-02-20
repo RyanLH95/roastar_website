@@ -12,7 +12,8 @@ const Banner = () => {
         className="sliderone"
       />
       <div className="slogan">
-        <p className="slogan-writing">FINEST VIETNAMESE COFFEE</p>
+        <h1 className="slogan-content slogan">FINEST VIETNAMESE COFFEE</h1>
+        <p className="slogan-content time">Open Monday - Sunday 9:00am - 5:00pm</p>
       </div>
     </div>
   )

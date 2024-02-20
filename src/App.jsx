@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
-import Products from './components/Products'
+import AboutUs from './components/AboutUs'
 import './App.css'
 
 
@@ -13,7 +13,7 @@ function App() {
     <div className='App'>
       <Navbar />
       <Banner />
-      <Products />
+      <AboutUs />
     </div>
   )
 }
