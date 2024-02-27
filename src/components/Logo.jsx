@@ -3,7 +3,11 @@ import '../App.css'
 
 const Logo = () => {
   return (
-    <div className="logo">Roastar Specialty Coffee</div>
+    <img 
+      src="src/assets/logo/Logo ROASTAR-beige.PNG"
+      height={50}
+      width={150}  
+      className="logo"/>
   )
 }
 
