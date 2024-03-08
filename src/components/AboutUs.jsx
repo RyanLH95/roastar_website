@@ -21,7 +21,9 @@ const Products = () => {
           className="paragraph"
           >
           <div className='paragraph-one'>
-            <img className="image-one"/>
+            <img 
+              src=""
+              className="image-one"/>
             <p className="para-one">Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br></br> 
               Expedita eligendi est ab voluptate magnam,<br></br> quisquam velit optio modi eos non,
               quo delectus eveniet totam possimus. Modi enim quas ea ducimus.</p>

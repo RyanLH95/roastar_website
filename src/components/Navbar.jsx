@@ -12,12 +12,11 @@ const Navbar = () => {
       {_id:102, title: 'SHOP', href: '/Shop'},
       {_id:103, title: 'ABOUT US', href: '/Careers'},
       {_id:104, title: 'CONTACT US', href: '/Contact-Us'},
-      
     ];
     
     const [colour, setColour] = useState(false)
     const changeColour = () => {
-      if (window.scrollY >= 700) {
+      if (window.scrollY >= 650) {
         setColour(true) 
       } else {
         setColour(false)

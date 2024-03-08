@@ -9,12 +9,11 @@
 
 /* navbar.jsx CSS */
 .navbarbg {
-  border-bottom: 1px solid hsl(49, 38%, 75%, 90%);
-  background: linear-gradient(#fbf1c6, #dfd5a6);
+  border-bottom: 1px solid hsl(48, 52%, 89%);
+  background-color: hsl(49, 100%, 94%);
   backdrop-filter: blur(30px); 
-  box-shadow: 1px 1px 5px 1px hsl(48, 25%, 68%);
+  box-shadow: 1px 1px 5px 1px hsl(48, 100%, 91%);
   transition-duration: 500ms;
-  -webkit-transition-duration: 500ms
 }
 
 .navbar {
@@ -40,7 +39,7 @@
 
 .nav-list a {
   /* color: hsl(96, 24%, 44%); */
-  color: rgb(200, 181, 103);
+  color: hsl(48, 52%, 89%);
   text-decoration: none;
   text-underline-offset: 0.2em;
   transition-duration: 500ms;
@@ -63,7 +62,8 @@
 }
 
 .logo {
-  position: relative; top: 5px; left: 10px; 
+  position: relative; top: 10px; left: 10px; 
+  transition-duration: 500ms;
 }
 
 @media only screen and (max-width: 600px) {
@@ -81,12 +81,31 @@
 
 /* Banner.jsx */
 .banner {
-  position: relative; top: 0px;
+  z-index: -1;
+  position: absolute; top: 10px; left: 0px;
+}
+
+.slides {
+  position: absolute; left: 0px;
+  object-fit: cover
+}
+
+.sliderone {
+  width: 100%;
+  filter: brightness(0.8) contrast(1.5);
+  position: absolute; top: -20px;
 }
 
 .slidertwo {
-  filter: brightness(0.6) contrast(1.5);
-  position: absolute; left: 0px;
+  width: 100%;
+  filter: brightness(0.7) contrast(1.5);
+  position: absolute; top: -20px;
+}
+
+.sliderthree {
+  width: 100%;
+  filter: brightness(0.7) contrast(1.5);
+  position: absolute; top: -20px;
 }
 
 .slogan {
