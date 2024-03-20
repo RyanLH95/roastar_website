@@ -23,8 +23,8 @@ const Banner = () => {
       <div
         style={{
           position: "absolute",
-          top: "700px",
-          left: "550px",
+          top: "720px",
+          left: "720px",
           transform: "translate(-50%, 0)",
           zIndex: 9,
         }}
@@ -75,11 +75,11 @@ const Banner = () => {
        <>
           <div className="slogan">
             <h1 className="slogan-content slogan">
-            <span className="origin">
-              VIETNAMESE
-            </span> 
-            <br></br>
-              Specialty Coffee
+              <span className="origin">
+                VIETNAMESE
+              </span> 
+              <br></br>
+                Specialty Coffee
             </h1>
             <p className="slogan-content time"></p>
           </div>

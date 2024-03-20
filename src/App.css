@@ -9,10 +9,9 @@
 
 /* navbar.jsx CSS */
 .navbarbg {
-  border-bottom: 1px solid hsl(48, 52%, 89%);
-  background-color: hsl(49, 100%, 94%);
+  background-color: hsl(0, 0%, 100%);
   backdrop-filter: blur(30px); 
-  box-shadow: 1px 1px 5px 1px hsl(48, 100%, 91%);
+  box-shadow: 1px 1px 5px 1px hsl(0, 0%, 63%);
   transition-duration: 500ms;
 }
 
@@ -27,38 +26,40 @@
   transition-duration: 500ms
 }
 
-.nav-list {
-  font-weight: bold;
+.container {
+  max-width: 1280px;
+  font-weight: 500;
+  position: relative; top: 0px; left: 0px;
+}
+
+.nav-list-beige {
   display: flex;
   gap: 50px;
   list-style-type: none;
   justify-content: center;
   font-size: larger;
-  position: relative; top: -30px; left: 300px;
+  display: flex;
+  position: relative; top: -30px; left: 350px;
 }
 
-.nav-list a {
-  /* color: hsl(96, 24%, 44%); */
-  color: hsl(48, 52%, 89%);
+.nav-list-beige a {
+  color: hsl(48, 54%, 89%);
   text-decoration: none;
-  text-underline-offset: 0.2em;
   transition-duration: 500ms;
 }
 
-.nav-list-colour a {
-  color: hsl(96, 24%, 44%);
-}
-
-.nav-list-colour a:hover {
-  color: rgb(200, 181, 103);
-}
-
-.nav-list a:hover {
-  /* color: rgb(200, 181, 103); */
-  color: hsl(96, 24%, 44%);
-  text-underline-offset: 0.4em;
+.nav-list-beige a:hover {
+  color: hsl(48, 100%, 85%);
   transition-duration: 300ms;
-  text-shadow: 0px 0px 3px;
+  text-shadow: 0px 0px 2px;
+}
+
+.nav-list-green a {
+  color: hsl(0, 0%, 0%);
+}
+
+.nav-list-green a:hover {
+  color: hsl(96, 24%, 44%);
 }
 
 .logo {
@@ -66,16 +67,17 @@
   transition-duration: 500ms;
 }
 
+@media only screen and (max-width: 1080px) {
+  .nav-list-beige {
+    position: relative; left:100px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .navbar {
     width: 50%;
   }
 }
-
-.container {
-  max-width: 1280px;
-}
-
 /* Logo.jsx CSS */
 
 
@@ -92,7 +94,7 @@
 
 .sliderone {
   width: 100%;
-  filter: brightness(0.8) contrast(1.5);
+  filter: brightness(0.8) contrast(1);
   position: absolute; top: -20px;
 }
 
@@ -116,7 +118,7 @@
 }
 
 .slogan-content {
-  position: relative; top: 150px; left: 430px;
+  position: relative; top: 150px; left: 300px;
 }
 
 .time {
@@ -131,44 +133,118 @@
 
 /* For Products.jsx */
 .about-us-section {
-  position: absolute; bottom: -630px; left: 500px;
+  position: absolute; bottom: -750px; left: 470px;
 }
 
 .about-us {
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
   font-size: 30px;
-  position: absolute; left: 180px;
+  position: absolute; top: -80px; left: 130px;
 }
 
-.paragraph-one {
+.desc {
+  position: relative; top: -50px;
+}
+
+.images {
+  gap: 30px;
   display: flex;
-  position: relative; left: -200px;
+  position: relative; left: -125px;
 }
 
-.paragraph-two {
-  gap: 200px;
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative; left: -200px;
-}
-
-.image-one {
+.image-one img {
   position: relative; top: 100px; left: -100px;
-  background-color: blue;
   height: 300px;
   width: 300px;
+  border-radius: 6px;
+  transition: 600ms;
 }
 
-.image-two {
-  position: relative; top: 100px; left: -100px;
-  background-color: blue;
-  height: 300px;
-  width: 600px;
+.image-one img:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 1px 10px 0px;
+  transition: 600ms;
 }
+
+.image-two img {
+  position: relative; top: 100px; left: -100px;
+  height: 300px;
+  width: 300px;
+  border-radius: 6px;
+  transition: 600ms;
+}
+
+.image-two img:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 1px 10px 0px;
+  transition: 600ms;
+}
+
+.image-three img {
+  position: relative; top: 100px; left: -100px;
+  height: 300px;
+  width: 300px;
+  border-radius: 6px;
+  transition: 600ms;
+}
+
+.image-three img:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 1px 10px 0px;
+  transition: 600ms;
+}
+
+/* link selectors */
+.content-link {
+  font-size: 22px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.content-link a::after {
+  content: '';
+  background-color: rgb(200, 181, 103);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  transition: transform .3s ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.content-link a:hover::after {
+  color: rgb(200, 181, 103);
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.learn-more {
+  position: relative; 
+  top: 100px; 
+  left: -220px;
+}
+
+.learn-more a {
+  color: rgb(200, 181, 103);
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+
+.learn-more a:hover {
+  color: rgb(167, 153, 93);
+  transition-duration: 500ms;
+}
+
 
 .para-one {
-  position: relative; top: 200px;
+  color: hsl(0, 0%, 32%);
+  font-size: 22px;
+  font-weight:200;
+  position: relative; top: 120px; left: -220px;
 }
 
 /* Products.jsx */
@@ -176,4 +252,17 @@
   background-color: aqua;
   width: 300px;
   height: 300px;
+}
+
+.logo-written {
+  position: relative; left: -10px; top: 0px;
+}
+
+/* reviews.jsx */
+.reviews-banner {
+  z-index: 99;
+}
+
+.review-star li {
+  position: relative; left: 500; top: 500px;
 }
