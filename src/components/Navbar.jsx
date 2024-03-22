@@ -1,38 +1,55 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, matchPath, useLocation } from 'react-router-dom'
 import Logo from './Logo.jsx'
 import '../App.css'
 
+// Array that features all navlinks required. Will use in .map component
+const navigation = [ 
+  {_id:102, title: 'ABOUT US', href: '/AboutUs'},
+  {_id:103, title: 'SHOP', href: '/Shop'},
+  {_id:104, title: 'MENU', href: '/Menu'},
+  {_id:105, title: 'CONTACT US', href: '/ContactUs'},
+];
+
 const Navbar = () => {
+    const { pathname } = useLocation();
+
     const state = useState()
-
-    const offsets = { '/': 650, '/AboutUs': 0}
-
-    // Array that features all navlinks required. Will use in .map component
-    const navigation = [ 
-      {_id:101, title: 'ABOUT US', href: '/AboutUs'},
-      {_id:102, title: 'SHOP', href: '/Shop'},
-      {_id:103, title: 'MENU', href: '/Menu'},
-      {_id:104, title: 'CONTACT US', href: '/ContactUs'},
-    ];
-    
     const [colour, setColour] = useState(false)
 
     useEffect(() => {
       const changeColour = () => {
-        setColour(window.scrollY >= offsets[window.location.pathname] ?? 650)
-      };
+        const isHome = matchPath("/", pathname)
+        const isAboutUs = matchPath("/AboutUs", pathname)
+        const isShop = matchPath("/Shop", pathname)
+        const isMenu = matchPath("/Menu", pathname)
+        const isContactUs = matchPath("/ContactUs", pathname)
 
+        if (isHome && window.scrollY >= 650) {
+          setColour(true)
+        } else if (isAboutUs && window.scrollY >= 0) {
+          setColour(true)
+        } else if (isShop && window.scrollY >= 0) {
+          setColour(true)
+        } else if (isContactUs && window.scrollY >= 0) {
+          setColour(true)
+        } else if (isMenu && window.scrollY >= 0) {
+          setColour(true)
+        } else {
+          setColour(false)
+        }
+      }; 
+      
+      // invoke once to check in case page is already scrolled down when rendering
+      changeColour();
       window.addEventListener('scroll', changeColour);
 
       return () => {
         window.removeEventListener('scroll', changeColour)
       }
-    }, [])
-
-     
+    }, [pathname])
     
   return (
     <div className={colour ? 'navbar navbarbg' : 'navbar'}>
@@ -43,9 +60,9 @@ const Navbar = () => {
           {
             navigation.map((item) => (
               <Link to={item?.href} key={item._id}>
-                <li className={colour ? 'nav-link nav-link-colour' : 'nav-link'}>
+                <li className={`${item?.href === pathname && 'color: hsl(96, 24%, 44%)'}`}>
                   {item?.title}
-                  <span className={`${item?.href === state && 'style=color: blue;'}`}></span>
+                  <span className={`${item?.href === pathname && 'color: hsl(96, 24%, 44%)'}`}></span>
                 </li>
               </Link>
             ))
@@ -61,6 +78,7 @@ const Navbar = () => {
 
 export default Navbar
 
+/* const offsets = { '/': 650, '/AboutUs': 0} */
 
 //This my old function that I was using
 /*

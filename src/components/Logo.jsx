@@ -20,13 +20,12 @@ const Logo = () => {
         className="logo"
         >
           <a href='/'>
-            <div className='roastar-logo-beige'>
-              <img 
-                src={logo < 650 ? "src/assets/logo/Logo ROASTAR-beige.PNG" : "src/assets/logo/Logo ROASTAR-green.PNG"}
-                height={50}
-                width={150}  
-              />
-            </div>
+            <img 
+              src={logo < 650 ? "src/assets/logo/Logo ROASTAR-beige.PNG" : "src/assets/logo/Logo ROASTAR-black.PNG"}
+              className='roastar-logo beige'
+              height={50}
+              width={150}  
+            />
           </a>
       </div>
     </Transition>

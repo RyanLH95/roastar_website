@@ -19,6 +19,6 @@
 }
 
 .vietnam-img img {
-    filter: contrast(0.5) brightness(0.7);
+    filter: contrast(0.5) brightness(1.2);
     position: relative; left: 300px;
 }

@@ -80,6 +80,9 @@
 }
 /* Logo.jsx CSS */
 
+.green {
+  position: absolute; left: -1px;
+}
 
 /* Banner.jsx */
 .banner {
