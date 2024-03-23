@@ -30,15 +30,15 @@ const Navbar = () => {
         if (isHome && window.scrollY >= 650) {
           setColour(true)
         } else if (isAboutUs && window.scrollY >= 0) {
-          setColour(true)
+            setColour(true)
         } else if (isShop && window.scrollY >= 0) {
-          setColour(true)
+            setColour(true)
         } else if (isContactUs && window.scrollY >= 0) {
-          setColour(true)
+            setColour(true)
         } else if (isMenu && window.scrollY >= 0) {
-          setColour(true)
+            setColour(true)
         } else {
-          setColour(false)
+            setColour(false)
         }
       }; 
       
@@ -59,10 +59,10 @@ const Navbar = () => {
           >
           {
             navigation.map((item) => (
-              <Link to={item?.href} key={item._id}>
-                <li className={`${item?.href === pathname && 'color: hsl(96, 24%, 44%)'}`}>
+              <Link reloadDocument to={item?.href} key={item._id}>
+                <li className={`item ${item?.href === pathname && 'color hsl(96, 24%, 44%)'}`}>
                   {item?.title}
-                  <span className={`${item?.href === pathname && 'color: hsl(96, 24%, 44%)'}`}></span>
+                  <span className={`item ${item?.href === pathname && 'color hsl(96, 24%, 44%)'}`}/>
                 </li>
               </Link>
             ))

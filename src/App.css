@@ -62,10 +62,7 @@
   color: hsl(96, 24%, 44%);
 }
 
-.logo {
-  position: relative; top: 10px; left: 10px; 
-  transition-duration: 500ms;
-}
+
 
 @media only screen and (max-width: 1080px) {
   .nav-list-beige {
@@ -79,9 +76,26 @@
   }
 }
 /* Logo.jsx CSS */
+.logo {
+  position: relative; top: 10px; left: 10px; 
+  transition-duration: 500ms;
+}
+
+.beige.black {
+  position: relative;
+  transition: 500ms;
+}
 
 .green {
+  z-index: 99;
   position: absolute; left: -1px;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.green:hover {
+  opacity: 1;
+  transition: 500ms;
 }
 
 /* Banner.jsx */
