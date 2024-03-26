@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Link, matchPath, useLocation } from 'react-router-dom'
+import { Link, matchPath, useLocation, NavLink } from 'react-router-dom'
 import Logo from './Logo.jsx'
 import '../App.css'
 
@@ -15,9 +15,9 @@ const navigation = [
 
 const Navbar = () => {
     const { pathname } = useLocation();
+    const active = useLocation().pathname; // returns current location and url
 
-    const state = useState()
-    const [colour, setColour] = useState(false)
+    const [colour, setColour] = useState(false) // activates colour change on scroll
 
     useEffect(() => {
       const changeColour = () => {
@@ -26,6 +26,7 @@ const Navbar = () => {
         const isShop = matchPath("/Shop", pathname)
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
+
 
         if (isHome && window.scrollY >= 650) {
           setColour(true)
@@ -41,6 +42,7 @@ const Navbar = () => {
             setColour(false)
         }
       }; 
+    
       
       // invoke once to check in case page is already scrolled down when rendering
       changeColour();
@@ -55,16 +57,20 @@ const Navbar = () => {
     <div className={colour ? 'navbar navbarbg' : 'navbar'}>
       <div className="container">
         <Logo />
-        <ul className={colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}
+        <ul className={`${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}
           >
           {
             navigation.map((item) => (
-              <Link reloadDocument to={item?.href} key={item._id}>
-                <li className={`item ${item?.href === pathname && 'color hsl(96, 24%, 44%)'}`}>
+              <NavLink 
+                reloadDocument
+                to={item?.href} 
+                key={item._id} 
+                >
+                <li className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}> 
                   {item?.title}
-                  <span className={`item ${item?.href === pathname && 'color hsl(96, 24%, 44%)'}`}/>
+                  <span className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}/>
                 </li>
-              </Link>
+              </NavLink>
             ))
           }
         </ul>

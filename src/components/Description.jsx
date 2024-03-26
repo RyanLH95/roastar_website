@@ -29,7 +29,7 @@ const Products = () => {
               <div className="image-one">
                 <img 
                   src="src/assets/images/imageOne.png"
-                  />
+                />
               </div>
               <div className="image-two">
                 <img 
@@ -42,12 +42,12 @@ const Products = () => {
                   />
               </div>
             </div>
-            <div>
+            <div className="desc-section">
               <p 
                 className="para-one">
-                  Roastar Coffee was founded in 2019 where we have been trading online with specially imported Vietnamese 
-                  coffee which we sell as B2B and B2C, bringing awarness to Vietnamese-grown coffee.<br></br>
-                  
+                  Roastar Coffee is a Vietnamese Specialised Coffee Shop founded in 2019 where we have
+                  been trading online with specially imported Vietnamese coffee which we sell as B2B and B2C, 
+                  bringing awarness to Vietnamese-grown coffee.<br></br>
                   <br></br>
               </p>
               <span className='content-link learn-more'><Link to='/AboutUs'>Learn More</Link></span>

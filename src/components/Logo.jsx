@@ -12,6 +12,8 @@ const Logo = () => {
   const logoHome = matchPath("/", pathname);
   const logoAboutUs = matchPath("/AboutUs", pathname);
   const logoShop = matchPath("/Shop", pathname);
+  const logoMenu = matchPath("/Menu", pathname);
+  const logoContactUs = matchPath("/ContactUs", pathname);
   
   useEffect(() => {
     const changeLogo = () => {
@@ -20,6 +22,10 @@ const Logo = () => {
       } else if (logoAboutUs && window.scrollY >= 0){
         setLogo(true);
       } else if (logoShop && window.scrollY >= 0){
+        setLogo(true);
+      } else if (logoMenu && window.scrollY >= 0){
+        setLogo(true);
+      } else if (logoContactUs && window.scrollY >= 0){
         setLogo(true);
       } else {
         setLogo(false);
