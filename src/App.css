@@ -43,7 +43,10 @@
 }
 
 .active {
-  color: hsl(96, 24%, 44%)
+  color: hsl(96, 24%, 44%);
+  text-decoration: underline;
+  text-underline-offset: 6.5px;
+  text-decoration-thickness: 2.5px;
 }
 
 .nav-list-beige a {
@@ -51,11 +54,33 @@
   text-decoration: none;
   transition-duration: 500ms;
 }
-
 .nav-list-beige a:hover {
   color: hsl(48, 100%, 85%);
   transition-duration: 300ms;
-  text-shadow: 0px 0px 2px;
+}
+
+.nav-list-beige li, .nav-list-green li {
+  position: relative;
+}
+
+.nav-list-beige a li::after {
+  content: '';
+  background-color: hsl(48, 100%, 85%);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  height: 2.3px;
+  z-index: -1;
+  transition: transform .3s ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.nav-list-beige a li:hover::after {
+  color: hsl(48, 54%, 89%);
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .nav-list-green a {
@@ -66,24 +91,26 @@
   color: hsl(96, 24%, 44%);
 }
 
-.item-link-beige {
-  cursor: pointer;
+.nav-list-green li {
+  position: relative;
 }
 
-.item-link-beige a > li::after {
+.nav-list-green a li::after {
   content: '';
-  background-color: blue;
+  background-color: hsl(96, 24%, 44%);
   position: absolute;
+  left: 0px;
   bottom: -5px;
   width: 100%;
-  height: 2px;
+  height: 2.3px;
+  z-index: -1;
   transition: transform .3s ease-out;
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-.item-link-beige a > li:hover::after {
-  color: blue;
+.nav-list-green a li:hover::after {
+  color: hsl(96, 24%, 44%);
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -281,7 +308,7 @@
 }
 
 .desc-section {
-  position: absolute; left: 20px;
+  position: absolute; left: 5px;
 }
 
 .para-one {
