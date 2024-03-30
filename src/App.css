@@ -28,7 +28,7 @@
 
 .container {
   max-width: 1280px;
-  font-weight: 500;
+  font-weight: 800;
   position: relative; top: 0px; left: 0px;
 }
 
@@ -40,6 +40,7 @@
   font-size: larger;
   display: flex;
   position: relative; top: -30px; left: 350px;
+  transform: scale(1, 1.1)
 }
 
 .active {
@@ -115,16 +116,70 @@
   transform-origin: bottom left;
 }
 
-@media only screen and (max-width: 1080px) {
-  .nav-list-beige {
-    position: relative; left:100px;
-  }
+.map a {
+  position: relative; top: -56px; left: 1270px;
+  z-index: 99;
 }
 
-@media only screen and (max-width: 600px) {
-  .navbar {
-    width: 50%;
-  }
+.map-beige a {
+  color: hsl(48, 54%, 89%);
+  transition-duration: 500ms;
+  position: relative;
+}
+
+.map-beige a:hover {
+  color: hsl(48, 100%, 85%);
+  transition-duration: 500ms;
+}
+
+.map-beige a::after {
+  content: '';
+  background-color: hsl(48, 100%, 85%);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  height: 2.3px;
+  z-index: -1;
+  transition: transform .3s ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.map-beige a:hover::after {
+  color: hsl(48, 54%, 89%);
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.map-black a {
+  color: hsl(0, 0%, 0%);
+  transition-duration: 500ms;
+}
+
+.map-black a:hover {
+  color: hsl(96, 24%, 44%);
+  transition-duration: 500ms;
+}
+
+.map-black a::after {
+  content: '';
+  background-color: hsl(96, 24%, 44%);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  height: 2.3px;
+  z-index: -1;
+  transition: transform .3s ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.map-black a:hover::after {
+  color: hsl(96, 24%, 44%);
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 /* Logo.jsx CSS */
 .logo {
@@ -201,18 +256,20 @@
 
 /* For Products.jsx */
 .about-us-section {
-  position: absolute; bottom: -550px; left: 470px;
+  position: absolute; top: 900px; left: 470px;
+  margin-right: 500px;
 }
 
 .about-us {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 30px;
-  position: absolute; top: -80px; left: 130px;
+  position: absolute; top: -80px; left: 100px;
 }
 
 .desc {
   position: relative; top: -50px;
+  
 }
 
 .images {
@@ -330,10 +387,44 @@
 }
 
 /* reviews.jsx */
-.reviews-banner {
-  z-index: 99;
+.reviews-container {
+  background-color: hsl(49, 87%, 88%);
+  height: 300px;
+  width: 1440px;
+  position: absolute; top: 600px; left: -470px;
+  right: 0;
 }
 
-.review-star li {
-  position: relative; left: 500; top: 500px;
+.reviews {
+  margin-right: 100%;
+  position: relative; right: 0px;
+}
+
+.review {
+  position: absolute; top: 50px; left: 100px;
+}
+
+.review img {
+  box-shadow: 6px 6px 10px black;
+}
+
+.second-review {
+  position: absolute; top: 50px; left: 750px;
+}
+
+.second-review img {
+  box-shadow: 6px 6px 10px black;
+}
+
+/* for mobile and tablet devices */
+@media only screen and (max-width: 1080px) {
+  .nav-list-beige {
+    position: relative; left:100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 50%;
+  }
 }

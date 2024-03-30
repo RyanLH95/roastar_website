@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Link, matchPath, useLocation, NavLink } from 'react-router-dom'
+import { matchPath, useLocation, NavLink } from 'react-router-dom'
+import { MapPin } from 'lucide-react'
 import Logo from './Logo.jsx'
 import '../App.css'
 
@@ -26,6 +27,7 @@ const Navbar = () => {
         const isShop = matchPath("/Shop", pathname)
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
+        const isMap = matchPath("/Map", pathname)
 
 
         if (isHome && window.scrollY >= 650) {
@@ -37,6 +39,8 @@ const Navbar = () => {
         } else if (isContactUs && window.scrollY >= 0) {
             setColour(true)
         } else if (isMenu && window.scrollY >= 0) {
+            setColour(true)
+        } else if (isMap && window.scrollY >= 0) {
             setColour(true)
         } else {
             setColour(false)
@@ -74,8 +78,12 @@ const Navbar = () => {
             ))
           }
         </ul>
-        <div>
-          
+        <div className={`map ${colour ? 'map-beige map-black' : 'map-beige'}`}>
+          <NavLink 
+            reloadDocument to={'/Map'} 
+            >
+            <MapPin className={`${active === '/Map' ? 'map-beige active' : 'map-beige'}`}/>
+          </NavLink>
         </div>
       </div>
     </div>

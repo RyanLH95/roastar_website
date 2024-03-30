@@ -7,13 +7,13 @@ const AboutBanner = () => {
       <div className="vietnam-banner">
         <div className="vietnam-img">
           <img
-            src='/src/assets/images/vietnam_map.png'
+            src="../../../../images/vietnam_map.png"
           />
         </div>
         <p>Specially Imported Coffee</p>
         <div className="vietnam-img">
           <img
-            src='/src/assets/images/vietnam_map.png'
+            src="../../../../images/vietnam_map.png"
           />
         </div>
       </div>

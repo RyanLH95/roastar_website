@@ -3,6 +3,8 @@ import { motion, useAnimation } from "framer-motion"
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer"
 import React, { useEffect } from 'react'
+import Reviews from "./Reviews";
+import ReviewsTwo from "./ReviewsTwo"
 import '../App.css'
 
 const Products = () => {
@@ -15,7 +17,7 @@ const Products = () => {
   return (
     <div className='about-us-section'>
       <p className='about-us'>
-        ABOUT ROASTAR
+        SPECIALLY IMPORTED
       </p>
 
         <motion.div
@@ -28,17 +30,17 @@ const Products = () => {
             <div className='images'>
               <div className="image-one">
                 <img 
-                  src="src/assets/images/imageOne.png"
+                  src="../../../images/imageOne.png"
                 />
               </div>
               <div className="image-two">
                 <img 
-                  src="src/assets/images/imageThree.png"
+                  src="../../../images/imageTwo.png"
                   />
               </div>
               <div className="image-three">
                 <img 
-                  src="src/assets/images/imageTwo.png"
+                  src="../../../images/imageThree.png"
                   />
               </div>
             </div>
@@ -61,6 +63,8 @@ const Products = () => {
             </div>
           </div>
         </motion.div>
+        <Reviews />
+        <ReviewsTwo />
     </div>
   )
 }
