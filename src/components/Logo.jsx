@@ -60,7 +60,7 @@ const Logo = () => {
               width={150}  
             />
             <img 
-              src={logo ? "../../../logo/Logo ROASTAR-black.PNG" : "../../public/logo/Logo ROASTAR-beige.PNG"}
+              src={logo ? "../../../logo/Logo ROASTAR-black.PNG" : "../../../logo/Logo ROASTAR-beige.PNG"}
               className='roastar-logo beige'
               alt="roastar-logo black/beige"
               height={50}
