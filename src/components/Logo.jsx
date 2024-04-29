@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Link, matchPath, useLocation } from 'react-router-dom'
+import { NavLink, matchPath, useLocation } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import '../App.css'
 import '../../public/logo/Logo ROASTAR-green.PNG'
@@ -47,28 +47,24 @@ const Logo = () => {
   
   return (
     <>
-    <Transition timeout={1000}>
-      <div 
-        className="logo"
-        >
-          <Link reloadDocument to='/'>
-            <img 
-              src="../../../logo/Logo ROASTAR-green.PNG"
-              alt="roastar-logo green"
-              className='roastar-logo green'
-              height={50}
-              width={150}  
-            />
-            <img 
-              src={logo ? "../../../logo/Logo ROASTAR-black.PNG" : "../../../logo/Logo ROASTAR-beige.PNG"}
-              className='roastar-logo beige'
-              alt="roastar-logo black/beige"
-              height={50}
-              width={150}  
-            />
-          </Link>
+      <div className="logo">
+        <NavLink reloadDocument to='/'>
+          <img 
+            src="../../../logo/Logo ROASTAR-green.PNG"
+            alt="roastar-logo green"
+            className='roastar-logo green'
+            height={50}
+            width={150}  
+          />
+          <img 
+            src={logo ? "../../../logo/Logo ROASTAR-black.PNG" : "../../../logo/Logo ROASTAR-beige.PNG"}
+            alt="roastar-logo-black/beige"
+            className='roastar-logo beige'
+            height={50}
+            width={150}  
+          />
+        </NavLink>
       </div>
-    </Transition>
     </>
   )
 }

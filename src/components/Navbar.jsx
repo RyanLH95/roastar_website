@@ -18,7 +18,7 @@ const Navbar = () => {
     const { pathname } = useLocation();
     const active = useLocation().pathname; // returns current location and url
 
-    const [colour, setColour] = useState(false) // activates colour change on scroll
+    const [colour, setColour] = useState(false) // declares 
 
     useEffect(() => {
       const changeColour = () => {
@@ -30,8 +30,8 @@ const Navbar = () => {
         const isMap = matchPath("/Map", pathname)
 
 
-        if (isHome && window.scrollY >= 650) {
-          setColour(true)
+          if (isHome && window.scrollY >= 650) {
+            setColour(true)
         } else if (isAboutUs && window.scrollY >= 0) {
             setColour(true)
         } else if (isShop && window.scrollY >= 0) {
@@ -59,31 +59,32 @@ const Navbar = () => {
     
   return (
     <div className={colour ? 'navbar navbarbg' : 'navbar'}>
-      <div className="container">
+      <div className="nav-container">
         <Logo />
-        <ul className={`${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}
-          >
-          {
-            navigation.map((item) => (
-              <NavLink 
-                reloadDocument
-                to={item?.href} 
-                key={item._id} 
-                >
-                <li className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}> 
-                  {item?.title}
-                  <span className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}/>
-                </li>
-              </NavLink>
-            ))
-          }
-        </ul>
-        <div className={`map ${colour ? 'map-beige map-black' : 'map-beige'}`}>
-          <NavLink 
-            reloadDocument to={'/Map'} 
-            >
-            <MapPin className={`${active === '/Map' ? 'map-beige active' : 'map-beige'}`}/>
-          </NavLink>
+        <div className='item-container'>
+          <ul className={`${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}>
+            {
+              navigation.map((item) => (
+                <NavLink 
+                  reloadDocument
+                  to={item?.href} 
+                  key={item._id} 
+                  >
+                  <li className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}> 
+                    {item?.title}
+                    <span className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}/>
+                  </li>
+                </NavLink>
+              ))
+            }
+          </ul>
+          <div className={`map ${colour ? 'map-beige map-black' : 'map-beige'}`}>
+            <NavLink 
+              reloadDocument to={'/Map'} 
+              >
+              <MapPin className={`${active === '/Map' ? 'map-beige active' : 'map-beige'}`}/>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

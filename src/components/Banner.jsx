@@ -17,14 +17,14 @@ const Banner = () => {
     fade: true,
     speed: 1000,
     beforeChange: (_prev, next) => {
-      setDotActive(next);
+      setDotActive(next)
     },
     appendDots: dots => (
       <div
         style={{
           position: "absolute",
           top: "720px",
-          left: "720px",
+          left: "692px",
           transform: "translate(-50%, 0)",
           zIndex: 9,
         }}
@@ -74,33 +74,31 @@ const Banner = () => {
   return (
        <>
           <div className="slogan">
-            <h1 className="slogan-content slogan">
-              <span className="origin">
-                VIETNAMESE
-              </span> 
-              <br></br>
-                Specialty Coffee
-            </h1>
-            <p className="slogan-content time"></p>
+            <div className="slogan-content slogan">
+              <img
+                src="../../../logo/Logo ROASTAR-beige.PNG"
+                width={400}
+                className='banner-logo'
+                /> 
+              <h5 className='slogan-title'>The taste of Vietnam at your doorstep</h5>
+            </div>
           </div>
-
           
           <div className="banner">
             <Slider {...settings}>
-              <div className="sliderone">
-                <img 
-                  src={slideone}
-                  alt="slideone"
-                  height={720}
-                  width={1440}
-                  className="slides"
-                  priority='true'
-                />
-              </div>
               <div className="slidertwo">
                 <img 
                   src={slidetwo}
                   alt="slidetwo"
+                  height={720}
+                  width={1440}
+                  className="slides"
+                />
+              </div>
+              <div className="sliderone">
+                <img 
+                  src={slideone}
+                  alt="slideone"
                   height={720}
                   width={1440}
                   className="slides"

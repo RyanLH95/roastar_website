@@ -12,5 +12,5 @@ import reviewSlideFive from '../reviewSlider/review_five.png'
 import reviewSlideSix from '../reviewSlider/review_six.png'
 
 export { slideone, slidetwo, slidethree,
-    reviewSlideOne, reviewSlideTwo, reviewSlideThree,
-    reviewSlideFour, reviewSlideFive, reviewSlideSix }
+reviewSlideOne, reviewSlideTwo, reviewSlideThree,
+reviewSlideFour, reviewSlideFive, reviewSlideSix }

@@ -54,7 +54,7 @@ const Reviews = () => {
               alignItems: "center",
               justifyContent: "center",
               color: "white",
-              background: "aqua",
+              background: "green",
               cursor: "pointer"
             }
             : {
@@ -65,7 +65,7 @@ const Reviews = () => {
               alignItems: "center",
               justifyContent: "center",
               color: "white",
-              background: "blue",
+              background: "black",
               cursor: "pointer",
             }
         }
@@ -75,7 +75,6 @@ const Reviews = () => {
 
   return (
     <>
-      <div className="reviews-container">
         <div className="reviews">
           <Slider {...settings}>
             <div className="review-one review">
@@ -122,7 +121,6 @@ const Reviews = () => {
             </div>
           </Slider>
         </div>
-      </div>
     </>
   )
 }

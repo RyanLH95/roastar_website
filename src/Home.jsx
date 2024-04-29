@@ -1,13 +1,15 @@
 import React from 'react'
 import Banner from './components/Banner'
-import Description from './components/Description'
+import Content from './components/Content'
 import './App.css'
 
 const Home = () => {
   return (
     <>
+    <div className='container'>
       <Banner />
-      <Description />
+      <Content />
+    </div>
     </>
   )
 }
