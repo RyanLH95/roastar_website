@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { slideone, slidetwo, slidethree } from '../assets/slider/index.js'
 import Slider from 'react-slick'
-import '../App.css'
+import '../Home.css'
 
 const Banner = () => {
   const [dotActive, setDotActive] = useState(0);

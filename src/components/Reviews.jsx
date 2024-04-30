@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { reviewSlideOne, reviewSlideTwo, reviewSlideThree, reviewSlideFour, reviewSlideFive, reviewSlideSix } from '../assets/slider/index'
 import Slider from 'react-slick'
-import '../App.css'
+import '../Home.css'
 
 const Reviews = () => {
   const [dotActive, setDotActive] = useState(0);

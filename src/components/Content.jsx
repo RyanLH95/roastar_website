@@ -9,7 +9,7 @@ import { Star } from 'lucide-react'
 import MenuAd from './MenuAd';
 import Reviews from "./Reviews";
 import ReviewsTwo from "./ReviewsTwo"
-import '../App.css'
+import '../Home.css'
 
 const Content = () => {
   return (
