@@ -48,15 +48,33 @@ const Content = () => {
                   { 
                     close => (
                       <div className='delivery'>
-                          <div className='content'>
-                              <p>Welcome to GFG!!!</p>
-                          </div>
-                          <div>
-                              <button onClick=
-                                  {() => close()}>
-                                      Close modal
-                              </button>
-                          </div>
+                        <div className='content'>
+                          <Link to='https://deliveroo.co.uk/menu/london/bromley/roastar-speciality-coffee-8-east-street'>
+                            <div className='deliveroo'>
+                              <img
+                                src='../../../icon/deliveroo_icon.png'
+                                width={250}
+                                className='deliv'
+                              />
+                            </div>
+                          </Link>
+                          <Link to='https://www.ubereats.com/gb/store/roastar-speciality-coffee/0oJZk_Y8WdGYpXWoQ1Qe_Q'>
+                            <div className='uber-eats'>
+                              <img
+                                src='../../../icon/uber_eats_icon.png'
+                                width={200}
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                        <div className='close'>
+                          <button 
+                            onClick={() => close()}
+                            className='close-button'
+                          >
+                            X
+                          </button>
+                        </div>
                       </div>
                     )
                   }
@@ -89,8 +107,10 @@ const Content = () => {
             <Star className="star" />
             <p className="stars-text">Based on 157 Reviews</p>
           </div>
-          <Reviews />
-          <ReviewsTwo />
+          <div className='review-container'>
+            <Reviews />
+            <ReviewsTwo />
+          </div>
         </div>
     </div>
   )

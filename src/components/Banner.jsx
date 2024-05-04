@@ -27,6 +27,7 @@ const Banner = () => {
           left: "692px",
           transform: "translate(-50%, 0)",
           zIndex: 9,
+          textAlign: "left",
         }}
       >
         <ul

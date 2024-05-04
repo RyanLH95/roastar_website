@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { matchPath, useLocation, NavLink } from 'react-router-dom'
-import { MapPin } from 'lucide-react'
+import { MapPin, ShoppingCart } from 'lucide-react'
 import Logo from './Logo.jsx'
 import '../App.css'
 
@@ -28,7 +28,6 @@ const Navbar = () => {
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
         const isMap = matchPath("/Map", pathname)
-
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
@@ -84,6 +83,11 @@ const Navbar = () => {
               >
               <MapPin className={`${active === '/Map' ? 'map-beige active' : 'map-beige'}`}/>
             </NavLink>
+          </div>
+          <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
+            <button class>
+              <ShoppingCart/>
+            </button>
           </div>
         </div>
       </div>

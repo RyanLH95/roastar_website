@@ -74,7 +74,6 @@ const Reviews = () => {
     };
   
     return (
-      <>
           <div className="reviews">
             <Slider {...settings}>
               <div className="review-one second-review">
@@ -121,7 +120,6 @@ const Reviews = () => {
               </div>
             </Slider>
           </div>
-      </>
     )
   }
   
