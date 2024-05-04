@@ -126,9 +126,9 @@
 
 .image-one {
   transition: 500ms;
-  border-radius: 6px;
+  border-radius: 10px;
   width: 100%;
-  height: 21vw;
+  height: 20.9vw;
   filter: brightness(0.8);
   color: hsl(0, 0%, 0%, 20%);
 }
@@ -136,7 +136,7 @@
 .image-one img,
 .image-two img,
 .image-three img {
-  border-radius: 6px;
+  border-radius: 10px;
   width: 21vw;
   height: 21vw;
 }
@@ -178,8 +178,8 @@
   
 .image-two {
   transition: 500ms;
-  border-radius: 6px;
-  height: 299px;
+  border-radius: 10px;
+  height: 298px;
   filter: brightness(0.8);
   cursor: pointer;
     
@@ -205,7 +205,7 @@
   
 .image-three {
   transition: 500ms;
-  border-radius: 6px;
+  border-radius: 10px;
   height: 299px;
   filter: brightness(0.8);
 }
@@ -304,7 +304,7 @@
 .reviews-section {
   background-color: hsl(51, 68%, 96%);
   height: 400px;
-  width: 1440px;
+  width: 100vw;
   position: absolute; top: 1200px; left: -470px;
   right: 0;
   z-index: 1;
@@ -331,8 +331,8 @@
   
 .reviews {
   margin-right: 100%;
-  justify-content: center;
-  position: relative; right: 0px; top: 70px;
+  text-align: center;
+  position: relative; left: 0vw; top: 70px;
   z-index: -1;
 }
   
@@ -358,12 +358,18 @@
   
 /* For MenuAd.jsx */
 .menu-ad {
-  position: absolute; left: -470px; top: 500px;
+  position: absolute; 
+  left: -470px; 
+  top: 500px;
 }
   
 .menu-container {
   position: relative; top: 50px;
   margin-right: 200px;
+}
+
+.menu-ad img {
+  width: 100vw;
 }
   
 .ad {
@@ -386,6 +392,7 @@
   .banner img {
     object-fit: cover;
   }
+  
 }
   
 @media all and (min-width: 1500px) and (max-width: 2000px) {
@@ -439,6 +446,10 @@
   box-shadow: 1px 1px 10px white;
 }
 
+.deliveroo:active {
+  transform: scale(0.98)
+}
+
 .deliveroo img {
   border-radius: 30px;
   position: absolute;
@@ -454,6 +465,17 @@
   height: 27vh;
   box-shadow: 10px 10px 20px black;
   position: relative;
+  top: 5px;
+}
+
+.uber-eats img {
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+.uber-eats:active {
+  transform: scale(0.98)
 }
 
 .content {

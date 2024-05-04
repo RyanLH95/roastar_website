@@ -305,10 +305,9 @@ html,body,#root {
   position: relative; top: -170px; left: -100px;
   text-align: left;
   float: right;
-  clear: left;
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(1, 1fr);
-  gap: 20px 5px;
+  gap: 20px;
   list-style-type: none;
 }
 
