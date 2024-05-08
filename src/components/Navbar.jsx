@@ -85,7 +85,7 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
-            <button class>
+            <button>
               <ShoppingCart/>
             </button>
           </div>

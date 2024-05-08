@@ -1,8 +1,12 @@
 import React from 'react'
+import GoogleMap from './components/GoogleMap'
+
 
 const Map = () => {
   return (
-    <div>Map</div>
+    <div className='map-container'>
+      <GoogleMap />
+    </div>
   )
 }
 

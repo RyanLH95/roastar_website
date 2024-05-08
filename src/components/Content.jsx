@@ -19,9 +19,6 @@ const Content = () => {
       </p>
 
           <div className='desc'>
-            <div className="desc-section">
-              
-            </div>
             <div className='images'>
               <div className="image-one">
                 <Link reloadDocument to='/Map' className='underline'>
