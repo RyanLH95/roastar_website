@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Map, Phone, Instagram, Facebook } from 'lucide-react'
+import ContactForm from './ContactForm'
 
 const Card = () => {
   return (
     <div className='card'>
-      <h2 className='info-title'>CONTACT INFORMATION</h2>
+      <h2 className='company-title'>ROASTAR SPECIALTY COFFEE</h2>
 
       <div className='info-card'>
-        <h3 className='company-title'>ROASTAR SPECIALTY COFFEE</h3>
-
         <div className='company-info'>
           <div className='address'>
             <Map 
@@ -22,18 +21,17 @@ const Card = () => {
             <p className='phone'>+44 020 4559 2984</p>
           </div>
           <div className='socials-info'>
-            <Link to='https://www.instagram.com/roastar.coffee/'>
-              <Instagram size={40} style={{position: 'relative', left: '-30px'}}/>
+            <Link to='https://www.instagram.com/roastar.coffee/' style={{position: 'absolute'}} >
+              <Instagram size={30} style={{position: 'relative', left: '-50px'}}/>
             </Link>
-            <Link to='https://www.facebook.com/roastarcoffeeuk'>
-              <Facebook size={40} strokeWidth={0.7} style={{fill: 'white'}}/>
+            <Link to='https://www.facebook.com/roastarcoffeeuk' style={{position: 'absolute'}}>
+              <Facebook size={30} strokeWidth={0.1} style={{fill: 'white'}}/>
             </Link>
           </div>
         </div>
       </div>
       <div className='contact-card'>
-      <h2 className='form-title'>CONTACT FORM</h2>
-       
+        <ContactForm />
       </div>
     </div>
   )

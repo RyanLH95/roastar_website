@@ -52,16 +52,23 @@
 }
 
 .company-title {
+  color: white;
+  font-weight: 200;
   text-align: center;
   position: relative;
-  top: 20px;
+  top: 10px;
 }
 
 .company-info {
   display: block;
   position: relative; 
-  top: 10px;
+  top: 0px;
   text-align: center;
+}
+
+.address {
+  position: relative;
+  left: 15px;
 }
 
 .socials-info {
@@ -74,10 +81,10 @@
   color: white;
 }
 
-.form-title {
-  position: relative;
-  top: 70px;
-  color: black;
+.contact-card {
+  position: relative; 
+  top: 200px;
+  z-index: 99;
 }
 
 .google-map {
@@ -107,4 +114,8 @@
   padding: 10px;
   font-size: 1.3em;
   color: var(--main-blue);
+}
+
+.email-form {
+  text-align: center;
 }
