@@ -17,6 +17,7 @@ const Content = () => {
       <p className='about-us'>
         Roastar Specialty
       </p>
+      <h5 className='slogan-title'>The Taste of Vietnam at your Doorstep</h5>
 
           <div className='desc'>
             <div className="desc-section">

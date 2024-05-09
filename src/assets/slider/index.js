@@ -1,5 +1,5 @@
 // Banner slider
-import slideone from '../slider/slideone.png'
+import slideone from '../slider/slider-five.png'
 import slidetwo from '../slider/slidetwo.png'
 import slidethree from '../slider/slidethree.png'
 

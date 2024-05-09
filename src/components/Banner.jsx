@@ -81,7 +81,7 @@ const Banner = () => {
                 width={400}
                 className='banner-logo'
                 /> 
-              <h5 className='slogan-title'>The taste of Vietnam at your doorstep</h5>
+              <h5 className='slogan-title'>The Taste of Vietnam at your Doorstep</h5>
             </div>
           </div>
           
@@ -102,7 +102,7 @@ const Banner = () => {
                   alt="slideone"
                   height={720}
                   width={1440}
-                  className="slides"
+                  className="slides slide-two"
                 />
               </div>
               <div className="sliderthree">
