@@ -104,33 +104,28 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800;
   font-size: 30px;
-  text-align: center;
-  position: relative; 
-  top: -80px;
-  left: -250px;
+  position: relative; top: -80px; left: 100px;
+  margin-right: 250px;
 }
   
 .desc {
   display: flex;
   position: relative; top: -100px;
-}
-  
-.desc-section {
-  position: relative; left: 800px;
-  right: 0;
+  justify-content: center;
 }
   
 .images {
-  gap: 20px;
+  gap: 30px;
   display: flex;
   position: relative;
-  right: 14em;
+  text-align:left;
+  right: 15.5em;
   top: 10vh;
 }
 
 .image-one {
-  transition: 500ms;
-  border-radius: 10px;
+  transition-duration: 500ms;
+  border-radius: 20px;
   width: 100%;
   height: 20.9vw;
   filter: brightness(0.6);
@@ -150,11 +145,8 @@
 .image-two img,
 .image-three img {
   border-radius: 10px;
-  border: 5px solid hsl(0, 0%, 100%);
   width: 21vw;
   height: 21vw;
-  box-shadow: 1px 1px 40px rgb(253, 253, 253);
-  object-fit: cover;
 }
   
 .image-one:hover {
@@ -211,7 +203,7 @@
 .image-two {
   transition: 500ms;
   border-radius: 10px;
-  height: 20.9vw;
+  height: 298px;
   filter: brightness(0.8);
   cursor: pointer;
   text-shadow: 
@@ -246,7 +238,7 @@
 .image-three {
   transition: 500ms;
   border-radius: 10px;
-  height: 20.9vw;
+  height: 299px;
   filter: brightness(0.8);
   text-shadow: 
           -1px -1px 10px #ffffff,

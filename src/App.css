@@ -146,7 +146,7 @@ html,body,#root {
   cursor: pointer;
   background: black;
   color: hsl(48, 54%, 89%);
-  position: relative; top: -8px; left: -150px;
+  position: relative; top: -37px; left: 620px;
 }
 
 .cart-beige button {
@@ -206,14 +206,6 @@ html,body,#root {
 }
 
 .shop-container, body, html {
-  height: 100vh;
-}
-
-.contact-us-container, body, html {
-  height: 150vh;
-}
-
-.careers-container, body, html {
   height: 100vh;
 }
 

@@ -27,7 +27,7 @@ const Navbar = () => {
         const isShop = matchPath("/Shop", pathname)
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
-        const isCareers = matchPath("/Careers", pathname)
+        const isMap = matchPath("/Map", pathname)
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
@@ -39,7 +39,7 @@ const Navbar = () => {
             setColour(true)
         } else if (isMenu && window.scrollY >= 0) {
             setColour(true)
-        } else if (isCareers && window.scrollY >= 0) {
+        } else if (isMap && window.scrollY >= 0) {
             setColour(true)
         } else {
             setColour(false)
@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className="nav-container">
         <Logo />
         <div className='item-container'>
-          <ul className={`${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}>
+          <ul className={`nav-list ${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}>
             {
               navigation.map((item) => (
                 <NavLink 
@@ -77,9 +77,16 @@ const Navbar = () => {
               ))
             }
           </ul>
+          <div className={`map ${colour ? 'map-beige map-black' : 'map-beige'}`}>
+            <NavLink 
+              reloadDocument to={'/Map'} 
+              >
+              <MapPin className={`${active === '/Map' ? 'map-beige active' : 'map-beige'}`}/>
+            </NavLink>
+          </div>
           <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
-            <button >
-              <ShoppingCart style={{position: 'absolute', left: '5px', top: '5px'}}/>
+            <button class>
+              <ShoppingCart/>
             </button>
           </div>
         </div>

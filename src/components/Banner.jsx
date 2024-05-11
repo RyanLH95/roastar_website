@@ -81,6 +81,7 @@ const Banner = () => {
                 width={400}
                 className='banner-logo'
                 /> 
+              <h5 className='slogan-title'>The taste of Vietnam at your doorstep</h5>
             </div>
           </div>
           
