@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Instagram, Facebook } from 'lucide-react'
+import { Instagram, Facebook, Copyright } from 'lucide-react'
 import '../App.css'
 
 const Footer = () => {
-
-  const navigation = [
-    {_id: 202, title: 'About Us', href: '/AboutUs'},
-    {_id: 203, title: 'Contact Us', href: '/ContactUs'},
-    {_id: 204, title: 'Careers', href: '/Careers'},
-    {_id: 205, title: 'Shop', href: '/Shop'},
-    {_id: 206, title: 'Shipping, Delivery and Returns Policy', href: '/Shipping'},
-  ]
    
   return (
     <div className='footer'>
@@ -61,14 +53,6 @@ const Footer = () => {
               Shop
             </Link>
           </div>
-          <div className={`footer-links`}>
-            <Link 
-              reloadDocument 
-              to={'/Shipping'} 
-            >
-              Shipping, Delivery and Returns Policy
-            </Link>
-          </div>
         </div>
 
         <div className='socials'>
@@ -81,6 +65,15 @@ const Footer = () => {
               className='facebook' 
             />
           </Link>
+          <div style={{textAlign: 'right'}}>
+            <span style={{
+                color: 'white', 
+                position: 'relative', 
+                left: '17vh', 
+                fontSize: '12px'
+                }}>
+              <Copyright size={12}style={{position: 'relative', top: '2px', left: '-2px'}}/>Copyright 2024. All Rights Reserved</span>
+          </div>
         </div>
       </div>
     </div>
@@ -88,3 +81,14 @@ const Footer = () => {
 }
 
 export default Footer
+
+/*
+<div className={`footer-links`}>
+  <Link 
+    reloadDocument 
+    to={'/Shipping'} 
+  >
+    Shipping, Delivery and Returns Policy
+  </Link>
+</div>
+*/

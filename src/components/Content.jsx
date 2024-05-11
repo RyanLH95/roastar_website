@@ -7,8 +7,7 @@ import { useInView } from "react-intersection-observer"
 import Popup from 'reactjs-popup';
 import { Star } from 'lucide-react'
 import MenuAd from './MenuAd';
-import Reviews from "./Reviews";
-import ReviewsTwo from "./ReviewsTwo"
+import FeaturedProducts from './FeaturedProducts';
 import '../Home.css'
 
 const Content = () => {
@@ -27,7 +26,7 @@ const Content = () => {
               <div className="image-one">
                 <Link reloadDocument to='/Map' className='underline'>
                   <img 
-                    src="../../../images/imageThree.png"
+                    src="../../../images/location_link_image.png"
                     width={300}
                     height={300}
                   />
@@ -39,7 +38,7 @@ const Content = () => {
                 <Popup trigger={
                   <div className='underline'>
                     <img
-                      src="../../../images/imageOne.png"
+                      src="../../../images/delivery_link_image.png"
                       width={300}
                       height={300}
                     />
@@ -85,7 +84,7 @@ const Content = () => {
               <div className="image-three">
                 <Link reloadDocument to='/Shop' className='underline'>
                   <img 
-                    src="../../../images/imageTwo.png"
+                    src="../../../images/shop_link_image.png"
                     width={300}
                     height={300}
                   />
@@ -97,20 +96,18 @@ const Content = () => {
 
         <MenuAd />
         
-        <div className="reviews-section">
-          <p className="google">Google Reviews</p>
-          <div className="stars">
-            <p>4.9</p>
-            <Star className="star" />
-            <Star className="star" />
-            <Star className="star" />
-            <Star className="star" />
-            <Star className="star" />
-            <p className="stars-text">Based on 157 Reviews</p>
-          </div>
-          <div className='review-container'>
-            <Reviews />
-            <ReviewsTwo />
+        <div className="fp-section">
+          <div className='fp-container'>
+            <h1 style={
+              {
+                textAlign: 'center', 
+                position: 'relative',
+                top: '10vh'
+              }}
+            >
+              FEATURED PRODUCTS
+            </h1>
+            <FeaturedProducts />
           </div>
         </div>
     </div>

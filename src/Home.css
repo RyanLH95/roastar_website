@@ -17,7 +17,7 @@
  
 .sliderone {
   width: 100%;
-  filter: brightness(0.9) contrast(1.6);
+  filter: brightness(0.7) contrast(1);
   position: absolute; top: -20px;
 }
   
@@ -97,14 +97,17 @@
 /* For Products.jsx */
 .about-us-section {
   position: absolute; top: 900px; left: 470px;
+  margin-right: 250px;
 }
   
 .about-us {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800;
   font-size: 30px;
-  position: relative; top: -80px; left: 100px;
-  margin-right: 250px;
+  text-align: center;
+  position: relative; 
+  top: -80px;
+  left: -250px;
 }
   
 .desc {
@@ -130,28 +133,56 @@
   border-radius: 10px;
   width: 100%;
   height: 20.9vw;
-  filter: brightness(0.8);
+  filter: brightness(0.6);
   color: hsl(0, 0%, 0%, 20%);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
 }
 
 .image-one img,
 .image-two img,
 .image-three img {
   border-radius: 10px;
+  border: 5px solid hsl(0, 0%, 100%);
   width: 21vw;
   height: 21vw;
+  box-shadow: 1px 1px 40px rgb(253, 253, 253);
+  object-fit: cover;
 }
   
 .image-one:hover {
   transform: scale(1.05);
   filter: brightness(1);
-  box-shadow: 3px 1px 10px 0px;
+  box-shadow: 3px 1px 10px rgb(168, 168, 168);
   transition: 500ms;
   color: hsl(0, 0%, 0%, 100%);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
 }
   
-.image-desc-one, .image-desc-two {
-  position: absolute; top: 9vw; left: 6vw;
+ .image-desc-two {
+  position: absolute; top: 9vw; left: 5.5vw;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.image-desc-one {
+  position: absolute; top: 9vw; left: 5.5vw;
   font-size: 2vw;
   font-weight: bold;
   z-index: 1;
@@ -169,7 +200,7 @@
 .underline {
   text-decoration: none;
   transition: 500ms;
-  color: hsl(0, 0%, 0%, 20%);
+  color: hsla(0, 0%, 0%, 0.6);
 }
   
 .underline:hover {
@@ -180,10 +211,18 @@
 .image-two {
   transition: 500ms;
   border-radius: 10px;
-  height: 298px;
+  height: 20.9vw;
   filter: brightness(0.8);
   cursor: pointer;
-    
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
 }
   
 .image-two:hover {
@@ -207,8 +246,17 @@
 .image-three {
   transition: 500ms;
   border-radius: 10px;
-  height: 299px;
+  height: 20.9vw;
   filter: brightness(0.8);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
 }
   
 .image-three:hover {
@@ -217,6 +265,15 @@
   box-shadow: 3px 1px 10px 0px;
   transition: 500ms;
   color: hsl(0, 0%, 0%, 100%);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
 }
   
 /* link selectors */
@@ -302,59 +359,89 @@
 }
 /* reviews.jsx */
   
-.reviews-section {
-  background-color: hsl(51, 68%, 96%);
-  height: 400px;
+.fp-section {
+  background-color: white;
+  height: 1000px;
   width: 100vw;
   position: absolute; top: 1200px; left: -470px;
   right: 0;
   z-index: 1;
 }
-
-.google {
-  position: absolute; 
-  top: 20px; 
-  left: 665px;
-  font-size: large;
-}
-  
-.stars {
-  display: flex;
-  gap: 3px;
-  position: absolute; top:50px; left: 637px;
-}
-  
-.star {
-  color: #ffee00;
-  fill: #ffee00;
-  position: relative; top: -3px;
-}
-  
-.reviews {
-  margin-right: 100%;
+/* For FeaturedProducts.jsx */
+.product-grid {
+  margin-left: 40em;
+  box-sizing: border-box;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* it means we have only one column */
+  grid-auto-rows: auto 1fr; /* the first row height is auto and the second is all the height left */
+  grid-gap: 550px 100px;
+  position: relative;
+  top: 30vh;
+  left: -70vh;
   text-align: center;
-  position: relative; left: 0vw; top: 70px;
-  z-index: -1;
 }
-  
-.review {
-  position: absolute; 
-  top: 50px; 
-  left: 100px;
+
+.product-card {
+  position: relative;
 }
-  
-.review img {
-  box-shadow: 6px 6px 10px black;
+
+.product-card a {
+  border-radius: 8px;
+  border: 1px solid hsl(0, 0%, 20%, 40%);
+  background-color: hsl(51, 68%, 96%);
+  box-shadow: 1px 1px 15px  hsl(0, 0%, 48%);
+  padding: 20px;
+  padding-bottom: 50px;
+  position: absolute;
+  text-decoration: none;
+  transition: 500ms;
 }
-  
-.second-review {
-  position: absolute; 
-  top: 50px; 
-  left: 750px;
+
+.product-card a:hover {
+  transition: 500ms;
+  transform: scale(1.02);
+  box-shadow: 1px 1px 40px  hsl(0, 0%, 48%);
 }
-  
-.second-review img {
-  box-shadow: 6px 6px 10px black;
+
+.product-card img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-info h3 {
+  color: black;
+  padding: 10px;
+}
+
+.product-info p {
+  text-align: left;
+  color: black;
+  position: relative;
+  left: 0px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.product-info button {
+  position: relative;
+  top: 20px;
+  left: -80px;
+}
+
+.add-to-cart {
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 500ms;
+}
+
+.add-to-cart:hover {
+  color: hsl(96, 24%, 44%);
+  text-shadow: 3px 3px 10px hsl(96, 24%, 44%);
 }
   
 /* For MenuAd.jsx */

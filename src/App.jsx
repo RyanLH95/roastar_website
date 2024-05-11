@@ -4,9 +4,10 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './Home'
 import AboutUs from './pages/AboutUs/AboutUs'
+import Menu from './pages/Menu/Menu'
 import Shop from './pages/Shop/Shop'
 import ContactUs from './pages/ContactUs/ContactUs'
-import Map from './pages/Map/Map'
+import Careers from './pages/Careers/Careers'
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/AboutUs' element={<AboutUs/>}/>
           <Route path='/Shop' element={<Shop/>}/>
+          <Route path='/Menu' element={<Menu/>}/>
           <Route path='/ContactUs' element={<ContactUs/>}/>
-          <Route path='/Map' element={<Map/>}/>
+          <Route path='Careers' element={<Careers/>}/>
         </Routes>
         <Footer />
       </div>

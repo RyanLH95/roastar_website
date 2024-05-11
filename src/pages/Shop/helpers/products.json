@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Roastar Coffee Box Bundle",
+        "image": "../../../../public/products/vietnam_robusta_and_aribaca_cau_dat.png",
+        "id": 1,
+        "price": "40.95"
+    },
+    {
+        "title": "Vietnam Robusta Gift Box",
+        "image": "../../../../public/products/vietnam_robusta_gift_box.png",
+        "id": 2,
+        "price": "50.95"
+    },
+    {
+        "title": "Arabica Cau Dat Gift Box",
+        "image": "../../../../public/products/arabica_cau_dat_gift_box.png",
+        "id": 3,
+        "price": "50.95"
+    },
+    {
+        "title": "Roastar Coffee Bean Box",
+        "image": "../../../../public/products/roastar_coffeebean_gift_box.png",
+        "id": 4,
+        "price": "40.95"
+    }
+]
