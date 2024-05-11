@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Map, Phone, Instagram, Facebook } from 'lucide-react'
 import ContactForm from './ContactForm'
+import '../ContactUs.css'
 
 const Card = () => {
   return (

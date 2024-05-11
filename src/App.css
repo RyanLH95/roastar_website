@@ -209,6 +209,10 @@ html,body,#root {
   height: 100vh;
 }
 
+.contact-us-container, body, html {
+  height: 150vh;
+}
+
 /* For Footer.jsx */
 .footer {
   width: 100%;
