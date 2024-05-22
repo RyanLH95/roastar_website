@@ -282,7 +282,5 @@ body {
 
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
-  .container, html, body {
-    height: 600vh;
-  }
+  
 }

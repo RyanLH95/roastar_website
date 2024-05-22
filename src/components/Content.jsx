@@ -21,7 +21,7 @@ const Content = () => {
           <div className='desc'>
             <div className='images'>
               <div className="image-one">
-                <Link reloadDocument to='/Map' className='underline'>
+                <Link reloadDocument to='/ContactUs' className='underline'>
                   <img 
                     src="../../../images/location_link_image.png"
                     width={300}
