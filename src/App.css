@@ -9,7 +9,11 @@
 
 html,body,#root {
   height: 100%;
- }
+}
+
+body {
+  overflow-x: hidden;
+}
 
 /* For App.jsx */
 .app {
@@ -46,7 +50,7 @@ html,body,#root {
 .item-container {
   text-align: center;
   position: relative; 
-  left: 70px;
+  left: 5em;
 }
 
 .nav-list-beige {
@@ -135,7 +139,7 @@ html,body,#root {
 
 /* shopping-cart */
 .cart {
-  text-align: right;
+  text-align: center;
   z-index: 99;
 }
 
@@ -144,9 +148,11 @@ html,body,#root {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  background: black;
+  background: hsl(0, 0%, 0%, 0%);
   color: hsl(48, 54%, 89%);
-  position: relative; top: -37px; left: 620px;
+  position: relative; 
+  top: -8px; 
+  left: 558px;
 }
 
 .cart-beige button {
@@ -164,7 +170,7 @@ html,body,#root {
 
 .cart-black button {
   color: hsl(0, 0%, 0%);
-  background-color: hsl(48, 54%, 89%);
+  background-color: hsl(48, 54%, 89%, 0%);
   border: 1.5px solid hsl(0, 0%, 0%);
   transition-duration: 500ms;
 }
@@ -216,7 +222,7 @@ html,body,#root {
 /* For Footer.jsx */
 .footer {
   width: 100%;
-  height: 100%;
+  height: 50vh;
   text-align: center;
   position: relative; /*change to fixed so it stays in the same place even if scrolled*/
   background-color: hsl(96, 24%, 44%); /*remove this for demonstration purposes only*/
@@ -225,7 +231,7 @@ html,body,#root {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  z-index: 98;
+  z-index: 99;
 }
 
 .footer-container {
@@ -234,7 +240,7 @@ html,body,#root {
 }
 
 .footer-nav {
-  position: relative; top: -170px; left: -100px;
+  position: relative; top: -11em; left: -100px;
   text-align: left;
   float: right;
   display: grid;
@@ -253,8 +259,8 @@ html,body,#root {
 }
 
 .footer-address img {
-  width: 20vw;
-  height: 6vw;
+  width: 20em;
+  height: 6em;
   position: relative; 
   left: -7px;
 }
@@ -275,4 +281,8 @@ html,body,#root {
 }
 
 /* for mobile and tablet devices */
-
+@media all and (max-width: 1250px) {
+  .container, html, body {
+    height: 600vh;
+  }
+}

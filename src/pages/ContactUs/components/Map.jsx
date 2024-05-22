@@ -22,19 +22,13 @@ return (
     <div className='title-background'>
       <h1 className='maps-title'>COME VISIT OUR CAFE</h1>
     </div>
-      <div 
-        style={{ 
-          height: '90vh', 
-          width: '160%', 
-          display: 'flex',
-          position: 'relative', 
-          top: '-30vh',
-          left: '-30vw',
-          gap: '100px'
-      }}>
+      <div
+        className='google-map'
+      >
         <Card />
       <GoogleMapReact
         /* Do NOT save/commit this API key to GitHub or any public platform */
+        className='google-maps'
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}

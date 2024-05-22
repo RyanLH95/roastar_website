@@ -8,9 +8,12 @@ const FeaturedProducts = ({ items }) => {
     <div className='product-grid'>
       {products.map(item => {
         return (
-          <div className='product-card'>
-            <Link>
-              <div key={item.id}>
+          <div  
+            key={item.id}
+            className='product-card'
+          >
+            <Link >
+              <div >
                 <img 
                   src={item.image}
                   alt={`Preview of ${item.title}`}

@@ -79,7 +79,7 @@ const Navbar = () => {
           </ul>
           <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
             <button>
-              <ShoppingCart/>
+              <ShoppingCart style={{position: 'absolute', left: '6px', top: '7px'}}/>
             </button>
           </div>
         </div>

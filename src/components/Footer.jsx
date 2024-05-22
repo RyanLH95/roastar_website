@@ -13,11 +13,21 @@ const Footer = () => {
             src='../../../logo/Logo ROASTAR-white.PNG'
             height={80}
             width={180}
-            className='roastar-white' 
-            />
+          />
           <h3>8 East St</h3>
           <h3>Bromley</h3>
           <h3>BR1 1QX</h3>
+        </div>
+        <div className='socials'>
+          <Link to='https://www.instagram.com/roastar.coffee/'>
+            <Instagram className='insta'/>
+          </Link>
+          <Link to='https://www.facebook.com/roastarcoffeeuk'>
+            <Facebook 
+              strokeWidth={0.7}
+              className='facebook' 
+            />
+          </Link>
         </div>
 
         <div className='footer-nav'>
@@ -53,28 +63,18 @@ const Footer = () => {
               Shop
             </Link>
           </div>
-        </div>
-
-        <div className='socials'>
-          <Link to='https://www.instagram.com/roastar.coffee/'>
-            <Instagram className='insta'/>
-          </Link>
-          <Link to='https://www.facebook.com/roastarcoffeeuk'>
-            <Facebook 
-              strokeWidth={0.7}
-              className='facebook' 
-            />
-          </Link>
           <div style={{textAlign: 'right'}}>
             <span style={{
                 color: 'white', 
                 position: 'relative', 
-                left: '17vh', 
+                left: '0vh', 
                 fontSize: '12px'
                 }}>
               <Copyright size={12}style={{position: 'relative', top: '2px', left: '-2px'}}/>Copyright 2024. All Rights Reserved</span>
           </div>
         </div>
+
+        
       </div>
     </footer>
   )

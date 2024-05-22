@@ -1,121 +1,190 @@
 /* For LocationPin.jsx */
 :root {
-    --main-green: #6b8b55;
-  }
+  --main-green: #6b8b55;
+}
   
-  .title-background {
-    background-color: var(--main-green);
-    position: relative;
-    top: -100px;
-    left: -84.9vh;
-    height: 300px;
-    width: 208vh;
-  }
+.maps {
+  background-color: var(--main-green);
+  height: 40vh; 
+  width: 100%;
+  position: absolute;
+}
   
-  .maps {
-    height: 80vh; 
-    width: 50%;
-    position: relative;
-    top: 20vh;
-    left: 40vw;
-  }
+.maps-title {
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 80px;
+  left: 0vh;
+}
   
-  .maps-title {
-    color: white;
-    position: relative;
-    text-align: center;
-    top: 80px;
-    left: 0vh;
-  }
+.card {
+  border-radius: 5px;
+  position: relative;
+  height: 600px;
+  width: 80%;
+  padding: 10px;
+  background-image: linear-gradient(to bottom,  #1c8d58 0%,#1c8d58 40%,#ffffff 40%,#ffffff 100%); /* hsl(152, 67%, 33%) */
+  box-shadow: 3px 5px 10px black;
+}
   
-  .card {
-    border-radius: 5px;
-    position: relative;
-    height: 89vh;
-    width: 100%;
-    padding: 10px;
-    background-image: linear-gradient(to bottom,  #1c8d58 0%,#1c8d58 40%,#ffffff 40%,#ffffff 100%); /* hsl(152, 67%, 33%) */
-    box-shadow: 3px 5px 10px black;
-  }
+.info-title, .form-title {
+  font-weight: 200;
+  text-align: center;
+}
   
-  .info-title, .form-title {
-    font-weight: 200;
-    text-align: center;
-  }
+.info-title {
+  color: white;
+}
   
-  .info-title {
-    color: white;
-  }
+.info-card {
+  color: white;
+}
   
-  .info-card {
-    color: white;
-  }
+.company-title {
+  color: white;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
   
-  .company-title {
-    color: white;
-    font-weight: 200;
-    text-align: center;
-    position: relative;
-    top: 10px;
-  }
+.company-info {
+  display: block;
+  position: relative; 
+  top: 0px;
+  text-align: center;
+}
   
-  .company-info {
-    display: block;
-    position: relative; 
-    top: 0px;
-    text-align: center;
-  }
+.address {
+  position: relative;
+  left: 15px;
+}
   
-  .address {
-    position: relative;
-    left: 15px;
-  }
+.socials-info {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
   
-  .socials-info {
-    text-align: center;
-    position: relative;
-    top: 30px;
-  }
+.socials-info a {
+  color: white;
+}
   
-  .socials-info a {
-    color: white;
-  }
+.contact-card {
+  position: relative; 
+  top: 200px;
+  z-index: 99;
+}
   
-  .contact-card {
-    position: relative; 
-    top: 200px;
-    z-index: 99;
-  }
+.google-map {
+  height: 90vh;
+  width: 80%;
+  display: flex;
+  position: relative;
+  top: 30vh;
+  left: 10vw;
+  gap: 100px;
+}
   
-  .google-map {
-    position: relative;
-    top: -100vh;
-  }
+.pin {
+  display: flex;
+  align-items: center;
+  width: 580px;
+  color: var(--main-green);
+  position: sticky;
+}
   
-  .pin {
-    display: flex;
-    align-items: center;
-    width: 580px;
-    color: var(--main-green);
-  }
+.pin:hover {
+  cursor: pointer;
+}
   
-  .pin:hover {
-    cursor: pointer;
-  }
+.pin-icon {
+  fill: black;
+  font-size: 4rem !important;
+}
   
-  .pin-icon {
-    fill: black;
-    font-size: 4rem !important;
-  }
+.pin-text {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.3em;
+  color: var(--main-blue);
+}
   
-  .pin-text {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1.3em;
-    color: var(--main-blue);
-  }
+.email-form { 
+  text-align: center;
+  position: relative;
+  top: -40px;
+}
+
+.form input, .form textarea {
+  display: block;
+  border: 2px solid rgb(179, 179, 179);
+  border-radius: 5px;
+  width: 50%;
+  position: relative; 
+  left: 8vw;
+}
+
+.form input {
+  position: relative;
+  top: -10px;
+  height: 40px;
+}
+
+.form .name-box {
+  position: relative;
+  top: -20px;;
+}
+
+.send-btn {
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: white;
+}
   
+@media all and (max-width: 1250px) {
   .email-form { 
     text-align: center;
+    position: relative;
+    top: -180px;
+    right: 3vw;
   }
+
+  .form input, .form textarea {
+    width: 100%;
+    position: relative; 
+    left: -3vw;
+  }
+
+  .company-title {
+    position: relative;
+    left: 25px;
+  }
+
+  .info-card {
+    display: block;
+    position: relative; 
+    top: 50px;
+    left: -20vw;
+  }
+
+  .card {
+    display: flex;
+    background-image: linear-gradient(to right,  #1c8d58 0%,#1c8d58 50%,#ffffff 50%,#ffffff 100%);
+    height: 50%;
+    position: relative;
+    left: 7vw;
+  }
+
+  .google-map {
+    position: relative;
+    top: 30vh;
+    display: block;
+  }
+
+  .google-maps {
+    position: relative;
+  }
+}

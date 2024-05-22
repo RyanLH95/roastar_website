@@ -14,9 +14,9 @@ const Content = () => {
   return (
     <div className='about-us-section'>
       <p className='about-us'>
-        Roastar Specialty
+        Vietnamese Specialty Coffee
       </p>
-      <h5 className='slogan-title'>The Taste of Vietnam at your Doorstep</h5>
+      <h5 className='slogan-title'></h5>
 
           <div className='desc'>
             <div className='images'>
@@ -99,7 +99,8 @@ const Content = () => {
               {
                 textAlign: 'center', 
                 position: 'relative',
-                top: '10vh'
+                top: '15vh',
+                left: '2vh'
               }}
             >
               FEATURED PRODUCTS
