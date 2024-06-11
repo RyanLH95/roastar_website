@@ -5,12 +5,10 @@ import './App.css'
 
 const Home = () => {
   return (
-    <>
-    <div className='container'>
+    <main className='container'>
       <Banner />
       <Content />
-    </div>
-    </>
+    </main>
   )
 }
 

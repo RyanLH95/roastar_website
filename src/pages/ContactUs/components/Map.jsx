@@ -22,25 +22,25 @@ return (
     <div className='title-background'>
       <h1 className='maps-title'>COME VISIT OUR CAFE</h1>
     </div>
-      <div
-        className='google-map'
-      >
+      <div className='google-map'>
+
         <Card />
-      <GoogleMapReact
-        /* Do NOT save/commit this API key to GitHub or any public platform */
-        className='google-maps'
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-        yesIWantToUseGoogleMapApiInternals
-      >
-        <LocationPin 
-          lat={defaultProps.lat}
-          lng={defaultProps.lng}
-          text={location.address}
-          position={defaultProps.center}
+
+        <GoogleMapReact
+          /* Do NOT save/commit this API key to GitHub or any public platform */
+          className='google-maps'
+          bootstrapURLKeys={{ key: "" }}
+          defaultCenter={defaultProps.center}
+          defaultZoom={defaultProps.zoom}
+          yesIWantToUseGoogleMapApiInternals
+        >
+          <LocationPin 
+            lat={defaultProps.lat}
+            lng={defaultProps.lng}
+            text={location.address}
+            position={defaultProps.center}
         />
-      </GoogleMapReact>
+        </GoogleMapReact>
     </div>
   </div>
  )

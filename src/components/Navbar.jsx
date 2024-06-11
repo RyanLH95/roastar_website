@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { matchPath, useLocation, NavLink } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
+import PopupLink from './PopupLink.jsx'
 import Logo from './Logo.jsx'
 import '../App.css'
 

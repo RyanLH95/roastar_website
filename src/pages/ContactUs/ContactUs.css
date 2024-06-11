@@ -11,10 +11,11 @@
 }
   
 .maps-title {
+  font-weight: 200;
   color: white;
   position: relative;
   text-align: center;
-  top: 80px;
+  top: 3.5em;
   left: 0vh;
 }
   
@@ -44,6 +45,7 @@
 .company-title {
   color: white;
   font-weight: 200;
+  text-wrap: wrap;
   text-align: center;
   position: relative;
   top: 10px;
@@ -52,7 +54,6 @@
 .company-info {
   display: block;
   position: relative; 
-  top: 0px;
   text-align: center;
 }
   
@@ -78,11 +79,11 @@
 }
   
 .google-map {
-  height: 90vh;
+  height: 38rem;
   width: 80%;
   display: flex;
   position: relative;
-  top: 30vh;
+  top: 12rem;
   left: 10vw;
   gap: 100px;
 }
@@ -142,49 +143,53 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: white;
+  margin-top: 1em;
+  position: relative;
+  left: 0em
 }
   
 @media all and (max-width: 1250px) {
-  .email-form { 
-    text-align: center;
+  .email-form {
     position: relative;
-    top: -180px;
-    right: 3vw;
+    left: 7.5vw;
+    width: 110%;
   }
 
   .form input, .form textarea {
-    width: 100%;
-    position: relative; 
-    left: -3vw;
+    left: 8vw;
   }
-
-  .company-title {
-    position: relative;
-    left: 25px;
-  }
-
-  .info-card {
-    display: block;
-    position: relative; 
-    top: 50px;
-    left: -20vw;
-  }
+  
 
   .card {
-    display: flex;
-    background-image: linear-gradient(to right,  #1c8d58 0%,#1c8d58 50%,#ffffff 50%,#ffffff 100%);
-    height: 50%;
     position: relative;
-    left: 7vw;
+    top: -10em;
+    width: 100%;
+  }
+
+  .form {
+    position: relative;
   }
 
   .google-map {
     position: relative;
-    top: 30vh;
+    top: 20em;
     display: block;
   }
 
   .google-maps {
     position: relative;
   }
+
+  .send-btn {
+    position: relative;
+    left: -14vw;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .email-form {
+    position: relative;
+    
+  }
+
 }

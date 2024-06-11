@@ -5,14 +5,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100vw;
 }
 
 html,body,#root {
   height: 100%;
 }
 
-body {
-  overflow-x: hidden;
+.container, body, * {
+  max-width: 100vw;
 }
 
 /* For App.jsx */
@@ -27,8 +28,9 @@ body {
 .navbarbg {
   background-color: hsl(0, 0%, 100%, 90%);
   backdrop-filter: blur(30px); 
-  box-shadow: 1px 1px 5px 1px hsl(0, 0%, 17%);
-  transition-duration: 500ms;
+  box-shadow: 1px 1px 5px 1px hsl(0, 0%, 89%);
+  transition: background-color 500ms;
+  margin: 0;
 }
 
 .navbar {
@@ -39,7 +41,8 @@ body {
   height: 80px;
   width: 100%;
   z-index: 100;
-  transition-duration: 500ms;
+  background-color: none;
+  transition: background-color 500ms;
 }
 
 .nav-container {
@@ -50,10 +53,10 @@ body {
 .item-container {
   text-align: center;
   position: relative; 
-  left: 5em;
+  left: 5vw;
 }
 
-.nav-list-beige {
+.nav-list {
   gap: 50px;
   list-style-type: none;
   justify-content: center;
@@ -66,14 +69,40 @@ body {
 .active {
   color: hsl(96, 24%, 44%);
   text-decoration: underline;
-  text-underline-offset: 6.5px;
-  text-decoration-thickness: 2.5px;
+  text-underline-offset: 11.38px;
+  text-decoration-thickness: 2.8px;
+  z-index: 1;
+}
+
+.nav-list-beige li, .nav-list-green li {
+  position: relative;
 }
 
 .nav-list-beige a {
   color: hsl(48, 54%, 89%);
   text-decoration: none;
-  transition-duration: 500ms;
+  transition: 500ms;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.6s;
+  &:before {
+    content: "";
+    width: 0;
+    height: 2.3px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: black;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      left: 0;
+      background-color: hsl(48, 100%, 85%);
+    }
+  }
 }
 
 .nav-list-beige a:hover {
@@ -81,10 +110,7 @@ body {
   transition-duration: 300ms;
 }
 
-.nav-list-beige li, .nav-list-green li {
-  position: relative;
-}
-
+/*
 .nav-list-beige a li::after {
   content: '';
   background-color: hsl(48, 100%, 85%);
@@ -104,19 +130,40 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+*/
 
 .nav-list-green a {
-  color: hsl(0, 0%, 0%);
+  color: black;
+  text-decoration: none;
+  transition: 500ms;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.6s;
+  &:before {
+    content: "";
+    width: 0;
+    height: 2.3px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: black;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      left: 0;
+      background-color: hsl(96, 24%, 44%);
+    }
+  }
 }
 
 .nav-list-green a:hover {
   color: hsl(96, 24%, 44%);
 }
 
-.nav-list-green li {
-  position: relative;
-}
-
+/*
 .nav-list-green a li::after {
   content: '';
   background-color: hsl(96, 24%, 44%);
@@ -136,6 +183,7 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+*/
 
 /* shopping-cart */
 .cart {
@@ -146,6 +194,7 @@ body {
 .cart button {
   width: 40px;
   height: 40px;
+  transform: scale(1);
   border-radius: 50%;
   cursor: pointer;
   background: hsl(0, 0%, 0%, 0%);
@@ -153,6 +202,11 @@ body {
   position: relative; 
   top: -8px; 
   left: 558px;
+}
+
+.cart button:active {
+  transition: transform 1ms !important;
+  transform: scale(1.1);
 }
 
 .cart-beige button {
@@ -204,28 +258,28 @@ body {
 
 /* For Footer.jsx */
 .container, body, html {
-  height: 500vh;
+  height: 225rem;
 }
 
 .about-us-container, body, html {
-  height: 200vh;
+  height: 125rem;
 }
 
 .shop-container, body, html {
-  height: 100vh;
+  height: 70rem;
 }
 
 .contact-us-container, body, html {
-  height: 150vh;
+  height: 75.75rem;
 }
 
 /* For Footer.jsx */
 .footer {
   width: 100%;
-  height: 50vh;
+  height: 350px;
   text-align: center;
-  position: relative; /*change to fixed so it stays in the same place even if scrolled*/
-  background-color: hsl(96, 24%, 44%); /*remove this for demonstration purposes only*/
+  position: relative; 
+  background-color: hsl(96, 24%, 44%);
   /*background-color: hsl(0%, 0%, 11%) */ 
   bottom: 0px;
   left: 50%;
@@ -251,6 +305,29 @@ body {
 
 .footer-links a {
   color: white;
+  text-decoration: none;
+  transition: 500ms;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.6s;
+  &:before {
+    content: "";
+    width: 0;
+    height: 2.3px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: black;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      left: 0;
+      background-color: white;
+    }
+  }
 }
 
 .footer-address {
@@ -259,7 +336,7 @@ body {
 }
 
 .footer-address img {
-  width: 20em;
+  width: 18em;
   height: 6em;
   position: relative; 
   left: -7px;
@@ -280,7 +357,28 @@ body {
   left: 30px;
 }
 
+
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
-  
+  .contact-us-container, body, html {
+    height: 85rem;
+  }
+
+  .item-container {
+    position: relative;
+    left: -10vw;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .nav-list {
+    display: none;
+  }
+
+  .cart {
+    text-align: right;
+    position: relative;
+    top: 22px;
+    left: -33em;
+  }
 }

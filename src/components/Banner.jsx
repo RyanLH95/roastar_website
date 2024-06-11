@@ -24,10 +24,10 @@ const Banner = () => {
         style={{
           position: "absolute",
           top: "720px",
-          left: "692px",
+          left: "48.5vw",
           transform: "translate(-50%, 0)",
           zIndex: 9,
-          textAlign: "left",
+          textAlign: "center",
         }}
       >
         <ul

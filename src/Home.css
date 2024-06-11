@@ -1,9 +1,18 @@
+:root {
+  --main-green: hsl(96, 24%, 44%);
+  --main-beige: hsl(49, 42%, 54%, 40%);
+}
+
 /* Banner.jsx */
 .banner {
   z-index: 0;
   position: absolute; 
   top: 10px; 
   left: 0px;
+}
+
+.main-content section {
+  max-width: 100%;
 }
   
 .slides img {
@@ -33,7 +42,7 @@
 .sliderthree {
   width: 100%;
   filter: brightness(0.7) contrast(1.5);
-  position: absolute; top: -20px;
+  position: absolute; top: -20px; 
 }
   
 .slogan {
@@ -66,56 +75,42 @@
   position: relative; 
   left: -10px;
 }
-
-.banner-socials {
-  text-align: center;
-  position: relative;
-  top: 30px;
-  left: -100px;
-}
-
-.insta-banner {
-  color: hsl(49, 87%, 88%);
-}
-  
-.origin {
-  color: hsl(49, 87%, 88%);
-  font-size: 60px;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
   
 /* For Links.jsx */
 .delivery-section {
-  position: absolute; left: 300px; top: 300px;
+  position: absolute; 
+  left: 300px; 
+  top: 300px;
 }
   
 .slogan-title {
   text-align: center;
   color: hsl(0, 0%, 0%);
-  position: relative; left: -245px; top: -70px;
+  position: relative; 
+  left: -245px; 
+  top: -70px;
   z-index: 1;
 }
   
-/* For Products.jsx */
-.about-us-section {
+.main-content {
   position: absolute; 
   top: 900px;
-  right: 0;
+  left: 0;
 }
   
-.about-us {
+.img-link-title {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: 30px;
-  position: relative; top: -80px; left: -250px;
+  position: relative; 
+  left: 7em;
+  top: -80px; 
   text-align: center;
 }
-  
-.desc {
-  display: flex;
-  position: relative; top: -100px;
-  justify-content: center;
-  width: 100%;
+
+.sm-text {
+  position: relative; top: 10px;
+  font-size: 17px;
 }
   
 .images {
@@ -123,16 +118,26 @@
   display: flex;
   position: relative;
   text-align: left;
-  right: 15.5em;
-  top: 10vh;
+  right: -15.5vw;
+  top: 1rem;
+}
+
+.image-one img,
+.image-two img,
+.image-three img {
+  border-radius: 5px;
+  border: 2px solid hsl(49, 87%, 88%);
+  width: 21vw;
+  height: 21vw;
+  box-shadow: 1px 1px 20px 3px hsl(0, 0%, 95%);;
+  object-fit: cover;
 }
 
 .image-one {
   transition-duration: 500ms;
   border-radius: 20px;
-  width: 100%;
   height: 20.9vw;
-  filter: brightness(0.6);
+  filter: brightness(0.7);
   color: hsl(0, 0%, 0%, 20%);
   text-shadow: 
           -1px -1px 10px #ffffff,
@@ -145,21 +150,10 @@
            1px  1px 10px #ffffff;
 }
 
-.image-one img,
-.image-two img,
-.image-three img {
-  border-radius: 10px;
-  border: 0.5px solid hsl(0, 0%, 100%);
-  width: 21vw;
-  height: 21vw;
-  box-shadow: 1px 1px 10px 3px hsl(0, 0%, 93%);;
-  object-fit: cover;
-}
-  
 .image-one:hover {
   transform: scale(1.05);
   filter: brightness(1);
-  box-shadow: 3px 1px 10px rgb(168, 168, 168);
+  box-shadow: 3px 1px 10px rgb(23, 23, 23);
   transition: 500ms;
   color: hsl(0, 0%, 0%, 100%);
   text-shadow: 
@@ -174,9 +168,11 @@
 }
 
 .image-desc-one {
-  position: absolute; top: 9vw; left: 5.5vw;
+  position: absolute; 
+  top: 9vw; 
+  left: 5.5vw;
   font-size: 2vw;
-  font-weight: bold;
+  font-weight: 400;
   z-index: 1;
 }
   
@@ -215,215 +211,11 @@
 .image-desc-two {
   position: absolute; top: 9vw; left: 5.5vw;
   font-size: 2vw;
-  font-weight: bold;
+  font-weight: 400;
   z-index: 1;
 }
 
-.underline {
-  text-decoration: none;
-  transition: 500ms;
-  color: hsla(0, 0%, 0%, 0.6);
-}
-  
-.underline:hover {
-  transition: 500ms;
-  color: hsl(0, 0%, 0%, 100%);
-}
-
-/* pop-up content */
-  
-.image-three {
-  transition: 500ms;
-  border-radius: 10px;
-  height: 20.9vw;
-  filter: brightness(0.8);
-  text-shadow: 
-          -1px -1px 10px #ffffff,
-           0px -1px 10px #ffffff,
-           1px -1px 10px #ffffff,
-          -1px  0px 10px #ffffff,
-           1px  0px 10px #ffffff,
-          -1px  1px 10px #ffffff,
-           0px  1px 10px #ffffff,
-           1px  1px 10px #ffffff;
-}
-  
-.image-three:hover {
-  transform: scale(1.05);
-  filter: brightness(1);
-  transition: 500ms;
-  color: hsl(0, 0%, 0%, 100%);
-  text-shadow: 
-          -1px -1px 10px #ffffff,
-           0px -1px 10px #ffffff,
-           1px -1px 10px #ffffff,
-          -1px  0px 10px #ffffff,
-           1px  0px 10px #ffffff,
-          -1px  1px 10px #ffffff,
-           0px  1px 10px #ffffff,
-           1px  1px 10px #ffffff;
-}
-
-.image-desc-three {
-  position: absolute; top: 9vw; left: 7.5vw;
-  font-size: 2vw;
-  font-weight: bold;
-  z-index: 1;
-}
-  
-/* Products.jsx */
-.product-one {
-  background-color: aqua;
-  width: 300px;
-  height: 300px;
-}
-  
-.logo-written {
-  position: relative; left: -10px; top: 0px;
-}
-/* reviews.jsx */
-  
-.fp-section {
-  height: 1000px;
-  width: 100%;
-  position: absolute; 
-  top: 1200px;
-  left: -260px;
-  z-index: 1;
-}
-/* For FeaturedProducts.jsx */
-.product-grid {
-  margin-left: 10em;
-  box-sizing: border-box;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* it means we have only one column */
-  grid-auto-rows: auto 1fr; /* the first row height is auto and the second is all the height left */
-  grid-gap: 550px 100px;
-  position: relative;
-  top: 30vh;
-  left: -33vh;
-  text-align: center;
-}
-
-.product-card {
-  position: relative;
-}
-
-.product-card a {
-  border-radius: 8px;
-  background-image: linear-gradient(#fff, hsl(0, 0%, 0%, 10%));
-  box-shadow: 1px 1px 15px  rgb(149, 149, 149);
-  padding: 20px;
-  padding-bottom: 50px;
-  position: absolute;
-  text-decoration: none;
-  transition: 500ms;
-}
-
-.product-card a:hover {
-  transition: 500ms;
-  transform: scale(1.02);
-  box-shadow: 1px 1px 40px  hsl(0, 0%, 48%);
-}
-
-.product-card img {
-  border-radius: 8px;
-  object-fit: cover;
-  width: 250px;
-  height: 250px;
-}
-
-.product-info h3 {
-  color: black;
-  padding: 10px;
-}
-
-.product-info p {
-  text-align: left;
-  color: black;
-  position: relative;
-  left: 0px;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.product-info button {
-  position: relative;
-  top: 20px;
-  left: -80px;
-}
-
-.add-to-cart {
-  cursor: pointer;
-  text-align: center;
-  background: none;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 500ms;
-}
-
-.add-to-cart:hover {
-  color: hsl(96, 24%, 44%);
-  text-shadow: 3px 3px 10px hsl(96, 24%, 44%);
-}
-  
-/* For MenuAd.jsx */
-.menu-ad {
-  position: absolute; 
-  top: 40vw;
-}
-
-.menu-image img {
-  filter: brightness(0.5);
-  object-fit: cover;
-  width: 100vw;
-  height: 48vw;
-}
-
-.menu-image {
-  position: absolute;
-  right: 0px;
-  width: 100vw;
-}
-
-.ad img {
-  position: absolute;
-  left: 0px;
-}
-
-.menu-container {
-  position: relative; top: 50px;
-}
-  
-.paragraph-one {
-  border-radius: 10px;
-  color: hsl(0, 0%, 100%);
-  font-size: 2.2vw;
-  font-weight: 200;
-  text-align: center;
-  position: relative; 
-  top: 100px;
-  left: -250px;
-  z-index: 1;
-}
-
-@media all and (max-width: 1250px) {
-
-}
-
-@media all and (max-width: 500px) {
-  .product-grid {
-    position: relative;
-    left: -55vh;
-  }
-}
-  
-@media all and (min-width: 1500px) and (max-width: 2000px) {
-
-}
-
+/* PopupLink content ONLY */
 @keyframes anvil {
   0% {
     transform: scale(1) translateY(0px);
@@ -443,16 +235,27 @@
 }
 
 .popup-content {
-  animation:forwards;
+  animation: forwards;
   width: 100%;
   height: 100%;
-  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9);
   background-color: hsl(0, 0%, 0%, 30%);
+  backdrop-filter: blur(10px);
+  transition-property: overlay display;
+  transition-behavior: allow-descrete;
 }
 
-.popup-content .delivery {
-  animation:forwards;
-  -webkit-animation: anvil 0.5s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+/* Selects the popup <body/> and applies the no-scroll property when clicked */
+.popup-content, body:has(.requires-no-scroll) {
+  overflow-y: hidden;
+}
+
+.delivery-text {
+  position: relative;
+  top: 150px;
+  font-size: 32px;
+  text-align: center;
+  color: white;
 }
 
 .deliveroo {
@@ -504,18 +307,18 @@ a {
 }
 
 .content {
-  gap: 70px;
+  gap: 90px;
   display: flex;
   justify-content: center;
   position: relative;
-  top: 250px;
+  top: 200px;
 }
 
 .close {
   text-align: right;
   position: relative; 
-  top: -150px; 
-  left: -60px;
+  top: -212px; 
+  left: -70px;
 }
 
 .close-button {
@@ -529,9 +332,316 @@ a {
 
 .close-button:active {
   width: 40px;
+  transform: scale(0.95);
   position: relative;
+  top: 1px;
   left: 10px;
-  box-shadow: 1px 1px 10px;
+  box-shadow: .5px .5px 10px;
   border: 1px solid white;
   border-radius: 10px;
 }
+  
+.image-three {
+  transition: 500ms;
+  border-radius: 10px;
+  height: 20.9vw;
+  filter: brightness(0.8);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
+}
+  
+.image-three:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+  transition: 500ms;
+  color: hsl(0, 0%, 0%, 100%);
+  text-shadow: 
+          -1px -1px 10px #ffffff,
+           0px -1px 10px #ffffff,
+           1px -1px 10px #ffffff,
+          -1px  0px 10px #ffffff,
+           1px  0px 10px #ffffff,
+          -1px  1px 10px #ffffff,
+           0px  1px 10px #ffffff,
+           1px  1px 10px #ffffff;
+}
+
+.image-desc-three {
+  position: absolute; top: 9vw; left: 7.5vw;
+  font-size: 2vw;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.underline {
+  text-decoration: none;
+  transition: 500ms;
+  color: hsla(0, 0%, 0%, 0.6);
+}
+  
+.underline:hover {
+  transition: 500ms;
+  color: hsl(0, 0%, 0%, 100%);
+}
+
+/* Desc.jsx */
+.desc {
+  width: 100%;
+  position: absolute;
+  top: 31.25rem;
+  left: 10rem;
+  /* background-image: linear-gradient(hsl(0, 0%, 0%, 10%), #fff); */
+}
+
+.desc-container {
+  position: relative;
+  top: -100px;
+  left: -10em;
+  background-image: linear-gradient(var(--main-beige), #fff);
+  height: 50rem;
+  width: 100vw;
+}
+
+.desc-content {
+  flex-shrink: 1;
+  width: 100em;
+  padding-left: 5em;
+  padding-top: 5em;
+  margin-top: 90px;
+  margin-right: -10px;
+  gap: 80px;
+  display: flex;
+}
+
+.desc-text {
+  text-align: left;
+  margin-top: 5em;
+  grid-template: repeat(1, .3fr) / repeat(1, 1fr);
+  display: grid;
+}
+
+.desc-text h2 {
+  font-weight: 400;
+  font-size: 30px;
+  color: hsl(96, 24%, 44%);
+}
+
+.desc-text p {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.desc-content img {
+  box-shadow: 5px 5px 10px 5px rgb(97, 97, 97);
+}
+
+.link-to a {
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 500ms;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.6s;
+  &:before {
+    content: "";
+    width: 0;
+    height: 2.2px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: black;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      left: 0;
+      background-color: hsl(49, 42%, 54%);
+    }
+  }
+}
+
+.link-to a:hover {
+  color: hsl(49, 42%, 54%);
+}
+
+/* For MenuAd.jsx */
+.menu-ad {
+  position: absolute; 
+  top: 75em;
+}
+
+.menu-container {
+  position: relative;
+  text-align: center;
+  top: -30em;
+  left: -90px;
+}
+
+.menu-image img {
+  position: relative;
+  filter: brightness(0.8);
+  object-fit: cover;
+  width: 100vw;
+  height: 40rem;
+}
+
+.ad img {
+  position: absolute;
+  left: 0px;
+}
+  
+.paragraph-one {
+  margin-right: 100px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+  top: 0em;
+  right: -4.3em;
+  z-index: 1;
+}
+
+.menu-link {
+  text-align: center;
+  position: relative;
+  left: 5em;
+}
+
+.menu-link button {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: 1px 1px 10px 1px white;
+  border-radius: 20px;
+  padding: 20px;
+  transition: background-color 300ms;
+}
+
+.menu-link button:hover {
+  color: white;
+  background-color: var(--main-green);
+  transition: background-color 300ms;
+}
+
+.menu-link:active {
+  transform: scale(0.98)
+}
+
+/* FeaturedProducts.jsx(inside Content.jsx) */
+.fp-section {
+  margin-top: 110rem;
+  height: 1000px;
+  width: 100%;
+  position: absolute; 
+  top: 0em;
+  z-index: 1;
+}
+
+/* FeaturedProducts.jsx ONLY */
+.product-grid {
+  margin-left: 10em;
+  box-sizing: border-box;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* it means we have only two columns */
+  grid-auto-rows: auto 1fr; /* the first row height is auto and the second is all the height left */
+  grid-gap: 550px 400px;
+  position: absolute;
+  top: 15em;
+  left: -15vw;
+  text-align: center;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card a {
+  border-radius: 8px;
+  background-image: linear-gradient(#fff, hsl(0, 0%, 0%, 10%));
+  box-shadow: 1px 1px 15px  rgb(149, 149, 149);
+  padding: 20px;
+  padding-bottom: 50px;
+  position: absolute;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.product-card a:hover {
+  transition: 500ms;
+  transform: scale(1.02);
+  box-shadow: 1px 1px 40px  hsl(0, 0%, 48%);
+}
+
+.product-card img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+}
+
+.product-info h3 {
+  color: black;
+  padding: 10px;
+}
+
+.product-info p {
+  text-align: left;
+  color: black;
+  position: relative;
+  left: 0px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.product-info button {
+  position: relative;
+  top: 20px;
+  left: -60px;
+}
+
+.add-to-cart {
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 500ms;
+}
+
+.add-to-cart:hover {
+  color: hsl(96, 24%, 44%);
+  text-shadow: 3px 3px 10px hsl(96, 24%, 44%);
+}
+
+@media all and (max-width: 1250px) {
+
+}
+
+@media all and (max-width: 500px) {
+  .product-grid {
+    position: relative;
+    left: -55vh;
+  }
+}
+  
+@media all and (min-width: 1500px) and (max-width: 2000px) {
+
+}
+

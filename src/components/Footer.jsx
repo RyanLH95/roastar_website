@@ -36,7 +36,7 @@ const Footer = () => {
               reloadDocument 
               to={'/AboutUs'} 
             >
-              About Us
+              ABOUT US
             </Link>
           </div>
           <div className={`footer-links`}>
@@ -44,7 +44,7 @@ const Footer = () => {
               reloadDocument 
               to={'/ContactUs'} 
             >
-              Contact Us
+              CONTACT US
             </Link>
           </div>
           <div className={`footer-links`}>
@@ -52,7 +52,7 @@ const Footer = () => {
               reloadDocument 
               to={'/Careers'} 
             >
-              Careers
+              CAREERS
             </Link>
           </div>
           <div className={`footer-links`}>
@@ -60,7 +60,7 @@ const Footer = () => {
               reloadDocument 
               to={'/Shop'} 
             >
-              Shop
+              SHOP
             </Link>
           </div>
           <div style={{textAlign: 'right'}}>

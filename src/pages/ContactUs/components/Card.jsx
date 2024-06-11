@@ -7,9 +7,8 @@ import '../ContactUs.css'
 const Card = () => {
   return (
     <div className='card'>
-      <h2 className='company-title'>ROASTAR SPECIALTY COFFEE</h2>
-
       <div className='info-card'>
+      <h2 className='company-title'>ROASTAR SPECIALTY COFFEE</h2>
         <div className='company-info'>
           <div className='address'>
             <Map 

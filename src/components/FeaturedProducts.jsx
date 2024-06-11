@@ -5,6 +5,19 @@ import { products } from '../pages/Shop/helpers';
 const FeaturedProducts = ({ items }) => {
   console.log(items)
   return (
+    <div className="fp-section">
+      <div className='fp-container'>
+        <h1 
+          style={
+              {
+                textAlign: 'center', 
+                position: 'relative',
+                top: '15vh',
+                left: '2vh'
+              }}
+            >
+              FEATURED PRODUCTS
+        </h1>
     <div className='product-grid'>
       {products.map(item => {
         return (
@@ -35,6 +48,8 @@ const FeaturedProducts = ({ items }) => {
         );
       })}
     </div>
+    </div>
+  </div>
   )
 }
 

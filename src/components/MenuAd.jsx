@@ -14,13 +14,14 @@ const MenuAd = () => {
       </div>
       <div className='menu-container'>
         <p className="paragraph-one">
-          Roastar Coffee is a Vietnamese Specialised Coffee Shop founded in 2019<br></br> where we have
-          been trading online with specially imported Vietnamese coffee<br></br> which we sell as B2B and B2C, 
-          bringing awarness to Vietnamese-grown coffee.
+          From our range of whole grain Vietnamese coffee beans to our homemade Banh Mih sandwiches<br></br> Our menu
+          contains a wide variety of delicious foods and beverages for your guaranteed delight<br></br> 
           <br></br><br></br>
         </p>
-        <div className='link'>
-        
+        <div className='menu-link'>
+          <Link to='/Menu' reloadDocument>
+            <button>VIEW MENU HERE</button>
+          </Link>
         </div>
       </div>
     </div>
