@@ -3,25 +3,27 @@ import { Link } from 'react-router-dom'
 
 const MenuAd = () => {
   return (
-    <div className="menu-ad">
-      <div className='menu-image'> 
+    <div className="menu-container">
+      <div className='menu-image'>
         <img 
           src="../../../images/imageThree.png"
           height={700}
           width={1440}
-          className="ad"
         />
       </div>
-      <div className='menu-container'>
-        <p className="paragraph-one">
-          From our range of whole grain Vietnamese coffee beans to our homemade Banh Mih sandwiches<br></br> Our menu
-          contains a wide variety of delicious foods and beverages for your guaranteed delight<br></br> 
-          <br></br><br></br>
-        </p>
-        <div className='menu-link'>
-          <Link to='/Menu' reloadDocument>
-            <button>VIEW MENU HERE</button>
-          </Link>
+      <div className='menu-content'> 
+        <div className='menu-text'>
+          <h1 className='menu-title'>OUR MENU</h1>
+          <p className="paragraph-one">
+            From our range of whole grain Vietnamese coffee beans to our homemade Banh Mih sandwiches and baked goods, Our menu
+            contains a wide variety of delicious foods, coffee and other beverages guaranteed to satisfy your tastebuds.
+            <br></br><br></br>
+          </p>
+          <div className='menu-link'>
+            <Link to='/Menu' reloadDocument>
+              <button>VIEW OUR MENU</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

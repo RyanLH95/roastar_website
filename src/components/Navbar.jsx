@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { matchPath, useLocation, NavLink } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
-import PopupLink from './PopupLink.jsx'
+import MobileMenu from './MobileMenu.jsx'
 import Logo from './Logo.jsx'
 import '../App.css'
 
@@ -19,7 +19,8 @@ const Navbar = () => {
     const { pathname } = useLocation();
     const active = useLocation().pathname; // returns current location and url
 
-    const [colour, setColour] = useState(false) // declares 
+    const [colour, setColour] = useState(false); // declares 
+    const [textColour, setTextColour] = useState(false)
 
     useEffect(() => {
       const changeColour = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
             setColour(true)
         } else if (isMenu && window.scrollY >= 0) {
             setColour(true)
-        } else if (isCareers && window.scrollY >= 0) {
+        } else if (isCareers && window.scrollY >= 180) {
             setColour(true)
         } else {
             setColour(false)
@@ -61,6 +62,7 @@ const Navbar = () => {
     <div className={colour ? 'navbar navbarbg' : 'navbar'}>
       <div className="nav-container">
         <Logo />
+        <MobileMenu />
         <div className='item-container'>
           <ul className={`nav-list ${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}>
             {
@@ -69,8 +71,8 @@ const Navbar = () => {
                   reloadDocument
                   to={item?.href} 
                   key={item._id} 
-                  >
-                  <li className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}> 
+                >
+                  <li className={`mobile ${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}> 
                     {item?.title}
                     <span className={`${active === item?.href ? 'nav-list-green active' : 'nav-list-green'}`}/>
                   </li>
@@ -80,7 +82,13 @@ const Navbar = () => {
           </ul>
           <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
             <button>
-              <ShoppingCart style={{position: 'absolute', left: '6px', top: '7px'}}/>
+              <ShoppingCart 
+                style={{
+                  position: 'absolute', 
+                  left: '6px', 
+                  top: '7px'
+                }}
+              />
             </button>
           </div>
         </div>

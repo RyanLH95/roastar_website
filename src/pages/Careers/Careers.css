@@ -1,0 +1,289 @@
+:root {
+  --main-black: rgb(34, 34, 34);
+}
+
+/* For Header.jsx */
+.careers-header {
+  text-align: center;
+  padding-top: 8em;
+  height: 250px;
+}
+
+.careers-header h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+/* For Application.jsx */
+.app-container {
+  background: white;
+  width: 88%;
+  height: 65em;
+}
+
+.app-content {
+  padding-top: 0;
+}
+
+.app-content h2 {
+  position: relative;
+  top: 3.4em;
+  color: white;
+  z-index: 2;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.careers-image {
+  text-align: center;
+  filter: brightness(0.6)
+}
+
+.careers-image img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.app-text {
+  display: block;
+  text-align: left;
+  padding-top: 3em;
+  padding-left: 4.3vw;
+}
+
+.app-text h3 {
+  color: var(--main-green);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.app-text p {
+  padding-top: 1em;
+  font-size: 20px;
+  font-weight:200;
+}
+
+.apply {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.apply p {
+  font-weight: 400;
+}
+
+.apply-btn {
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  background: #1c8d58;
+  color: white;
+  margin-top: 5em;
+  position: relative;
+  transition: background 300ms;
+}
+
+.apply-btn:active {
+  transform: scale(0.98)
+}
+
+.application {
+  display: block;
+  background: hsl(0, 0%, 0%, 40%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0em;
+  left: 0em;
+  z-index: 102;
+}
+
+.application, body:has(.no-scroll) {
+  overflow-y: hidden;
+}
+
+@keyframes dropTop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.app-card {
+  position: fixed;
+  top: 1.5em;
+  left: 30%;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom,  #1c8d58 0%,#1c8d58 10%,#ffffff 10%,#ffffff 100%);
+  width: 40%;
+  height: 650px;
+  box-shadow: 5px 5px 30px 5px hsl(0, 0%, 0%, 60%);
+  z-index: 102;
+}
+
+.app-card img {
+  padding-top: 0.4em;
+}
+
+.close-div {
+  position: inherit;
+  text-align: center;
+  left: 66%;
+  right: 66%;
+  padding-top: 2.5em;
+  z-index: 103;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:active {
+  height: 40px;
+  transform: scale(0.95);
+  position: relative;
+  top: -0.25em;
+  left: -0.09em;
+  box-shadow: .5px .5px 10px;
+  border: 1px solid hsl(0, 0%, 100%, 10%);
+  border-radius: 10px;
+  padding-bottom: -2em;
+}
+
+.app-form {
+  display: block;
+  padding-top: 2em;
+}
+
+.app-form h3 {
+  font-size: 20px;
+}
+
+.form-content {
+  margin-top: -1em;
+}
+
+.form-content input:invalid {
+  border: 1px solid red;
+}
+
+.form-content input {
+  position: relative;
+  top: 2em;
+  width: 80%;
+  height: 3em;
+  border: 1px solid hsl(0, 0%, 0%, 30%);
+  border-radius: 5px;
+  margin-top: 1em;
+  padding-left: 1em;
+}
+
+.form-content p {
+  text-align: left;
+  font-size: 14px;
+  position: relative;
+  top: 0.4em;
+  padding-left: 10%;
+}
+
+.form-content select {
+  margin-top: 1em;
+  height: 3em;
+  width: 80%;
+  border: 1px solid hsl(0, 0%, 0%, 30%);
+  border-radius: 5px;
+}
+
+.form-content option {
+  position: relative;
+  top: 5em;
+}
+
+.phone-number {
+  display: flex;
+  gap: 0.5em;
+  padding-left: 10%;
+}
+
+.phone-number select {
+  position: relative;
+  top: 2em;
+  width: 80px;
+  padding-left: 5px;
+  z-index: 1;
+}
+
+.phone-number input {
+  width: 100%;
+  margin-right: 4vw;
+  z-index: 100;
+}
+
+.cv {
+  position: relative;
+  top: -3em;
+}
+
+.cv:active {
+  transform: scale(0.99);
+}
+
+.cv label {
+  position: relative;
+  top: 4.3em;
+  margin-left: 12vw;
+  margin-right: 12vw;
+  color: white;
+}
+
+.cv div {
+  cursor: pointer;
+  position: relative;
+  top: 4.3em;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  color: white;
+  z-index: 2;
+  text-wrap: nowrap;
+}
+
+.cv input::-webkit-file-upload-button {
+  cursor: pointer;
+  width: 32vw;
+  color: #1c8d58;
+  background: #1c8d58;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  position: relative;
+  left: -1em;
+  border: none
+}
+
+.cv input {
+  border: none;
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 40%);
+}
+
+.cv input:active, .cv div:active {
+  transform: scale(0.99);
+}
+
+.job {
+  position: relative;
+  top: 1em;
+}
+
+@media all and (max-width: 1000px) {
+  .app-container {
+    width: 100vw;
+  }
+}

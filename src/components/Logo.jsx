@@ -15,7 +15,6 @@ const Logo = () => {
   const logoShop = matchPath("/Shop", pathname);
   const logoMenu = matchPath("/Menu", pathname);
   const logoContactUs = matchPath("/ContactUs", pathname);
-  const logoMap = matchPath("/Map", pathname)
   const logoCareers = matchPath("/Careers", pathname)
 
   
@@ -31,9 +30,7 @@ const Logo = () => {
         setLogo(true);
       } else if (logoContactUs && window.scrollY >= 0){
         setLogo(true);
-      } else if (logoMap && window.scrollY >= 0){
-        setLogo(true);
-      } else if (logoCareers && window.scrollY >= 0){
+      } else if (logoCareers && window.scrollY >= 180){
         setLogo(true);
       } else {
         setLogo(false);

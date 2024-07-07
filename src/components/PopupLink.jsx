@@ -1,6 +1,7 @@
 import React from 'react'
 import Popup from 'reactjs-popup';
 import { Link } from 'react-router-dom'
+import { X } from 'lucide-react';
 
 const PopupLink = () => {
   return (
@@ -19,7 +20,8 @@ const PopupLink = () => {
           close => (
             <div className='delivery requires-no-scroll'>
               <div className='delivery-text'>
-                <p>Pick Your Delivery</p>
+                <p>WE DELIVER TOO!</p>
+                <p>Pick Your Delivery Option</p>
               </div>
               <div className='content'>
                 <Link to='https://deliveroo.co.uk/menu/london/bromley/roastar-speciality-coffee-8-east-street'>
@@ -44,7 +46,7 @@ const PopupLink = () => {
                   onClick={() => close()}
                   className='close-button'
                 >
-                  X
+                  <X size='50' />
                 </button>
               </div>
             </div>

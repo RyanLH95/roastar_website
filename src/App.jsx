@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import Menu from './pages/Menu/Menu'
 import Shop from './pages/Shop/Shop'
 import ContactUs from './pages/ContactUs/ContactUs'
+import Careers from './pages/Careers/Careers'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/Shop' element={<Shop/>}/>
           <Route path='/Menu' element={<Menu/>}/>
           <Route path='/ContactUs' element={<ContactUs />}/>
+          <Route path='/Careers' element={<Careers />}/>
         </Routes>
         <Footer />
       </div>

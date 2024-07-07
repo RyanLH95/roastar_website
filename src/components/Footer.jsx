@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Instagram, Facebook, Copyright } from 'lucide-react'
+import { Instagram, Facebook, Copyright, Phone } from 'lucide-react'
 import '../App.css'
 
 const Footer = () => {
@@ -14,20 +14,31 @@ const Footer = () => {
             height={80}
             width={180}
           />
-          <h3>8 East St</h3>
-          <h3>Bromley</h3>
-          <h3>BR1 1QX</h3>
+          <ul className='address'>
+            <li>8 EAST ST</li>
+            <li>BROMLEY</li>
+            <li>BR1 1QX</li>
+          </ul>
+          <div className='phone-no'>
+            <p>020 4559 2984</p>
+          </div>
         </div>
         <div className='socials'>
-          <Link to='https://www.instagram.com/roastar.coffee/'>
-            <Instagram className='insta'/>
-          </Link>
-          <Link to='https://www.facebook.com/roastarcoffeeuk'>
-            <Facebook 
-              strokeWidth={0.7}
-              className='facebook' 
-            />
-          </Link>
+          <p>
+            <Link to='https://www.instagram.com/roastar.coffee/'>
+              <Instagram 
+                className='insta'
+              />
+           </Link>
+          </p>
+          <p>
+            <Link to='https://www.facebook.com/roastarcoffeeuk'>
+              <Facebook 
+                strokeWidth={0.7}
+                className='facebook'
+             />
+            </Link>
+          </p>
         </div>
 
         <div className='footer-nav'>
@@ -63,14 +74,15 @@ const Footer = () => {
               SHOP
             </Link>
           </div>
-          <div style={{textAlign: 'right'}}>
-            <span style={{
+          <div style={{textAlign: 'center'}}>
+            <span 
+              style={{
                 color: 'white', 
-                position: 'relative', 
-                left: '0vh', 
+                position: 'relative',  
                 fontSize: '12px'
-                }}>
-              <Copyright size={12}style={{position: 'relative', top: '2px', left: '-2px'}}/>Copyright 2024. All Rights Reserved</span>
+              }}>
+              <Copyright size={12}style={{position: 'relative', top: '1.5px', left: '-5px'}}/>Copyright 2024. All Rights Reserved
+            </span>
           </div>
         </div>
 

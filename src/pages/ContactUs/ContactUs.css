@@ -54,12 +54,12 @@
 .company-info {
   display: block;
   position: relative; 
+  left: 1em;
   text-align: center;
 }
   
-.address {
-  position: relative;
-  left: 15px;
+.card-address {
+  text-align: center;
 }
   
 .socials-info {
@@ -139,31 +139,86 @@
   top: -20px;;
 }
 
+.form-display {
+  display: none;
+}
+
 .send-btn {
-  border-radius: 5px;
-  background-color: var(--main-green);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  background: #1c8d58;
   color: white;
   margin-top: 1em;
   position: relative;
-  left: 0em
+  left: 0em;
+  transition: background 300ms;
+}
+
+.send-btn:disabled {
+  transform: scale(1) !important;
+  cursor:default;
+  opacity: 0.5;
+}
+
+.send-btn:disabled:hover {
+  background: #1c8d58;
+}
+
+.send-btn:hover {
+  background: #23ad6c;
+  transition: background 300ms;
+}
+
+.send-btn:active {
+  transform: scale(0.98)
+}
+
+.sent-confirm {
+  position: inherit;
+  text-align: center;
+  top: -3em;
+  left: 0vw;
+}
+
+.sent-tick {
+  color: #1c8d58;
+  z-index: 2;
+}
+
+.message-sent {
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 10px;
+  top: 20px;
 }
   
 @media all and (max-width: 1250px) {
   .email-form {
     position: relative;
     left: 7.5vw;
-    width: 110%;
+    width: 100%;
   }
 
   .form input, .form textarea {
+    width: 60%;
+    position: relative; 
     left: 8vw;
   }
-  
 
   .card {
     position: relative;
     top: -10em;
     width: 100%;
+  }
+
+  .company-info {
+    display: block;
+    position: relative; 
+    left: 1em;
+    text-align: center;
   }
 
   .form {
@@ -182,14 +237,20 @@
 
   .send-btn {
     position: relative;
-    left: -14vw;
+    left: -7.5vw;
   }
+
+  .message-sent {
+    position: inherit;
+    text-align: center;
+    top: -19em;
+    left: -7.5vw;
+  }
+  
 }
 
 @media all and (max-width: 1000px) {
   .email-form {
     position: relative;
-    
   }
-
 }

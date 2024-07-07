@@ -74,14 +74,13 @@ const Banner = () => {
 
   return (
        <>
-          <div className="slogan">
-            <div className="slogan-content slogan">
-              <img
-                src="../../../logo/Logo ROASTAR-beige.PNG"
-                width={400}
-                className='banner-logo'
-              />
-            </div>
+          <div className="slogan-content slogan">
+            <img
+              src="../../../logo/Logo ROASTAR-beige.PNG"
+              width={400}
+              className='banner-logo'
+            />
+            <p>Vietnamese Style Cafe at your doorstep</p>
           </div>
           
           <div className="banner">

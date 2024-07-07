@@ -12,10 +12,6 @@ html,body,#root {
   height: 100%;
 }
 
-.container, body, * {
-  max-width: 100vw;
-}
-
 /* For App.jsx */
 .app {
   display: flex;
@@ -37,7 +33,7 @@ html,body,#root {
   /* (green) background-color: hsl(96, 24%, 44%, 90%); */
   /* background-color: hsl(49, 87%, 88%); */
   /* border-bottom: 1px solid black; */
-  position: fixed; top: 0px;
+  position: fixed; top: 0;
   height: 80px;
   width: 100%;
   z-index: 100;
@@ -66,6 +62,139 @@ html,body,#root {
   transform: scale(1, 1.1)
 }
 
+/* For @media-query all and (max-width: 1000px) */
+
+/* hamburger menu main div from MobileMenu.jsx */
+.nav-list-mobile {
+  position: absolute;
+  display: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+}
+
+.nav-list-mobile a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-list-mobile a:hover {
+  color: var(--main-green)
+}
+
+.nav-list-mobile input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 101; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+.nav-list-mobile-beige a span {
+  background: none;
+}
+
+.nav-list-mobile span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+}
+
+.nav-list-mobile-beige span {
+  background: var(--main-beige);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.nav-list-mobile-green span {
+  background: black;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.nav-list-mobile span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.nav-list-mobile span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.nav-list-mobile span:nth-last-child(2):hover {
+  transform-origin: 0% 100%;
+}
+
+/* this will transform all of the hamburger slices into a crossmark */
+.nav-list-mobile input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/* this selector will hide the middle span tag when clicked */
+.nav-list-mobile input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.nav-list-mobile span:active {
+  transform: scale(0.95);
+}
+
+/* this selector is to make the second span tag go the opposite direction when activated */
+.nav-list-mobile input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg);
+  translate:(0, -1px);
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 1000px;
+  height: 755px;
+  margin: -100px 0 0 -20px;
+  padding: 50px;
+  padding-top: 125px;
+  background: hsl(50, 100%, 99%);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0%);
+  transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.mobile-menu li {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 32px;
+}
+
+.mobile-menu a {
+  margin-right: 0;
+}
+
+.nav-list-mobile input:checked ~ ul {
+  transform: none;
+  overflow: hidden;
+}
+
 .active {
   color: hsl(96, 24%, 44%);
   text-decoration: underline;
@@ -74,7 +203,7 @@ html,body,#root {
   z-index: 1;
 }
 
-.nav-list-beige li, .nav-list-green li {
+.nav-list-beige li, .nav-list-green li, .nav-list-white li {
   position: relative;
 }
 
@@ -107,7 +236,11 @@ html,body,#root {
 
 .nav-list-beige a:hover {
   color: hsl(48, 100%, 85%);
-  transition-duration: 300ms;
+  transition: color 500ms;
+}
+
+.nav-list-beige a:active, .nav-list-green a:active {
+  transform: scale(0.98);
 }
 
 /*
@@ -161,7 +294,9 @@ html,body,#root {
 
 .nav-list-green a:hover {
   color: hsl(96, 24%, 44%);
+  transition: color 500ms;
 }
+
 
 /*
 .nav-list-green a li::after {
@@ -205,39 +340,61 @@ html,body,#root {
 }
 
 .cart button:active {
-  transition: transform 1ms !important;
-  transform: scale(1.1);
+  transition: transform 0ms !important;
+  transform: scale(1.05);
 }
 
 .cart-beige button {
+  background-color: hsl(96, 24%, 44%, 0%);
   color: hsl(48, 54%, 89%);
   border: 1.5px solid hsl(48, 54%, 89%);;
-  transition-duration: 500ms;
+  transition: 
+    background-color 500ms, 
+    color 500ms, 
+    border 500ms;
 }
 
 .cart-beige button:hover {
   background-color: hsl(96, 24%, 44%);
   border: 1.5px solid hsl(0, 0%, 0%);
   color: hsl(0, 0%, 0%);
-  transition-duration: 500ms;
+  transition: 
+    background-color 500ms, 
+    color 500ms, 
+    border 500ms;
 }
 
 .cart-black button {
   color: hsl(0, 0%, 0%);
   background-color: hsl(48, 54%, 89%, 0%);
   border: 1.5px solid hsl(0, 0%, 0%);
-  transition-duration: 500ms;
+  transition:
+    color 500ms,
+    border 500ms,
+    background-color 500ms;
 }
 
 .cart-black button:hover {
   color: hsl(0, 0%, 0%);
-  transition-duration: 500ms;
+  background-color: hsl(96, 24%, 44%);
+  border: 1.5px solid hsl(0, 0%, 0%);
+  transition: 
+    color 500ms,
+    border 500ms,
+    background-color 500ms;
 }
 
 /* Logo.jsx CSS */
 .logo {
-  position: relative; top: 10px; left: 10px; 
-  transition-duration: 500ms;
+  position: relative; 
+  top: 6px; 
+  left: 10px; 
+  z-index: 100;
+}
+
+.logo:active {
+  position: absolute;
+  transform: scale(0.99);
 }
 
 .beige {
@@ -248,34 +405,17 @@ html,body,#root {
   z-index: 99;
   position: absolute; left: -1px;
   opacity: 0;
-  transition: 500ms;
+  transition: opacity 500ms;
 }
 
 .green:hover {
   opacity: 1;
-  transition: 500ms;
-}
-
-/* For Footer.jsx */
-.container, body, html {
-  height: 225rem;
-}
-
-.about-us-container, body, html {
-  height: 125rem;
-}
-
-.shop-container, body, html {
-  height: 70rem;
-}
-
-.contact-us-container, body, html {
-  height: 75.75rem;
+  transition: opacity 500ms;
 }
 
 /* For Footer.jsx */
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 350px;
   text-align: center;
   position: relative; 
@@ -283,7 +423,7 @@ html,body,#root {
   /*background-color: hsl(0%, 0%, 11%) */ 
   bottom: 0px;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0);
   z-index: 99;
 }
@@ -333,18 +473,40 @@ html,body,#root {
 .footer-address {
   color: white;
   text-align: left;
+  display: block;
 }
 
 .footer-address img {
   width: 18em;
   height: 6em;
   position: relative; 
-  left: -7px;
+  left: -6.5px;
+}
+
+.footer-address ul {
+  font-weight: 400;
+  list-style-type: none;
+  position: relative;
+  left: 0em;
+}
+
+.address {
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.phone-no {
+  padding-top: 20px;
 }
 
 .socials {
-  position: relative; top: 10px;
+  position: relative; 
+  top: 20px;
   text-align: left;
+  display: flex;
+  gap: 10px;
 }
 
 .socials a {
@@ -353,10 +515,32 @@ html,body,#root {
 
 .facebook {
   fill: white;
-  position: absolute;
-  left: 30px;
 }
 
+/* For Footer.jsx */
+.container, body, html {
+  height: 300rem;
+}
+
+.about-us-container, body, html {
+  height: 125rem;
+}
+
+.shop-container, body, html {
+  height: 70rem;
+}
+
+.careers-container, body, html {
+  height: 80rem;
+}
+
+.careers-container {
+  background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
+}
+
+.contact-us-container, body, html {
+  height: 75.75rem;
+}
 
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
@@ -371,6 +555,22 @@ html,body,#root {
 }
 
 @media all and (max-width: 1000px) {
+  .nav-list-mobile {
+    display: block;
+    color: var(--main-beige)
+  }
+
+  .logo {
+    text-align: center;
+    left: -5em;
+  }
+
+  .green {
+    position: absolute;
+    top: 0;
+    left: 49.9vw;
+  }
+
   .nav-list {
     display: none;
   }
@@ -380,5 +580,90 @@ html,body,#root {
     position: relative;
     top: 22px;
     left: -33em;
+  }
+
+  .footer {
+    position: relative;
+    height: 550px; 
+    width: 100vw;
+    left: 50vw;
+    padding: 0 !important;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .footer-nav {
+    position: relative;
+    top: 3em;
+    left: -.5em;
+    text-align: center;
+    float: inherit;
+  }
+
+  .footer-address {
+    text-align: center;
+  }
+
+  .footer-address img {
+    left: 1px;
+  }
+
+  .address {
+    position: relative;
+    gap: 20px;
+    display: flex;
+  }
+
+  .footer-address ul {
+    justify-content: center;
+    position: relative;
+    left: 0em;
+  }
+
+  .socials {
+    position: relative;
+    gap: 20px;
+    top: 1.5em;
+    left: -1em;
+    justify-content: center;
+  }
+
+  .facebook {
+    position: relative;
+    margin-left: -25px;
+    left: 1em;
+  }
+
+  .insta {
+    margin-bottom: -5px;
+  }
+
+  .socials a {
+    outline: none;
+  }
+
+  .container, body, html {
+    height: 325rem;
+  }
+
+  .about-us-container, body, html {
+    height: 165rem;
+  }
+
+  .contact-us-container, body, html {
+    height: 115rem;
+  }
+
+  .careers-container {
+    background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    margin-top: 40vw;
   }
 }

@@ -10,7 +10,7 @@ const Card = () => {
       <div className='info-card'>
       <h2 className='company-title'>ROASTAR SPECIALTY COFFEE</h2>
         <div className='company-info'>
-          <div className='address'>
+          <div className='card-address'>
             <Map 
               style={{position: 'relative', top: '25px', left: '-120px'}}
               />
