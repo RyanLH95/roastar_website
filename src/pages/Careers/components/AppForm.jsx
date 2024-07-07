@@ -18,7 +18,7 @@ const AppForm = () => {
     <>
       <div className='app-card'>
         <img 
-          src='../../../../../logo/Logo ROASTAR-white.PNG'
+          src='../../../../logo/Logo ROASTAR-white.PNG'
           width={150}
         />
         <form className='app-form'>
