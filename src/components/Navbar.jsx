@@ -19,8 +19,7 @@ const Navbar = () => {
     const { pathname } = useLocation();
     const active = useLocation().pathname; // returns current location and url
 
-    const [colour, setColour] = useState(false); // declares 
-    const [textColour, setTextColour] = useState(false)
+    const [colour, setColour] = useState(false); // changes the state of colour upon scrolling
 
     useEffect(() => {
       const changeColour = () => {

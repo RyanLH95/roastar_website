@@ -80,7 +80,7 @@ const Banner = () => {
               width={400}
               className='banner-logo'
             />
-            <p>Vietnamese Style Cafe at your doorstep</p>
+            <p>Vietnamese style café, brought to you!</p>
           </div>
           
           <div className="banner">

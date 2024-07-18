@@ -1,12 +1,14 @@
 import React from 'react'
-import AboutBanner from './components/AboutBanner'
+import AboutHeader from './components/AboutHeader'
+import AboutContent from './components/AboutContent'
 import '../../App.css'
 import './AboutUs.css'
 
 const AboutUs = () => {
   return (
     <div className='about-us-container'>
-      <AboutBanner/>
+      <AboutHeader />
+      <AboutContent />
     </div>
   )
 }

@@ -50,7 +50,7 @@ const Logo = () => {
       <div className="logo">
         <NavLink reloadDocument to='/'>
           <img 
-            src="../../../logo/Logo ROASTAR-green.PNG"
+            src={logo ? "../../../logo/Logo ROASTAR-green.PNG" : "../../../logo/Logo ROASTAR-white.PNG"}
             alt="roastar-logo green"
             className='roastar-logo green'
             height={50}

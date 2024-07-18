@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import AppContent from './AppContent'
 
 const Application = () => {
-
   return (
     <div className='app-container'>
       <div className='app-content'>
@@ -24,7 +23,7 @@ const Application = () => {
              you the ways of Roastery styled coffee.
           </p>
           <div className='apply'>
-            <p>Interested? Send CV down here.</p>
+            <p>Interested? Send CV to email down here:</p>
             <AppContent />
           </div>
         </div>

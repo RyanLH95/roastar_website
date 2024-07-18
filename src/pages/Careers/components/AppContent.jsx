@@ -23,7 +23,9 @@ const AppContent = () => {
           className='application no-scroll'
           style={{animation:'dropTop .3s linear'}}
         >
-          <div className='close-div'>
+          <div 
+            className='close-div'
+          >
             <button 
               className='close-btn'
               onClick={handleClick}

@@ -78,7 +78,8 @@ const Footer = () => {
             <span 
               style={{
                 color: 'white', 
-                position: 'relative',  
+                position: 'relative',
+                left: '5px',
                 fontSize: '12px'
               }}>
               <Copyright size={12}style={{position: 'relative', top: '1.5px', left: '-5px'}}/>Copyright 2024. All Rights Reserved

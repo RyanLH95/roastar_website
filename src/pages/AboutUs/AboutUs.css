@@ -7,18 +7,139 @@
   padding: 0;
 }
 
-.vietnam-banner {
-    position: absolute; top: 70px;
-    margin-right: 300px;
+.about-us-header {
+  margin-top: 8em;
+  text-align: center;
 }
 
-.vietnam-img {
-    background-color: hsl(96, 25%, 29%);
-    width: 1440px;
-    position: relative; top: 3px; left: 0px;
+.about-us-header h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--main-beige);
 }
 
-.vietnam-img img {
-    filter: contrast(0.5) brightness(1.2);
-    position: relative; left: 300px;
+.about-us-background {
+  margin-top: 5em;
+  height: 130em;
+  width: 100%;
+  background: white;
+}
+
+.about-us-content {
+  text-align: center;
+  display: block;
+}
+
+/* For all class' within '.top-section' */
+.top-section {
+  display: flex;
+  text-align: center;
+  padding: 5em;
+}
+
+.text-container-one {
+  margin-top: 3em;
+  text-align: left;
+  margin-right: 10em;
+}
+
+.text-container-one h3 {
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--main-green);
+  text-shadow: 5px 5px 10px var(--main-green);
+}
+
+.text-container-one p {
+  font-size: 24px;
+  font-weight: 200;
+  color: black;
+  margin-top: 1em;
+}
+
+.about-images img {
+  margin-top: 1em;
+  object-fit: cover;
+}
+
+.text-container-one img {
+  position: relative;
+  margin-left: 3em;
+  width: 70%;
+}
+
+/* For all class's within '.bottom-section' */
+.bottom-section {
+  text-align: left;
+  padding: 2em;
+  margin-top: 4em;
+}
+
+.section {
+  display: flex;
+  gap: 5em;
+}
+
+.bottom-section-text {
+  margin-top: 3em;
+}
+
+.bottom-section-text h3 {
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--main-green);
+  text-shadow: 5px 5px 10px var(--main-green);
+}
+
+.bottom-section-text p {
+  font-size: 24px;
+  font-weight: 200;
+  color: black;
+  margin-top: 1em;
+}
+
+.bottom-section-img img {
+  width: 100%;
+}
+
+@media all and (max-width: 1250px) {
+  .text-container-one img {
+    right: 5em;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .top-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5vw;
+  }
+
+  .about-images {
+    display: flex;
+    padding-left: 4.8vw;
+    gap: 1vw;
+  }
+
+  .about-images img {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .text-container-one {
+    text-align: center;
+    margin-right: 0em;
+  }
+
+  .text-container-one img {
+    right: 2em;
+    width: 90%;
+  }
+
+  /* For the 'bottom-section' */
+  .section {
+    text-align: center;
+    display: block;
+  }
 }

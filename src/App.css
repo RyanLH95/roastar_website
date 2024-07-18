@@ -12,6 +12,14 @@ html,body,#root {
   height: 100%;
 }
 
+:root {
+  --main-green: hsl(96, 24%, 44%);
+  --main-beige: hsl(48, 54%, 89%);
+  --hover-beige: hsl(48, 100%, 85%);
+  --main-black: rgb(34, 34, 34);
+  --btn-green: hsl(152, 67%, 33%);
+}
+
 /* For App.jsx */
 .app {
   display: flex;
@@ -196,7 +204,7 @@ html,body,#root {
 }
 
 .active {
-  color: hsl(96, 24%, 44%);
+  color: var(--main-green);
   text-decoration: underline;
   text-underline-offset: 11.38px;
   text-decoration-thickness: 2.8px;
@@ -222,20 +230,20 @@ html,body,#root {
     position: absolute;
     bottom: -10px;
     right: 0;
-    background-color: black;
+    background-color: hsl(48, 100%, 85%);
     transition: all 0.3s;
   }
   &:hover {
     &:before {
       width: 100%;
       left: 0;
-      background-color: hsl(48, 100%, 85%);
+      background-color: white;
     }
   }
 }
 
 .nav-list-beige a:hover {
-  color: hsl(48, 100%, 85%);
+  color: white;
   transition: color 500ms;
 }
 
@@ -526,6 +534,10 @@ html,body,#root {
   height: 125rem;
 }
 
+.about-us-container {
+  background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
+}
+
 .shop-container, body, html {
   height: 70rem;
 }
@@ -545,7 +557,7 @@ html,body,#root {
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
   .contact-us-container, body, html {
-    height: 85rem;
+    height: 115rem;
   }
 
   .item-container {
@@ -622,6 +634,10 @@ html,body,#root {
     left: 0em;
   }
 
+  .phone-no {
+    margin-right: 1em;
+  }
+
   .socials {
     position: relative;
     gap: 20px;
@@ -649,11 +665,20 @@ html,body,#root {
   }
 
   .about-us-container, body, html {
-    height: 165rem;
+    height: 130rem;
+  }
+
+  .about-us-container {
+    margin-bottom: 100vw;
+    width: 100vw;
   }
 
   .contact-us-container, body, html {
     height: 115rem;
+  }
+
+  .careers-container, body, html {
+    height: 81rem;
   }
 
   .careers-container {
@@ -663,6 +688,10 @@ html,body,#root {
 }
 
 @media all and (max-width: 800px) {
+  .about-us-container, body, html {
+    height: 120rem;
+  }
+
   .container {
     margin-top: 40vw;
   }

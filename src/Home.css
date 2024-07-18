@@ -1,8 +1,4 @@
-:root {
-  --main-green: hsl(96, 24%, 44%);
-  --main-beige: hsl(48, 54%, 89%);
-  --hover-beige: hsl(48, 100%, 85%);
-}
+
 
 /* Banner.jsx */
 .banner {
@@ -526,7 +522,7 @@ a {
   filter: brightness(0.6);
   object-fit: cover;
   width: 100vw;
-  height: 50rem;
+  height: 50.7rem;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
