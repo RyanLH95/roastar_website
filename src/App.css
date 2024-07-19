@@ -175,7 +175,7 @@ html,body,#root {
 .mobile-menu {
   position: fixed;
   width: 1000px;
-  height: 755px;
+  height: 100%;
   margin: -100px 0 0 -20px;
   padding: 50px;
   padding-top: 125px;
@@ -560,6 +560,10 @@ html,body,#root {
     height: 115rem;
   }
 
+  .careers-container, body, html {
+    height: 90rem;
+  }
+
   .item-container {
     position: relative;
     left: -10vw;
@@ -575,6 +579,11 @@ html,body,#root {
   .logo {
     text-align: center;
     left: -5em;
+  }
+
+  .logo:active {
+    position: relative;
+    transform: scale(0.99);
   }
 
   .green {
@@ -690,6 +699,10 @@ html,body,#root {
 @media all and (max-width: 800px) {
   .about-us-container, body, html {
     height: 120rem;
+  }
+
+  .careers-container, body, html {
+    height: 81rem;
   }
 
   .container {

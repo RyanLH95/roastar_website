@@ -59,7 +59,7 @@ const MobileMenu = () => {
         <span></span>
         <span></span>
       
-      <ul className='mobile-menu' >
+      <ul className='mobile-menu cannot-scroll' >
         {
           navigation.map((item) => (
             <NavLink 

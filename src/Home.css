@@ -1243,6 +1243,12 @@ a {
     left: 6em;
   }
 }
+
+@media all and (max-width: 500px) {
+  .container {
+    width: 60%;
+  }
+}
   
 @media all and (min-width: 1500px) and (max-width: 2000px) {
 
