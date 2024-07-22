@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { slideone, slidetwo, slidethree } from '../assets/slider/index.js'
 import Slider from 'react-slick'
-import '../Home.css'
 
 const Banner = () => {
   const [dotActive, setDotActive] = useState(0);
@@ -24,9 +23,9 @@ const Banner = () => {
         style={{
           position: "absolute",
           top: "720px",
-          left: "48.5vw",
+          left: "49.7vw",
           transform: "translate(-50%, 0)",
-          zIndex: 9,
+          zIndex: 200,
           textAlign: "center",
         }}
       >
@@ -73,48 +72,48 @@ const Banner = () => {
   };
 
   return (
-       <>
-          <div className="slogan-content slogan">
-            <img
-              src="../../../logo/Logo ROASTAR-beige.PNG"
-              width={400}
-              className='banner-logo'
-            />
-            <p>Vietnamese style café, brought to you!</p>
-          </div>
+    <div className='width'>
+      <div className="slogan-content">
+        <img
+          src="../../../logo/Logo ROASTAR-beige.PNG"
+          width={400}
+          className='banner-logo'
+        />
+        <p>Vietnamese style café, brought to you!</p>
+      </div>
           
-          <div className="banner">
-            <Slider {...settings}>
-              <div className="slidertwo">
-                <img 
-                  src={slidetwo}
-                  alt="slidetwo"
-                  height={720}
-                  width={1440}
-                  className="slides"
-                />
-              </div>
-              <div className="sliderone">
-                <img 
-                  src={slideone}
-                  alt="slideone"
-                  height={720}
-                  width={1440}
-                  className="slides slide-two"
-                />
-              </div>
-              <div className="sliderthree">
-                <img 
-                  src={slidethree}
-                  alt="slidethree"
-                  height={720}
-                  width={1440}
-                  className="slides"
-                />
-              </div>
-            </Slider>
+      <div className="banner">
+        <Slider {...settings}>
+          <div className="slidertwo">
+            <img 
+              src={slidetwo}
+              alt="slidetwo"
+              height={720}
+              width={1440}
+              className="slides"
+            />
           </div>
-       </>
+          <div className="sliderone">
+            <img 
+              src={slideone}
+              alt="slideone"
+              height={720}
+              width={1440}
+              className="slides slide-two"
+            />
+          </div>
+          <div className="sliderthree">
+            <img 
+              src={slidethree}
+              alt="slidethree"
+              height={720}
+              width={1440}
+              className="slides"
+            />
+          </div>
+        </Slider>
+      </div>
+    </div>
   )
 }
 

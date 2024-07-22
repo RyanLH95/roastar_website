@@ -8,9 +8,8 @@ const Desc = () => {
           <div className='desc-text'>
             <h3>VIETNAMESE STYLE COFFEE</h3>
             <p>
-              Roastar Coffee is a Vietnamese Specialised Coffee Shop founded in 2019 where we have
-              been trading online with specially imported Vietnamese coffee which we sell as B2B and B2C, 
-              bringing awarness to Vietnamese-grown coffee.
+              Discover and learn about our coffee and what makes it so great by visiting our
+              'About Us' page. Learn about what makes our coffee so great and stands out.
               <br></br><br></br>
             </p>
             <h4 className='link-to'>

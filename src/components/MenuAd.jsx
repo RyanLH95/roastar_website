@@ -4,17 +4,15 @@ import { Link } from 'react-router-dom'
 const MenuAd = () => {
   return (
     <div className="menu-container">
-      <div className='menu-image'>
-        <img 
-          src="../../../images/imageThree.png"
-          height={700}
-          width={1440}
-        />
-      </div>
+      <img 
+        src="../../../images/imageThree.png"
+        height={800}
+        width={1440}
+      />
       <div className='menu-content'> 
         <div className='menu-text'>
-          <h1 className='menu-title'>OUR MENU</h1>
-          <p className="paragraph-one">
+          <h3>OUR MENU</h3>
+          <p>
             From our range of whole grain Vietnamese coffee beans to our homemade Banh Mih sandwiches and baked goods, Our menu
             contains a wide variety of delicious foods, coffee and other beverages guaranteed to satisfy your tastebuds.
             <br></br><br></br>
