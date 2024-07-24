@@ -666,6 +666,7 @@
   .fs-container {
     position: relative;
     top: -40em;
+    height: 600px;
   }
 
 }

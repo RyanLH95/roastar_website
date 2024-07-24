@@ -716,21 +716,25 @@ html,body,#root {
 }
 
 @media all and (max-width: 600px) {
+  .container, body, html {
+    height: 336rem;
+  }
+  
   .careers-container, body, html {
     height: 90rem;
   }
 }
 
-@media all and (max-width: 400px) and (min-width: 600px) {
+@media all and (max-width: 400px) {
+  .container, body, html {
+    height: 330rem;
+  }
+  
   .about-us-container, body, html {
     height: 120rem;
   }
 
   .careers-container, body, html {
     height: 90rem;
-  }
-
-  .container, body, html {
-    height: 336rem;
   }
 }
