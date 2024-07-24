@@ -668,15 +668,15 @@
     top: -40em;
   }
 
-  .points-container {
-    margin-top: -30.5em;
-  }
 }
 
-@media all and (max-width: 390px) and (max-height: 844px) {
+@media all and (max-width: 390px) and (min-height: 395px) {
   .home-container {
     position: relative;
     margin-top: 28em; 
   }  
 
+  .points-container {
+    margin-top: -30.5em;
+  }
 }
