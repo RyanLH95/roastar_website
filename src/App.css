@@ -710,8 +710,6 @@ html,body,#root {
   .careers-container, body, html {
     height: 90rem;
   }
-
-  
 }
 
 @media all and (max-width: 600px) {
@@ -720,7 +718,7 @@ html,body,#root {
   }
 }
 
-@media all and (max-width: 390px) and (max-height: 390px) {
+@media all and (max-width: 390px) {
   .about-us-container, body, html {
     height: 120rem;
   }
@@ -729,7 +727,7 @@ html,body,#root {
     height: 90rem;
   }
 
-  .container {
-    margin-top: 40vw;
+  .container, body, html {
+    height: 336rem;
   }
 }
