@@ -4,15 +4,16 @@ const FeaturedShop = () => {
   return (
     <div className='fs-container'>
       <div className='fs-content'>
-        <p>CHECK OUT OUR STORE</p>
-        <div className=''>
+        <div className='fs-text'>
+          <h3>CHECK OUT OUR STORE</h3>
+          <p>Check out our store to find our finest Vietnamese coffee beans you can purchase for yourself.</p>
+          <h4>COMING SOON</h4>
+        </div>
+        <div className='fs-image'>
           <img 
             src='../../../products/roastar_coffeebean_gift_box.png'
-            width={1200}
+            width={700}
           />
-          <h3>Check out our store to find our finest Vietnamese coffee beans you can purchase for yourself.</h3>
-        </div>
-        <div className='fs-text'>
         </div>
       </div>
     </div>

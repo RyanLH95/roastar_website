@@ -6,6 +6,12 @@ const Points = () => {
       <div className='points-title'>
         <h2>THE TATSE OF VIETNAM AT YOUR DOORSTEP!</h2>
       </div>
+      <div className='points-banner'>
+        <img 
+          src='../../../images/image-four.png'
+          width={800}
+        />
+      </div>
       <div className='points-content'>
         <div className='points-image'>
           <img 

@@ -397,7 +397,7 @@ html,body,#root {
 .logo {
   position: relative; 
   top: 6px; 
-  left: 10px; 
+  left: 10px;
   z-index: 100;
 }
 
@@ -528,7 +528,7 @@ html,body,#root {
 
 /* For Footer.jsx */
 .container, body, html {
-  height: 300rem;
+  height: 320rem;
 }
 
 .about-us-container, body, html {
@@ -579,7 +579,7 @@ html,body,#root {
 
   .logo {
     text-align: center;
-    left: -5em;
+    left: -4.6em;
   }
 
   .logo:active {
@@ -671,7 +671,7 @@ html,body,#root {
   }
 
   .container, body, html {
-    height: 325rem;
+    height: 395rem;
   }
 
   .about-us-container, body, html {
@@ -698,6 +698,11 @@ html,body,#root {
 }
 
 @media all and (max-width: 800px) {
+  .container, body, html {
+    height: 335rem;
+    margin-bottom: 90vw;
+  }
+
   .about-us-container, body, html {
     height: 120rem;
   }

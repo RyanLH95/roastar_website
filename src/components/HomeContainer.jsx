@@ -3,6 +3,7 @@ import Links from './Links'
 import Desc from './Desc.jsx'
 import MenuAd from './MenuAd.jsx'
 import Points from './Points.jsx'
+import FeaturedShop from './FeaturedShop.jsx'
 import '../Home.css'
 
 const HomeContainer = () => {
@@ -12,7 +13,7 @@ const HomeContainer = () => {
       <Desc />
       <MenuAd />
       <Points />
-    
+      <FeaturedShop />
     </div>
   )
 }
