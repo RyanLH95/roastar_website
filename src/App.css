@@ -718,7 +718,7 @@ html,body,#root {
   }
 }
 
-@media all and (max-width: 395px) {
+@media all and (max-width: 400px) {
   .about-us-container, body, html {
     height: 120rem;
   }

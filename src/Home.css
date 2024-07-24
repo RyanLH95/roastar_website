@@ -670,7 +670,7 @@
 
 }
 
-@media all and (max-width: 395px) {
+@media all and (max-width: 400px) {
   .home-container {
     position: relative;
     margin-top: 28em; 
