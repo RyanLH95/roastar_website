@@ -699,7 +699,10 @@ html,body,#root {
 
 @media all and (max-width: 800px) {
   .container, body, html {
-    height: 335rem;
+    height: 345rem;
+  }
+
+  .container {
     margin-bottom: 90vw;
   }
 
