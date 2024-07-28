@@ -1,5 +1,5 @@
 import React from 'react'
-import Links from './Links'
+import Links from './Links.jsx'
 import Desc from './Desc.jsx'
 import MenuAd from './MenuAd.jsx'
 import Points from './Points.jsx'

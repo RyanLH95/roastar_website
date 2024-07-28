@@ -1,7 +1,7 @@
 // Banner slider
-import slideone from '../slider/slider-five.png'
-import slidetwo from '../slider/slidetwo.png'
-import slidethree from '../slider/slidethree.png'
+import slideone from './slider-five.png'
+import slidetwo from './slidetwo.png'
+import slidethree from './slidethree.png'
 
 //Review Slider
 import reviewSlideOne from '../reviewSlider/review_one.png'
