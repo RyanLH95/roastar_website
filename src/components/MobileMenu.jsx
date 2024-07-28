@@ -24,7 +24,8 @@ const MobileMenu = () => {
         const menuShop = matchPath("/Shop", pathname);
         const menuIsMenu = matchPath("Menu", pathname);
         const menuContactUs = matchPath("ContactUs", pathname);
-        const menuCareers = matchPath("Careers", pathname)
+        const menuCareers = matchPath("Careers", pathname);
+        const menuProductPage = matchPath("/ProductPage", pathname)
 
           if (menuHome && window.scrollY >= 650) {
             setMenu(true);
@@ -37,6 +38,8 @@ const MobileMenu = () => {
         } else if (menuContactUs && window.scrollY >= 0) {
             setMenu(true);
         } else if (menuCareers && window.scrollY >= 180) {
+            setMenu(true);
+        } else if (menuProductPage && window.scrollY >= 0) {
             setMenu(true);
         } else {
             setMenu(false);

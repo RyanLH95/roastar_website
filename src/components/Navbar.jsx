@@ -1,10 +1,9 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
 import { matchPath, useLocation, NavLink } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import MobileMenu from './MobileMenu.jsx'
 import Logo from './Logo.jsx'
+import Cart from '../pages/Shop/components/Cart.jsx'
 import '../App.css'
 
 // Array that features all navlinks required. Will use in .map component
@@ -20,6 +19,12 @@ const Navbar = () => {
     const active = useLocation().pathname; // returns current location and url
 
     const [colour, setColour] = useState(false); // changes the state of colour upon scrolling
+    const [open, setOpen] = useState(false); // This opens and closes cart component
+
+    document.addEventListener("DOMContentLoaded", function(){
+      let node = document.querySelector('.preload');
+      node.classList.remove('.preload')
+    })
 
     useEffect(() => {
       const changeColour = () => {
@@ -29,6 +34,7 @@ const Navbar = () => {
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
         const isCareers = matchPath("/Careers", pathname)
+        const isProductPage = matchPath("/ProductPage", pathname)
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
@@ -41,6 +47,8 @@ const Navbar = () => {
         } else if (isMenu && window.scrollY >= 0) {
             setColour(true)
         } else if (isCareers && window.scrollY >= 180) {
+            setColour(true)
+        } else if (isProductPage && window.scrollY >= 0) {
             setColour(true)
         } else {
             setColour(false)
@@ -58,7 +66,7 @@ const Navbar = () => {
     }, [pathname])
     
   return (
-    <div className={colour ? 'navbar navbarbg' : 'navbar'}>
+    <div className={`preload ${colour ? 'navbar navbarbg' : 'navbar'}`}>
       <div className="nav-container">
         <Logo />
         <MobileMenu />
@@ -79,8 +87,10 @@ const Navbar = () => {
               ))
             }
           </ul>
-          <div className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
-            <button>
+          <div 
+            className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }
+          >
+            <button onClick={() => setOpen(!open)}>
               <ShoppingCart 
                 style={{
                   position: 'absolute', 
@@ -92,6 +102,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {open && <Cart/>}
     </div>
   )
 }

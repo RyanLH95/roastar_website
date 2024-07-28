@@ -15,7 +15,7 @@ html,body,#root {
 :root {
   --main-green: hsl(96, 24%, 44%);
   --main-beige: hsl(48, 54%, 89%);
-  --hover-beige: hsl(48, 100%, 85%);
+  --hover-beige: hsl(48, 64%, 78%);
   --main-black: rgb(34, 34, 34);
   --btn-green: hsl(152, 67%, 33%);
 }
@@ -26,6 +26,14 @@ html,body,#root {
   flex-flow: column nowrap;
   min-height: 100%;
   flex: 1;
+}
+
+.preload * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 /* navbar.jsx CSS */
@@ -205,7 +213,7 @@ html,body,#root {
 }
 
 .active {
-  color: var(--main-green);
+  color: var(--main-black);
   text-decoration: underline;
   text-underline-offset: 11.38px;
   text-decoration-thickness: 2.8px;
@@ -393,6 +401,105 @@ html,body,#root {
     background-color 500ms;
 }
 
+/* For Cart.jsx/Cart-design */
+.cart-card {
+  position: relative;
+  background-color: hsl(0, 0%, 100%, 90%);
+  margin-top: 1.04em;
+  padding: 2em;
+  float: right;
+  box-shadow: 1px 1px 5px 1px hsl(0, 0%, 89%);
+}
+
+.cart-container {
+  margin-top: -1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container h2 {
+  text-align: center;
+  color: var(--main-green);
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+}
+
+.item img {
+  margin-bottom: 1em;
+  object-fit: contain;
+}
+
+.item p {
+  margin-top: 0.5em;
+}
+
+.item-info {
+  padding-top: 0.2em;
+}
+
+.item-info h3 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.item-info p {
+  margin-top: 2em;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+.total {
+  display: flex;
+  gap: 12em;
+  margin-bottom: 1em;
+}
+
+.total span {
+  font-weight: 200;
+}
+
+.total p {
+  font-weight: 300;
+}
+
+.checkout {
+  border-radius: 5px;
+  border: 3px solid hsla(152, 63%, 33%, 0.1);
+  font-weight: 200;
+  background: var(--btn-green);
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px var(--btn-green);
+  margin-bottom: 1em;
+}
+
+.checkout:active {
+  transform: scale(0.99);
+  box-shadow: 0px 0px 2px var(--btn-green);
+}
+
+.reset {
+  cursor: pointer;
+  margin-top: 1em;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: red;
+  margin-right: 20em;
+}
+
+.reset:active {
+  transform: scale(0.98);
+}
+
 /* Logo.jsx CSS */
 .logo {
   position: relative; 
@@ -443,7 +550,9 @@ html,body,#root {
 }
 
 .footer-nav {
-  position: relative; top: -11em; left: -100px;
+  position: relative; 
+  top: -11em; 
+  left: 0px;
   text-align: left;
   float: right;
   display: grid;
@@ -540,7 +649,11 @@ html,body,#root {
 }
 
 .shop-container, body, html {
-  height: 70rem;
+  height: 80rem;
+}
+
+.shop-container {
+  background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
 }
 
 .careers-container, body, html {
@@ -553,6 +666,10 @@ html,body,#root {
 
 .contact-us-container, body, html {
   height: 75.75rem;
+}
+
+.product-page-container, body, html {
+  height: 70rem;
 }
 
 /* for mobile and tablet devices */
@@ -602,6 +719,10 @@ html,body,#root {
     position: relative;
     top: 22px;
     left: -33em;
+  }
+
+  .cart-card {
+    margin-top: 2.45em;
   }
 
   .footer {
@@ -727,7 +848,7 @@ html,body,#root {
 
 @media all and (max-width: 400px) {
   .container, body, html {
-    height: 330rem;
+    height: 336rem;
   }
   
   .about-us-container, body, html {

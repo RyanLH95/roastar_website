@@ -74,6 +74,14 @@ const Footer = () => {
               SHOP
             </Link>
           </div>
+          <div className={`footer-links`}>
+            <Link 
+              reloadDocument 
+              to={'/Shop'} 
+            >
+              PRIVACY NOTICE
+            </Link>
+          </div>
           <div style={{textAlign: 'center'}}>
             <span 
               style={{
@@ -82,7 +90,7 @@ const Footer = () => {
                 left: '5px',
                 fontSize: '12px'
               }}>
-              <Copyright size={12}style={{position: 'relative', top: '1.5px', left: '-5px'}}/>Copyright 2024. All Rights Reserved
+              <Copyright size={12}style={{position: 'relative', top: '1.5px', left: '-5px'}}/>Copyright 2024. Roastar Coffee. All Rights Reserved
             </span>
           </div>
         </div>

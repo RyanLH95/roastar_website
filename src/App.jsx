@@ -8,7 +8,7 @@ import Menu from './pages/Menu/Menu'
 import Shop from './pages/Shop/Shop'
 import ContactUs from './pages/ContactUs/ContactUs'
 import Careers from './pages/Careers/Careers'
-
+import ProductPage from './pages/Shop/ProductPage'
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
           <Route path='/Menu' element={<Menu/>}/>
           <Route path='/ContactUs' element={<ContactUs />}/>
           <Route path='/Careers' element={<Careers />}/>
+          <Route path='/ProductPage' element={<ProductPage />}/>
         </Routes>
         <Footer />
       </div>
