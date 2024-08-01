@@ -1,8 +1,4 @@
 /* For LocationPin.jsx */
-:root {
-  --main-green: #6b8b55;
-}
-  
 .maps {
   background-color: var(--main-green);
   height: 40vh; 
@@ -54,7 +50,6 @@
 .company-info {
   display: block;
   position: relative; 
-  left: 1em;
   text-align: center;
 }
   

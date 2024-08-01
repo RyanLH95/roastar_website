@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { matchPath, useLocation, NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Badge, Box, IconButton } from '@mui/material'
+import { matchPath, useLocation, NavLink, useNavigate } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
+import { shades } from '../theme.js'
 import MobileMenu from './MobileMenu.jsx'
 import Logo from './Logo.jsx'
-import Cart from '../pages/Shop/components/Cart.jsx'
+import { setIsCartOpen } from '../state/index.js'
 import '../App.css'
 
 // Array that features all navlinks required. Will use in .map component
@@ -14,17 +17,17 @@ const navigation = [
   {_id:105, title: 'CONTACT US', href: '/ContactUs'},
 ];
 
+const withouSidebarRoutes = ["/submit"];
+
 const Navbar = () => {
     const { pathname } = useLocation();
     const active = useLocation().pathname; // returns current location and url
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    // The duplicate is to grab the slice and state of cart
+    const cart = useSelector((state) => state.cart.cart);
 
     const [colour, setColour] = useState(false); // changes the state of colour upon scrolling
-    const [open, setOpen] = useState(false); // This opens and closes cart component
-
-    document.addEventListener("DOMContentLoaded", function(){
-      let node = document.querySelector('.preload');
-      node.classList.remove('.preload')
-    })
 
     useEffect(() => {
       const changeColour = () => {
@@ -34,7 +37,7 @@ const Navbar = () => {
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
         const isCareers = matchPath("/Careers", pathname)
-        const isProductPage = matchPath("/ProductPage", pathname)
+        const isItemDetails = matchPath("item/item:id", pathname)
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
@@ -48,7 +51,7 @@ const Navbar = () => {
             setColour(true)
         } else if (isCareers && window.scrollY >= 180) {
             setColour(true)
-        } else if (isProductPage && window.scrollY >= 0) {
+        } else if (isItemDetails && window.scrollY >= 0) {
             setColour(true)
         } else {
             setColour(false)
@@ -66,7 +69,7 @@ const Navbar = () => {
     }, [pathname])
     
   return (
-    <div className={`preload ${colour ? 'navbar navbarbg' : 'navbar'}`}>
+    <div className={`${colour ? 'navbar navbarbg' : 'navbar'}`}>
       <div className="nav-container">
         <Logo />
         <MobileMenu />
@@ -87,22 +90,37 @@ const Navbar = () => {
               ))
             }
           </ul>
-          <div 
-            className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }
-          >
-            <button onClick={() => setOpen(!open)}>
-              <ShoppingCart 
-                style={{
-                  position: 'absolute', 
-                  left: '6px', 
-                  top: '7px'
-                }}
-              />
-            </button>
+          <div className='cart-placement'>
+            <Badge
+              badgeContent={cart.length}
+              color="secondary"
+              invisible={cart.length === 0}
+              sx={{
+                "& .MuiBadge-badge": {
+                  right: 5,
+                  top: 4,
+                  padding: '0 4px',
+                  height: '14px',
+                  minWidth: '13px'
+                }
+              }}
+            >
+              <button 
+                className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` } 
+                onClick={() => dispatch(setIsCartOpen({}))}
+              >
+                <ShoppingCart 
+                  style={{
+                    position: 'absolute', 
+                    left: '6px', 
+                    top: '7px'
+                  }}
+                />
+              </button>
+            </Badge>
           </div>
         </div>
       </div>
-      {open && <Cart/>}
     </div>
   )
 }

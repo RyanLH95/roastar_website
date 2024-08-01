@@ -14,7 +14,7 @@ const Products = ({ items }) => {
                 className='product-card'
                 key={item.id}
               >
-                <Link to='/ProductPage'>
+                <Link to='/item/item:id'>
                   <div className='product-link'>
                     <img 
                       src={item.image}

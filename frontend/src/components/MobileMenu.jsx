@@ -25,7 +25,7 @@ const MobileMenu = () => {
         const menuIsMenu = matchPath("Menu", pathname);
         const menuContactUs = matchPath("ContactUs", pathname);
         const menuCareers = matchPath("Careers", pathname);
-        const menuProductPage = matchPath("/ProductPage", pathname)
+        const menuItemDetails = matchPath("item/item:id", pathname)
 
           if (menuHome && window.scrollY >= 650) {
             setMenu(true);
@@ -39,7 +39,7 @@ const MobileMenu = () => {
             setMenu(true);
         } else if (menuCareers && window.scrollY >= 180) {
             setMenu(true);
-        } else if (menuProductPage && window.scrollY >= 0) {
+        } else if (menuItemDetails && window.scrollY >= 0) {
             setMenu(true);
         } else {
             setMenu(false);
@@ -57,7 +57,6 @@ const MobileMenu = () => {
   return (
     <div className={`nav-list-mobile ${menu ? 'nav-list-mobile-beige nav-list-mobile-green' : 'nav-list-mobile-beige'}`}>
       <input name='menu' type='checkbox' />
-    
         <span></span>
         <span></span>
         <span></span>

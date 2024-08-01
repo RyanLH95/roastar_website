@@ -28,14 +28,6 @@ html,body,#root {
   flex: 1;
 }
 
-.preload * {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
 /* navbar.jsx CSS */
 .navbarbg {
   background-color: hsl(0, 0%, 100%, 90%);
@@ -65,18 +57,22 @@ html,body,#root {
 
 .item-container {
   text-align: center;
-  position: relative; 
-  left: 5vw;
+  position: relative;
+  top: -0.3em;
 }
 
 .nav-list {
   gap: 50px;
   list-style-type: none;
-  justify-content: center;
+  justify-content: right;
   font-size: larger;
   display: flex;
-  position: relative; top: 23px; left: 250px; 
-  transform: scale(1, 1.1)
+  flex-direction: row;
+  position: relative; 
+  padding-top: 1.4em;
+  margin-right: 7em;
+  transform: scale(1, 1.1);
+  letter-spacing: 1.5px;
 }
 
 /* For @media-query all and (max-width: 1000px) */
@@ -338,12 +334,20 @@ html,body,#root {
 */
 
 /* shopping-cart */
+.cart-placement {
+  position: relative;
+  top: -1.4em;
+  margin-right: 3em;
+  float: right;
+}
+
 .cart {
+  position: relative;
   text-align: center;
   z-index: 99;
 }
 
-.cart button {
+.cart {
   width: 40px;
   height: 40px;
   transform: scale(1);
@@ -353,15 +357,39 @@ html,body,#root {
   color: hsl(48, 54%, 89%);
   position: relative; 
   top: -8px; 
-  left: 558px;
 }
 
-.cart button:active {
+.cart:active {
   transition: transform 0ms !important;
-  transform: scale(1.05);
+  transform: scale(0.96);
 }
 
-.cart-beige button {
+.cart-amount {
+  position: absolute;
+  top: 0.4em;
+  left: 1.3em;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+}
+
+.cart-amount-beige {
+  color: black;
+  background: var(--main-beige);
+  transition: 
+    background 500ms,
+    color 500ms;
+}
+
+.cart-amount-black {
+  color: white;
+  background: black;
+  transition: 
+    background 500ms,
+    color 500ms;
+}
+
+.cart-beige {
   background-color: hsl(96, 24%, 44%, 0%);
   color: hsl(48, 54%, 89%);
   border: 1.5px solid hsl(48, 54%, 89%);;
@@ -371,7 +399,7 @@ html,body,#root {
     border 500ms;
 }
 
-.cart-beige button:hover {
+.cart-beige:hover {
   background-color: hsl(96, 24%, 44%);
   border: 1.5px solid hsl(0, 0%, 0%);
   color: hsl(0, 0%, 0%);
@@ -381,7 +409,12 @@ html,body,#root {
     border 500ms;
 }
 
-.cart-black button {
+.cart-beige:hover div {
+  color: white;
+  background: black;
+}
+
+.cart-black {
   color: hsl(0, 0%, 0%);
   background-color: hsl(48, 54%, 89%, 0%);
   border: 1.5px solid hsl(0, 0%, 0%);
@@ -391,7 +424,7 @@ html,body,#root {
     background-color 500ms;
 }
 
-.cart-black button:hover {
+.cart-black:hover {
   color: hsl(0, 0%, 0%);
   background-color: hsl(96, 24%, 44%);
   border: 1.5px solid hsl(0, 0%, 0%);
@@ -403,11 +436,11 @@ html,body,#root {
 
 /* For Cart.jsx/Cart-design */
 .cart-card {
-  position: relative;
   background-color: hsl(0, 0%, 100%, 90%);
-  margin-top: 1.04em;
+  margin-top: 2.15em;
+  position: absolute;
   padding: 2em;
-  float: right;
+  right: 0;
   box-shadow: 1px 1px 5px 1px hsl(0, 0%, 89%);
 }
 
@@ -672,19 +705,22 @@ html,body,#root {
   height: 70rem;
 }
 
+.submit-container, body, html {
+  height: 21.95rem;
+  
+}
+
+.submit-container {
+  background: grey;
+  height: 100%;
+  position: relative;
+  z-index: 120;
+}
+
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
   .contact-us-container, body, html {
     height: 115rem;
-  }
-
-  .careers-container, body, html {
-    height: 90rem;
-  }
-
-  .item-container {
-    position: relative;
-    left: -10vw;
   }
 }
 
@@ -715,14 +751,17 @@ html,body,#root {
   }
 
   .cart {
-    text-align: right;
+    text-align: center;
     position: relative;
-    top: 22px;
-    left: -33em;
+    top: 3em;
+  }
+
+  .cart-placement {
+    margin-right: 1em;
   }
 
   .cart-card {
-    margin-top: 2.45em;
+    margin-top: 5.03em;
   }
 
   .footer {
@@ -832,7 +871,7 @@ html,body,#root {
   }
 
   .careers-container, body, html {
-    height: 90rem;
+    height: 80rem;
   }
 }
 

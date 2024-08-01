@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { Link, useNavigate } from 'react-router-dom';
 
 const AppForm = () => {
   // To set focus on each input field and return error when field is not properly filled
   const [ focused, setFocused ] = React.useState({});
+  const navigate = useNavigate();
 
   // For file name
   const [ fileName, setFileName ] = useState('')
 
+  // Give the selected file a name when selected
   let handleFile = (file) => {
     setFileName(file?.name)
   }
@@ -36,23 +39,21 @@ const AppForm = () => {
   const [ phoneNumber, setPhoneNumber ] = useState('');
   const [ job, setJob ] = useState('');
   const [ rightToWork, setRightToWork ] = useState('');
-  const [ resume, setResume ] = useState('');
+  const [ resume, setResume ] = useState(0);
   
+  // This target each specific input field
   const handleBlur = (e) => {
     setFocused(prev => ({...prev, [e.target.name]: true}))
   }
 
+  // For focusing the input field for correct information
   const isFocused = (name) => {
     return focused[name] === true
   }
 
+  // This submits the form
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const reader = new FileReader();
-    reader.readAsDataURL(handleFile)
-
-    reader.onload = async () => {
 
     const serviceId = '';
     const templateId = '';
@@ -65,9 +66,9 @@ const AppForm = () => {
       from_phonenumber: phoneNumber,
       job: job,
       right_to_work: rightToWork,
-      resume: reader.result,
+      resume: resume,
       to_name: 'Lucy',
-    }
+    };
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
@@ -75,17 +76,17 @@ const AppForm = () => {
         setFirstName('');
         setLastName('');
         setEmail('');
-        setMessage('');
         setPhoneNumber('');
         setJob(true);
         setRightToWork(true);
-        setResume('');
+        setResume(0);
       })
       .catch((error) => {
         console.error('Error sending email:', error)
       })
-    console.log(form)
-    }
+    console.log()
+
+    navigate('/Submit');
   }
 
   return (
@@ -137,7 +138,6 @@ const AppForm = () => {
                 value={email}
                 placeholder='Email'
                 autoComplete='off'
-                pattern="^(\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)(44)\)?[\s-]?)?\(?0?(?:\)[\s-]?)?([1-9]\d{1,4}\)?[\d[\s-]]+)((?:x|ext\.?|\#)\d{3,4})?$"
                 onChange={(e) => setEmail(e.target.value)}
                 onBlur={handleBlur}
                 data-focused={isFocused('from_email').toString()}
@@ -148,11 +148,11 @@ const AppForm = () => {
             </div>
             <div className='phone-number'>
               <input
-                type='text'
+                type='tel'
                 name='from_phonenumber'
                 value={phoneNumber}
-                placeholder='Phone Number'
-                pattern="^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$"
+                placeholder='Phone no. e.g. +44 7'
+                pattern="[+]{1}[0-9]{11,14}"
                 autoComplete='off'
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 onBlur={handleBlur}
@@ -194,28 +194,36 @@ const AppForm = () => {
             </div>
             <div className='cv'>
               <button type='button' className="button-upload" onClick={handleClick}>
-                {fileName ? <p>{fileName}</p> : <p>Upload File</p>}
+                {fileName ? <p>{fileName}</p> : <p>Upload CV</p>}
               </button>
               <input
                 name='resume'
                 type="file"
                 accept='.pdf, .docx'
-                onChange={handleChange}
+                onChange={(e) => {
+                  handleChange(e);
+                  setResume(e.target.files[0]);
+                }}
                 ref={hiddenFileInput}
                 required
                 style={{ display: 'none'}}
               />
-              <span style={{position: 'relative', top: '0.6em'}}>Please upload file</span>
+              <span style={{position: 'relative', top: '0.6em'}}>Please upload cv</span>
             </div>
           </div>
-          <button 
-            disabled={!firstName | !lastName | !email | !phoneNumber | !job | !rightToWork | !resume }
-            type='submit' 
-            className='submit-btn'
-            onClick={handleSubmit}
+          <Link 
+            to='/Submit'
+            reloadDocument
           >
-            <span>Submit</span>
-          </button>
+            <button 
+              disabled={!firstName | !lastName | !email | !phoneNumber | !job | !rightToWork | !resume }
+              type='button' 
+              className='submit-btn'
+              onClick={(e) => handleSubmit(e)}
+            >
+              <span>SUBMIT</span>
+            </button>
+          </Link>
         </form>
       </div>
     </>

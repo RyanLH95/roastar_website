@@ -12,12 +12,23 @@ const Card = () => {
         <div className='company-info'>
           <div className='card-address'>
             <Map 
-              style={{position: 'relative', top: '25px', left: '-120px'}}
-              />
+              style={{
+                position: 'relative', 
+                top: '25px', 
+                left: '-8em'
+              }}
+            />
                 <p>8 East St, Bromley, BR1 1QX</p>
           </div>
           <div className=''>
-            <Phone size={20} style={{position: 'relative', top: '23px', left: '-90px'}}/>
+            <Phone 
+              size={20} 
+              style={{
+                position: 'relative', 
+                top: '23px', 
+                left: '-6em'
+              }}
+            />
             <p className='phone'>+44 020 4559 2984</p>
           </div>
           <div className='socials-info'>

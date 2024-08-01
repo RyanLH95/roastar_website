@@ -15,7 +15,7 @@
 .app-container {
   background: white;
   width: 88%;
-  height: 65em;
+  height:100%;
 }
 
 .app-content {
@@ -72,12 +72,14 @@
 }
 
 .apply-btn {
-  font-size: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
   cursor: pointer;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 3px;
   border: none;
-  padding: 15px;
+  padding: 20px 40px;
   background: #1c8d58;
   color: white;
   margin-top: 5em;
@@ -85,8 +87,13 @@
   transition: background 300ms;
 }
 
+.apply-btn:hover {
+  background: hsla(0, 0%, 92%, 0.3);
+  transition: background 300ms;
+}
+
 .apply-btn:active {
-  transform: scale(0.98)
+  transform: scale(0.98);
 }
 
 .application {
@@ -101,7 +108,7 @@
 }
 
 .application, body:has(.no-scroll) {
-  overflow-y: hidden;
+  display: block;
 }
 
 @keyframes dropTop {
@@ -229,6 +236,18 @@
   width: 80%;
   border: 1px solid hsl(0, 0%, 0%, 30%);
   border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-content select:invalid[data-focused="true"] ~ span {
+  padding-left: 4.3vw;
+  text-align: left;
+  position: relative;
+  top: 0.3em;
+  font-size: 12px;
+  display: block;
+  color: red;
 }
 
 .form-content option {
@@ -274,13 +293,15 @@
   border-radius: 5px;
   color: white;
   background: var(--btn-green);
-  box-shadow: 2px 2px 5px 1px var(--btn-green);
+  box-shadow: 1px 1px 5px 1px var(--btn-green);
 }
 
 .button-upload p {
   position: relative;
   top: -0.5em;
   font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
   text-align: center;
 }
 
@@ -306,18 +327,18 @@
 
 .submit-btn {
   position: fixed;
-  top: 35em;
+  top: 40rem;
   margin-top: 0em;
-  margin-left: -2.1em;
-  font-size: 18px;
+  margin-left: -3em;
+  margin-right: -3em;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 4px;
+  letter-spacing: 1.5px;
   border: none;
   padding: 10px;
   background: #1c8d58;
   color: white;
   transition: background 300ms;
-  box-shadow: 1px 1px 2px 1px var(--btn-green);
 }
 
 .submit-btn:disabled {
@@ -340,7 +361,6 @@
   }
 
   .app-text {
-    margin-right: 2em;
     text-align: center;
   }
 
@@ -357,20 +377,38 @@
   .form-content input:invalid[data-focused="true"] ~ span {
     padding-left: 6.3vw;
   }
+
+  .form-content select:invalid[data-focused="true"] ~ span {
+    padding-left: 6.3vw;
+  }
 }
 
 @media all and (max-width: 600px) {
+  .app-content h2 {
+    position: relative;
+    top: 3.8em;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+  }
+  
   .close-div {
     left: 80%;
     right: 80%;
   }
 
   .app-card {
-    left: 10%;
-    width: 80%;
+    left: 5%;
+    width: 90%;
   }
 
   .form-content input:invalid[data-focused="true"] ~ span {
+    padding-left: 9.3vw;
+  }
+
+  .form-content select:invalid[data-focused="true"] ~ span {
     padding-left: 9.3vw;
   }
 }

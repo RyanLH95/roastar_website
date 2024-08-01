@@ -1,10 +1,6 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
 import { NavLink, matchPath, useLocation } from 'react-router-dom'
-import { Transition } from 'react-transition-group'
 import '../App.css'
-import '../../public/logo/Logo ROASTAR-green.PNG'
 
 const Logo = () => {
   const [logo, setLogo] = useState(false);
@@ -16,7 +12,7 @@ const Logo = () => {
   const logoMenu = matchPath("/Menu", pathname);
   const logoContactUs = matchPath("/ContactUs", pathname);
   const logoCareers = matchPath("/Careers", pathname);
-  const logoProductPage = matchPath("/ProductPage", pathname);
+  const logoItemDetails = matchPath("item/item:id", pathname);
 
   
   useEffect(() => {
@@ -33,7 +29,7 @@ const Logo = () => {
         setLogo(true);
       } else if (logoCareers && window.scrollY >= 180){
         setLogo(true);
-      } else if (logoProductPage && window.scrollY >= 0){
+      } else if (logoItemDetails && window.scrollY >= 0){
         setLogo(true);
       } else {
         setLogo(false);
@@ -53,14 +49,14 @@ const Logo = () => {
       <div className="logo">
         <NavLink reloadDocument to='/'>
           <img 
-            src={logo ? "../../../logo/Logo ROASTAR-green.PNG" : "../../../logo/Logo ROASTAR-white.PNG"}
+            src={logo ? "../../../../logo/Logo ROASTAR-green.PNG" : "../../../../logo/Logo ROASTAR-white.PNG"}
             alt="roastar-logo green"
             className='roastar-logo green'
             height={50}
             width={150}  
           />
           <img 
-            src={logo ? "../../../logo/Logo ROASTAR-black.PNG" : "../../../logo/Logo ROASTAR-beige.PNG"}
+            src={logo ? "../../../../logo/Logo ROASTAR-black.PNG" : "../../../../logo/Logo ROASTAR-beige.PNG"}
             alt="roastar-logo-black/beige"
             className='roastar-logo beige'
             height={50}

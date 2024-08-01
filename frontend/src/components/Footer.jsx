@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Instagram, Facebook, Copyright, Phone } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { Instagram, Facebook, Copyright } from 'lucide-react'
 import '../App.css'
 
+const withouSidebarRoutes = ["/submit"];
+
 const Footer = () => {
-   
+  const { pathname } = useLocation();
+
   return (
     <footer className='footer'>
       <div className='footer-container'>
@@ -40,7 +43,6 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-
         <div className='footer-nav'>
           <div className={`footer-links`}>
             <Link 
@@ -77,7 +79,7 @@ const Footer = () => {
           <div className={`footer-links`}>
             <Link 
               reloadDocument 
-              to={'/Shop'} 
+              to={'/'} 
             >
               PRIVACY NOTICE
             </Link>
@@ -90,12 +92,18 @@ const Footer = () => {
                 left: '5px',
                 fontSize: '12px'
               }}>
-              <Copyright size={12}style={{position: 'relative', top: '1.5px', left: '-5px'}}/>Copyright 2024. Roastar Coffee. All Rights Reserved
+              <Copyright 
+                size={12}
+                style={{
+                  position: 'relative',
+                  top: '1.5px',
+                  left: '-5px'
+                }}
+              />
+                Copyright 2024. Roastar Coffee. All Rights Reserved
             </span>
           </div>
         </div>
-
-        
       </div>
     </footer>
   )

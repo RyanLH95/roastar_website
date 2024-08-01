@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import AppContent from './AppContent'
 
 const Application = () => {
@@ -23,7 +23,7 @@ const Application = () => {
              you the ways of Roastery styled coffee.
           </p>
           <div className='apply'>
-            <p>Interested? Send CV to email down here:</p>
+            <p>Interested? Apply down below.</p>
             <AppContent />
           </div>
         </div>
