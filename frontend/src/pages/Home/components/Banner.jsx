@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from 'react'
 import { slideone, slidetwo, slidethree } from '../../../assets/slider/index.js'
 import Slider from 'react-slick'
