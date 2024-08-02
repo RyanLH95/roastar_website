@@ -334,20 +334,20 @@ html,body,#root {
 */
 
 /* shopping-cart */
-.cart-placement {
+.cart {
   position: relative;
   top: -1.4em;
   margin-right: 3em;
   float: right;
 }
 
-.cart {
+.cart-btn {
   position: relative;
   text-align: center;
   z-index: 99;
 }
 
-.cart {
+.cart-btn {
   width: 40px;
   height: 40px;
   transform: scale(1);
@@ -359,34 +359,9 @@ html,body,#root {
   top: -8px; 
 }
 
-.cart:active {
+.cart-btn:active {
   transition: transform 0ms !important;
   transform: scale(0.96);
-}
-
-.cart-amount {
-  position: absolute;
-  top: 0.4em;
-  left: 1.3em;
-  height: 17px;
-  width: 17px;
-  border-radius: 50%;
-}
-
-.cart-amount-beige {
-  color: black;
-  background: var(--main-beige);
-  transition: 
-    background 500ms,
-    color 500ms;
-}
-
-.cart-amount-black {
-  color: white;
-  background: black;
-  transition: 
-    background 500ms,
-    color 500ms;
 }
 
 .cart-beige {
@@ -434,103 +409,28 @@ html,body,#root {
     background-color 500ms;
 }
 
+.cart-backdrop {
+  display: block;
+  background:rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+
 /* For Cart.jsx/Cart-design */
 .cart-card {
-  background-color: hsl(0, 0%, 100%, 90%);
-  margin-top: 2.15em;
-  position: absolute;
-  padding: 2em;
+  background: white;
+  position: fixed;
   right: 0;
+  bottom: 0;
+  width: max(400px, 30%);
+  height: 100%;
+  z-index: 102;
   box-shadow: 1px 1px 5px 1px hsl(0, 0%, 89%);
-}
-
-.cart-container {
-  margin-top: -1em;
-  display: flex;
-  flex-direction: column;
-}
-
-.cart-container h2 {
-  text-align: center;
-  color: var(--main-green);
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 1em;
-}
-
-.item {
-  display: flex;
-  gap: 10px;
-}
-
-.item img {
-  margin-bottom: 1em;
-  object-fit: contain;
-}
-
-.item p {
-  margin-top: 0.5em;
-}
-
-.item-info {
-  padding-top: 0.2em;
-}
-
-.item-info h3 {
-  font-size: 14px;
-  font-weight: 200;
-}
-
-.item-info p {
-  margin-top: 2em;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-
-.total {
-  display: flex;
-  gap: 12em;
-  margin-bottom: 1em;
-}
-
-.total span {
-  font-weight: 200;
-}
-
-.total p {
-  font-weight: 300;
-}
-
-.checkout {
-  border-radius: 5px;
-  border: 3px solid hsla(152, 63%, 33%, 0.1);
-  font-weight: 200;
-  background: var(--btn-green);
-  color: white;
-  cursor: pointer;
-  box-shadow: 1px 1px 5px var(--btn-green);
-  margin-bottom: 1em;
-}
-
-.checkout:active {
-  transform: scale(0.99);
-  box-shadow: 0px 0px 2px var(--btn-green);
-}
-
-.reset {
-  cursor: pointer;
-  margin-top: 1em;
-  text-align: left;
-  background: none;
-  border: none;
-  font-size: 11px;
-  color: red;
-  margin-right: 20em;
-}
-
-.reset:active {
-  transform: scale(0.98);
 }
 
 /* Logo.jsx CSS */

@@ -90,7 +90,7 @@ const Navbar = () => {
               ))
             }
           </ul>
-          <div className='cart-placement'>
+          <div className='cart'>
             <Badge
               badgeContent={cart.length}
               color="secondary"
@@ -106,7 +106,7 @@ const Navbar = () => {
               }}
             >
               <button 
-                className={`cart ${colour ? 'cart-beige cart-black' : 'cart-beige'}` } 
+                className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` } 
                 onClick={() => dispatch(setIsCartOpen({}))}
               >
                 <ShoppingCart 
