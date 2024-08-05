@@ -47,7 +47,6 @@
   font-size: 34px;
   font-weight: 300;
   color: var(--main-green);
-  text-shadow: 5px 5px 10px var(--main-green);
 }
 
 .text-container-one p {
@@ -88,7 +87,6 @@
   font-size: 34px;
   font-weight: 300;
   color: var(--main-green);
-  text-shadow: 5px 5px 10px var(--main-green);
 }
 
 .bottom-section-text p {

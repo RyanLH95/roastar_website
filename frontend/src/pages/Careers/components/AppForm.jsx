@@ -1,8 +1,12 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
+import { X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Backdrop from '../../../assets/popups/application/Backdrop';
+import { animate } from '../../../assets/popups/application/animation';
 
-const AppForm = () => {
+const AppForm = ({ handleClose }) => {
   // To set focus on each input field and return error when field is not properly filled
   const [ focused, setFocused ] = React.useState({});
   const navigate = useNavigate();
@@ -90,8 +94,21 @@ const AppForm = () => {
   }
 
   return (
-    <>
-      <div className='app-card'>
+    <Backdrop>
+      <motion.div 
+        onClick={(e) => e.stopPropagation()}
+        className='app-card'
+        variants={animate}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <button
+          onClick={handleClose}
+          className='app-btn'
+        >
+          <X size={30}/>
+        </button>
         <img 
           src='../../../../logo/Logo ROASTAR-white.PNG'
           width={150}
@@ -225,8 +242,8 @@ const AppForm = () => {
             </button>
           </Link>
         </form>
-      </div>
-    </>
+      </motion.div>
+    </Backdrop>
   )
 }
 

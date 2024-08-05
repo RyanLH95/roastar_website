@@ -4,10 +4,10 @@ import { Badge, Box, IconButton } from '@mui/material'
 import { matchPath, useLocation, NavLink, useNavigate } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import { shades } from '../theme.js'
-import MobileMenu from './MobileMenu.jsx'
 import Logo from './Logo.jsx'
 import { setIsCartOpen } from '../state/index.js'
 import '../App.css'
+import MobileNav from './MobileNav.jsx'
 
 // Array that features all navlinks required. Will use in .map component
 const navigation = [ 
@@ -57,7 +57,6 @@ const Navbar = () => {
             setColour(false)
         }
       }; 
-    
       
       // invoke once to check in case page is already scrolled down when rendering
       changeColour();
@@ -72,7 +71,7 @@ const Navbar = () => {
     <div className={`${colour ? 'navbar navbarbg' : 'navbar'}`}>
       <div className="nav-container">
         <Logo />
-        <MobileMenu />
+        <MobileNav />
         <div className='item-container'>
           <ul className={`nav-list ${colour ? 'nav-list-beige nav-list-green' : 'nav-list-beige'}`}>
             {

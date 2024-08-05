@@ -78,14 +78,17 @@ html,body,#root {
 /* For @media-query all and (max-width: 1000px) */
 
 /* hamburger menu main div from MobileMenu.jsx */
+
 .nav-list-mobile {
   position: absolute;
   display: none;
   -webkit-user-select: none;
   user-select: none;
-  z-index: 100;
+  z-index: 103;
   top: 23px;
   left: 20px;
+  background: none;
+  border: none;
 }
 
 .nav-list-mobile a {
@@ -100,16 +103,14 @@ html,body,#root {
 
 .nav-list-mobile input {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   top: -7px;
-  left: -5px;
+  left: 0px;
   cursor: pointer;
-  
   opacity: 0; /* hide this */
   z-index: 101; /* and place it over the hamburger */
-  
   -webkit-touch-callout: none;
 }
 
@@ -157,50 +158,51 @@ html,body,#root {
 /* this will transform all of the hamburger slices into a crossmark */
 .nav-list-mobile input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(-45deg) translate(-2px, -2px) scale(1, 1);
   background: #232323;
 }
 
 /* this selector will hide the middle span tag when clicked */
-.nav-list-mobile input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.nav-list-mobile span:active {
+.nav-list-mobile:active {
   transform: scale(0.95);
 }
 
 /* this selector is to make the second span tag go the opposite direction when activated */
 .nav-list-mobile input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg);
+  opacity: 0;
+  transform: rotate(0deg);
   translate:(0, -1px);
+  transition: 200ms;
 }
 
-.mobile-menu {
+.nav-list-mobile input:checked ~ span:nth-last-child(3) {
+  opacity: 1;
+  transform: rotate(45deg) scale(1, 1);
+}
+
+.mobile-backdrop {
   position: fixed;
-  width: 1000px;
-  height: 1044px;
-  margin: -100px 0 0 -20px;
-  padding: 50px;
-  padding-top: 125px;
+  width: 100%;
+  height: 105vh;
   background: hsl(50, 100%, 99%);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0%);
-  transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  z-index: 102;
 }
 
-.mobile-menu li {
-  position: relative;
+.mobile-nav {
   text-align: center;
-  padding: 20px 0;
-  font-size: 32px;
+  margin-top: 5em;
 }
 
-.mobile-menu a {
-  margin-right: 0;
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 28px;
+}
+
+.mobile-nav-list a {
+  color: black;
+  text-decoration: none;
 }
 
 .nav-list-mobile input:checked ~ ul {
@@ -619,8 +621,14 @@ html,body,#root {
 
 /* for mobile and tablet devices */
 @media all and (max-width: 1250px) {
-  .contact-us-container, body, html {
+  .contact-us-container {
     height: 115rem;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .mobile-backdrop {
+    display: none;
   }
 }
 
@@ -651,13 +659,14 @@ html,body,#root {
   }
 
   .cart {
+    margin-right: 1em;
+    float: right;
+  }  
+
+  .cart-btn {
     text-align: center;
     position: relative;
-    top: 3em;
-  }
-
-  .cart-placement {
-    margin-right: 1em;
+    top: 3.2em;
   }
 
   .cart-card {

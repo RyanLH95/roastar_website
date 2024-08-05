@@ -1,41 +1,26 @@
-import React, { useState } from 'react'
-import { X } from 'lucide-react'
+import React, { useState, useCallback } from 'react'
+import { AnimatePresence } from 'framer-motion';
 import AppForm from './AppForm';
 
 const AppContent = () => {
-    const [ showForm, setShowForm ] = useState(false);
+    const [ applicationOpen, setApplicationOpen ] = useState(false);
 
-    const handleClick = () => {
-        setShowForm(!showForm)
-    }
-  
+    const toggleApplication = useCallback(() => {
+      setApplicationOpen((prev) => !prev);
+    }, [])
+    
   return (
     <>
       <button 
         className='apply-btn'
-        onClick={handleClick}
+        onClick={toggleApplication}
       >
         APPLY HERE
       </button>
-
-      {showForm && (
-        <div 
-          className='application no-scroll'
-          style={{animation:'dropTop .3s linear'}}
-        >
-          <div 
-            className='close-div'
-          >
-            <button 
-              className='close-btn'
-              onClick={handleClick}
-            >
-              <X size={30}/>
-            </button>
-          </div>
-          <AppForm />
-        </div>
-      )}
+       
+      <AnimatePresence>
+        {applicationOpen && <AppForm applicationOpen={applicationOpen} handleClose={toggleApplication}/>}
+      </AnimatePresence>
     </>
   )
 }

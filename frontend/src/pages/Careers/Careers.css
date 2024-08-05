@@ -15,7 +15,7 @@
 .app-container {
   background: white;
   width: 88%;
-  height:100%;
+  height: 100%;
 }
 
 .app-content {
@@ -96,8 +96,7 @@
   transform: scale(0.98);
 }
 
-.application {
-  display: block;
+.application-backdrop {
   background: hsl(0, 0%, 0%, 40%);
   position: fixed;
   width: 100%;
@@ -105,19 +104,6 @@
   top: 0em;
   left: 0em;
   z-index: 102;
-}
-
-.application, body:has(.no-scroll) {
-  display: block;
-}
-
-@keyframes dropTop {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .app-card {
@@ -132,45 +118,27 @@
   z-index: 102;
 }
 
-.app-card img {
-  padding-top: 0.4em;
+/* to close application form */
+.app-card .app-btn {
+  float: right;
+  margin-top: 1.3em;
+  margin-right: 1em;
 }
 
-.close-div {
-  position: inherit;
-  text-align: center;
-  left: 66%;
-  right: 66%;
-  padding-top: 2.2em;
-  z-index: 103;
-}
-
-@keyframes close {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.close-btn {
+.app-btn {
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
+  color: white;
 }
 
-.close-btn:active {
-  height: 32px;
+.app-btn:active {
   transform: scale(0.90);
-  position: relative;
-  top: -0.10em;
-  left: -0.09em;
-  box-shadow: .5px .5px 10px;
-  border: 1px solid hsl(0, 0%, 100%, 10%);
-  border-radius: 10px;
-  padding-bottom: -2em;
+}
+
+.app-card img {
+  padding-top: 0.4em;
+  margin-left: 2.5em;
 }
 
 .app-form {
@@ -326,8 +294,8 @@
 }
 
 .submit-btn {
-  position: fixed;
-  top: 40rem;
+  position: absolute;
+  top: 39rem;
   margin-top: 0em;
   margin-left: -3em;
   margin-right: -3em;
