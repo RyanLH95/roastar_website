@@ -7,7 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import { shades } from '../../theme.js';
 import { addToCart } from '../../state/index.js';
 import { useParams } from 'react-router-dom';
-import Item from '../../components/Item.jsx';
+import Item from '../../components/Item';
 import './ItemDetails.css'
 import '../../App.css'
 
@@ -158,78 +158,3 @@ const ItemDetails = () => {
 }
 
 export default ItemDetails
-
-/*
-
-          COUNT AND BUTTON 
-          <Box display="flex" alignItems="center" minHeight="50px">
-            <Box 
-              display="flex" 
-              alignItems="center" 
-              border={`1.5px solid ${shades.neutral[300]}`} 
-              mr="20px"
-              p="2px 5px"
-            >
-              <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
-                <RemoveIcon />
-              </IconButton>
-              <p style={{ padding: '0 5px' }}>{count}</p>
-              <IconButton onClick={() => setCount(count + 1)}>
-                <AddIcon />
-              </IconButton>
-            </Box>
-            <Button
-              style={{ 
-                backgroundColor: "var(--btn-green)",
-                color: 'white',
-                borderRadius: 0,
-                minWidth: '150px',
-                padding: '10px 40px'
-              }}
-              onClick={() => dispatch(addToCart({ item: {...item, count}}))}
-            >
-              ADD TO CART
-            </Button>
-          </Box>
-
-          <Box>
-            <Box m="20px 0 5px 0" display="flex">
-              <FavoriteBorderOutlinedIcon />
-              <p style={{ marginLeft: "5px"}}>ADD TO WISHLIST</p>
-            </Box>
-            <p>CATEGORIES: {item?.attributes?.category}</p>
-          </Box>
-        </Box>
-      
-
-       INFORMATION 
-      <Box m="20px 0">
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="DESCRIPTION" value="description" />
-          <Tab label="REVIEWS" value="reviews" />
-        </Tabs>
-      </Box>
-      <Box display="flex" flexWrap="wrap" gap="15px">
-        {value === "description" && (
-          <div>{item?.attributes?.longDescription}</div>
-        )}
-        {value === "reviews" && <div>reviews</div>}
-      </Box>
-
-      RELATED ITEMS 
-      <Box mt="50px" width="100%">
-        <p style={{ fontWeight: "bold" }}>
-          Related Products
-        </p>
-        <Box
-          mt="20px"
-          display="flex"
-          flexWrap="wrap"
-          columnGap="1.33%"
-          justifyContent="space-between"
-        >
-          {items.slice(0,4).map((item, i) => (
-            <Item key={`${item.name}-${i}`} item={item} />
-          ))}
-        </Box>
-*/
