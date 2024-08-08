@@ -103,7 +103,7 @@ const Cart = () => {
                         >
                           <RemoveIcon />
                         </IconButton>
-                        <p style={{invisible: item.count === 1}}>{item.count}</p>
+                        <p>{item.count}</p>
                         <IconButton
                           onClick={() => dispatch(increaseCount({ id: item.id }))}
                         >
