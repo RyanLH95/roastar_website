@@ -26,7 +26,7 @@ const MobileNav = () => {
         const menuIsMenu = matchPath("Menu", pathname);
         const menuContactUs = matchPath("ContactUs", pathname);
         const menuCareers = matchPath("Careers", pathname);
-        const menuItemDetails = matchPath("item/item:id", pathname)
+        const menuItemDetails = matchPath("item/:itemId", pathname)
 
         // px to determine when change colour activates
           if (menuHome && window.scrollY >= 650) {

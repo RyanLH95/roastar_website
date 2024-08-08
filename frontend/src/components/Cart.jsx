@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { X } from 'lucide-react'
-import { Box, Button, IconButton } from '@mui/material'
+import { Box, Button, Divider, IconButton } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -28,8 +28,8 @@ const Cart = () => {
   const isCartOpen = useSelector((state) => state.cart.isCartOpen)
 
   const totalPrice = cart.reduce((total, item) => {
-    return total + item.attributes.price
-  }, 0)
+    return total + item.count * item.attributes.price;
+  }, 0);
 
   return (
     <Box 
@@ -76,7 +76,7 @@ const Cart = () => {
                     <img
                       alt={item?.name}
                       width="123px"
-                      height="164px"
+                      height="123px"
                       src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                     />
                   </Box>
@@ -103,7 +103,7 @@ const Cart = () => {
                         >
                           <RemoveIcon />
                         </IconButton>
-                        <p>{item.count}</p>
+                        <p style={{invisible: item.count === 1}}>{item.count}</p>
                         <IconButton
                           onClick={() => dispatch(increaseCount({ id: item.id }))}
                         >

@@ -8,7 +8,7 @@ import Menu from './pages/Menu/Menu'
 import Shop from './pages/Shop/Shop'
 import ContactUs from './pages/ContactUs/ContactUs'
 import Careers from './pages/Careers/Careers'
-import ItemDetails from './itemDetails/ItemDetails'
+import ItemDetails from './pages/itemDetails/ItemDetails'
 import Checkout from './checkout/Checkout'
 import Confirmation from './checkout/Confirmation'
 import Cart from './components/Cart'
@@ -29,7 +29,7 @@ function App() {
           <Route path='/Careers' element={<Careers />}/>
           <Route path='submit' element={<Submit />}/>
           {/* Ecommerce pages */}
-          <Route path='item/item:id' element={<ItemDetails />}/>
+          <Route path='item/:itemId' element={<ItemDetails />}/>
           <Route path='checkout' element={<Checkout />}/>
           <Route path='checkout/success' element={<Confirmation />}/>
         </Routes>

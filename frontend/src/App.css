@@ -591,6 +591,11 @@ html,body,#root {
   background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
 }
 
+/* ItemDetails */
+.item-details-container, body, html {
+  height: 120rem;
+}
+
 .careers-container, body, html {
   height: 80rem;
 }
@@ -609,7 +614,6 @@ html,body,#root {
 
 .submit-container, body, html {
   height: 21.95rem;
-  
 }
 
 .submit-container {
@@ -669,10 +673,10 @@ html,body,#root {
     top: 3.2em;
   }
 
-  .cart-card {
-    margin-top: 5.03em;
+  .cart-badge {
+    display: block;
   }
-
+  
   .footer {
     position: relative;
     height: 550px; 

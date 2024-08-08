@@ -12,7 +12,7 @@ const Logo = () => {
   const logoMenu = matchPath("/Menu", pathname);
   const logoContactUs = matchPath("/ContactUs", pathname);
   const logoCareers = matchPath("/Careers", pathname);
-  const logoItemDetails = matchPath("item/item:id", pathname);
+  const logoItemDetails = matchPath("item/:itemId", pathname);
 
   
   useEffect(() => {

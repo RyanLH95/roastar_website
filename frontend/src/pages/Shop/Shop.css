@@ -13,7 +13,8 @@
   padding-top: 2em;
   font-size: 40px;
   font-weight: 200;
-  color: var(--main-beige)
+  color: var(--main-beige);
+  letter-spacing: 2px;
 }
 
 .product-container {
@@ -25,15 +26,16 @@
 .product-content {
   text-align: center;
   padding: 3em;
-  padding-top: 5em;
+  padding-top: 1em;
 }
 
 .product-grid {
-  gap: 2rem;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: space-around;
+  row-gap: 20px;
+  column-gap: 1.33%;
 }
 
 .product-grid a {

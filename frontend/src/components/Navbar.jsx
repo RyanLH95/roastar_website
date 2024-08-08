@@ -37,7 +37,7 @@ const Navbar = () => {
         const isMenu = matchPath("/Menu", pathname)
         const isContactUs = matchPath("/ContactUs", pathname)
         const isCareers = matchPath("/Careers", pathname)
-        const isItemDetails = matchPath("item/item:id", pathname)
+        const isItemDetails = matchPath("item/:itemId", pathname)
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
@@ -91,16 +91,18 @@ const Navbar = () => {
           </ul>
           <div className='cart'>
             <Badge
+              className='cart-badge'
               badgeContent={cart.length}
               color="secondary"
               invisible={cart.length === 0}
               sx={{
                 "& .MuiBadge-badge": {
-                  right: 5,
-                  top: 4,
+                  right: 12,
+                  top: 5,
                   padding: '0 4px',
                   height: '14px',
-                  minWidth: '13px'
+                  minWidth: '13px',
+                  zIndex: 100,
                 }
               }}
             >
