@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setItems } from '../../../state'
 import Item from '../../../components/Item'
-import { Box, Tab, Tabs, useMediaQuery } from '@mui/material'
+import { Tab, Tabs, useMediaQuery } from '@mui/material'
 
 const Products = () => {
   const dispatch = useDispatch();
