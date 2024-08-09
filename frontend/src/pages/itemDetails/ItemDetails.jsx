@@ -7,7 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import { shades } from '../../theme.js';
 import { addToCart } from '../../state/index.js';
 import { useParams } from 'react-router-dom';
-import Item from '../../components/Item';
+import Item from '../../components/Item'
 import './ItemDetails.css'
 import '../../App.css'
 
