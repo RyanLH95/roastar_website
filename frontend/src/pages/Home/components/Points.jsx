@@ -4,7 +4,7 @@ const Points = () => {
   return (
     <div className='points-container'>
       <div className='points-title'>
-        <h2>THE TATSE OF VIETNAM AT YOUR DOORSTEP!</h2>
+        <h2>THE TASTE OF VIETNAM AT YOUR DOORSTEP!</h2>
       </div>
       <div className='points-banner'>
         <img 
