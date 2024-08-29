@@ -104,7 +104,7 @@ html,body,#root {
 .nav-list-mobile input {
   display: block;
   width: 35px;
-  height: 35px;
+  height: 28px;
   position: absolute;
   top: -7px;
   left: 0px;
@@ -120,8 +120,8 @@ html,body,#root {
 
 .nav-list-mobile span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 28px;
+  height: 2px;
   margin-bottom: 5px;
   position: relative;
   border-radius: 3px;
@@ -158,7 +158,7 @@ html,body,#root {
 /* this will transform all of the hamburger slices into a crossmark */
 .nav-list-mobile input:checked ~ span {
   opacity: 1;
-  transform: rotate(-45deg) translate(-2px, -2px) scale(1, 1);
+  transform: rotate(-43deg) translate(-2px, -2px) scale(.94, 1);
   background: #232323;
 }
 
@@ -177,7 +177,7 @@ html,body,#root {
 
 .nav-list-mobile input:checked ~ span:nth-last-child(3) {
   opacity: 1;
-  transform: rotate(45deg) scale(1, 1);
+  transform: rotate(45deg) scale(.94, 1) translate(.5px, .5px);
 }
 
 .mobile-backdrop {
@@ -576,7 +576,7 @@ html,body,#root {
 }
 
 .about-us-container, body, html {
-  height: 125rem;
+  height: 135rem;
 }
 
 .about-us-container {

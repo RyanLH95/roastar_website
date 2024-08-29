@@ -5,7 +5,6 @@ import { matchPath, useLocation, NavLink, useNavigate } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import { shades } from '../theme.js'
 import Logo from './Logo.jsx'
-import { setIsCartOpen } from '../state/index.js'
 import '../App.css'
 import MobileNav from './MobileNav.jsx'
 
@@ -22,10 +21,6 @@ const withouSidebarRoutes = ["/submit"];
 const Navbar = () => {
     const { pathname } = useLocation();
     const active = useLocation().pathname; // returns current location and url
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    // The duplicate is to grab the slice and state of cart
-    const cart = useSelector((state) => state.cart.cart);
 
     const [colour, setColour] = useState(false); // changes the state of colour upon scrolling
 
@@ -41,7 +36,7 @@ const Navbar = () => {
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
-        } else if (isAboutUs && window.scrollY >= 0) {
+        } else if (isAboutUs && window.scrollY >= 280) {
             setColour(true)
         } else if (isShop && window.scrollY >= 0) {
             setColour(true)
@@ -92,9 +87,7 @@ const Navbar = () => {
           <div className='cart'>
             <Badge
               className='cart-badge'
-              badgeContent={cart.length}
               color="secondary"
-              invisible={cart.length === 0}
               sx={{
                 "& .MuiBadge-badge": {
                   right: 12,
@@ -106,10 +99,7 @@ const Navbar = () => {
                 }
               }}
             >
-              <button 
-                className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` } 
-                onClick={() => dispatch(setIsCartOpen({}))}
-              >
+              <button className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
                 <ShoppingCart 
                   style={{
                     position: 'absolute', 

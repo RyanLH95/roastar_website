@@ -19,7 +19,7 @@ const Logo = () => {
     const changeLogo = () => {
       if (logoHome && window.scrollY >= 650) {
         setLogo(true);
-      } else if (logoAboutUs && window.scrollY >= 0){
+      } else if (logoAboutUs && window.scrollY >= 280){
         setLogo(true);
       } else if (logoShop && window.scrollY >= 0){
         setLogo(true);

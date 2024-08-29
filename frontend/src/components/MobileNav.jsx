@@ -31,7 +31,7 @@ const MobileNav = () => {
         // px to determine when change colour activates
           if (menuHome && window.scrollY >= 650) {
             setMenu(true);
-        } else if (menuAboutUs && window.scrollY >= 0) {
+        } else if (menuAboutUs && window.scrollY >= 250) {
             setMenu(true);
         } else if (menuShop && window.scrollY >= 0) {
             setMenu(true);
