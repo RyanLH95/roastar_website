@@ -183,9 +183,10 @@
 }
 
 .close:active {
-  transform: scale(0.95);
+  transform: scale(0.90);
   outline: 1px solid transparent;
   box-shadow: 1px 1px 5px 1px var(--main-green);
+  border-radius: 20%;
 }
 
 /* content inside of Backdrop.jsx */
@@ -221,7 +222,7 @@
   background: white;
   border-radius: 45px;
   height: 12.5rem;
-  width: 12.3rem;
+  width: 12.5rem;
   box-shadow: 3px 3px 10px 3px hsl(0, 0%, 21%, 30%);
 }
 
@@ -248,7 +249,7 @@
 
 .desc-container {
   background-image: linear-gradient(#fff, var(--main-green));
-  height: 42em;
+  height: 47em;
 }
 
 .desc-content {
@@ -257,7 +258,11 @@
 }
 
 .desc-content img {
+  border: 2px solid var(--hover-beige);
+  position: relative;
+  top: 3em;
   object-fit: cover;
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 30%);
 }
 
 .desc-text {
@@ -313,6 +318,60 @@
   color: var(--main-beige);
 }
 
+/* For Specialty.jsx */
+.specialty-container {
+  margin-top: 0em;
+  text-align: center;
+  height: 70em;
+  background: var(--main-black);
+}
+
+.specialty-content {
+  position: relative;
+  top: 2em;
+}
+
+.specialty-text {
+  position: relative;
+  top: 5em;
+  z-index: 10;
+}
+
+.specialty-text h1 {
+  color: var(--main-beige);
+  text-align: center;
+  font-weight: 200;
+  font-size: 4rem;
+  position: relative;
+  top: 0.5em;
+}
+
+.specialty-text p {
+  font-size: 1.3rem;
+  width: 25%;
+}
+
+.specialty-text .left-text {
+  color: white;
+  position: absolute;
+  top: 8em;
+  margin-left: 7vw;
+}
+
+.specialty-text .right-text {
+  color: white;
+  position: absolute;
+  top: 25em;
+  right: 0;
+  margin-right: 4.5em;
+}
+
+.specialty-content img {
+  width: 90%;
+  object-fit: cover;
+  border: 5px solid var(--hover-beige);
+}
+
 /* For MenuAd.jsx */
 .menu-container {
   background: var(--main-green);
@@ -321,12 +380,11 @@
 .menu-container img {
   object-fit: cover;
   filter: brightness(0.7);
-  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 10%, 30%);
 }
 
 .menu-content {
   position: relative;
-  top: -40em;
+  top: -44em;
   text-align: center;
 }
 
@@ -436,36 +494,45 @@
 .points-banner {
   text-align: center;
   padding-top: 2em;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
 }
 
 .points-banner img {
-  border: 20px solid hsl(0, 0%, 96%);
+  border: 10px solid hsl(0, 0%, 96%);
   border-radius: 50%;
   box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 30%);
 }
 
 .points-content {
-  background: var(--main-beige);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  /* background: white; */
+  text-align: center;
   display: flex;
-  gap: 10em;
-  width: 90%;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 10%);
+  flex-direction: column-reverse;
+  gap: 6em;
+  padding-top: 0em;
+  padding-bottom: 7em;
+  /* box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 10%); */
+}
+
+.points-image {
+  margin-left: 3em;
+}
+
+.points-image img {
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 30%);
+  margin-right: 3em;
 }
 
 .points-text {
-  padding-top: 8em;
-  padding-right: 10em;
+  padding-top: 3em;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 .points-text h3 {
   font-size: 30px;
   font-weight: 300;
-  color: var(--main-green)
+  color: var(--main-green);
 }
 
 .points-text p {
@@ -481,24 +548,23 @@
     to bottom,  
     var(--main-beige) 0%,
     var(--main-beige) 50%,
-    white 50%,
-    white 100%
   );
   height: 800px;
 }
 
 .fs-content {
   background: white;
-  padding: 3em;
+  padding: 6em;
   padding-top: 6em;
   padding-bottom: 6em;
   display: inline-flex;
-  flex-direction: row-reverse;
-  gap: 5em;
+  flex-direction: row;
+  gap: 8em;
 }
 
 .fs-image img {
-   width: 90%;
+  width: 100%;
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 50%);
 }
 
 .fs-text {
@@ -521,7 +587,7 @@
 .fs-text h4 {
   text-align: left;
   padding-top: 2em;
-  padding-left: 2em;
+  padding-left: 0em;
   font-size: 30px;
   font-weight: 200;
 }
@@ -557,17 +623,18 @@
   .desc-container {
     text-align: center;
     margin-top: 35em;
-    height: 62em;
+    height: 70em;
   }
 
   .desc-content {
     text-align: center;
     display: block;
     padding: 2em;
+    padding-top: 6em;
   }
 
   .desc-content img {
-    padding-top: 5em;
+    margin-top: 3em;
     position: relative;
     left: 0.5em;
   }
@@ -576,8 +643,15 @@
     margin-right: 0px;
   }
 
+  .specialty-text .right-text {
+    position: absolute;
+    top: 25em;
+    right: 0;
+    margin-right: 3.5em;
+  }
+
   .menu-container {
-    margin-top: -5em;
+    margin-top: 0em;
   }
 
   .menu-text p {
@@ -586,13 +660,32 @@
     margin-left: 0.5em;
   }
 
+  .points-container {
+    height: 105rem;
+  }
+
   .points-content {
     text-align: center;
-    flex-direction: column;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    gap: 0em;
+    padding-top: 5em;
+    gap: 3em;
     width: 100vw;
+  }
+
+  .points-banner {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 0em;
+  }
+
+  .points-image {
+    margin-left: 0em;
+  }
+
+  .points-image img {
+    box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 30%);
+    margin-right: 0em;
   }
 
   .points-text {
@@ -600,10 +693,13 @@
     padding-right: 2em;
     padding-left: 2em;
     padding-bottom: 4em;
+    margin-right: 10%;
+    margin-left: 10%;
   }
 
   .fs-container {
-    margin-top: 7em;
+    margin-top: 0em;
+    height: 500px;
   }
 
   .fs-content {
@@ -628,7 +724,7 @@
   }
 
   .fs-image img {
-    padding-top: 5em;
+    margin-top: 4em;
     width: 600px;
     height: 500px;
     object-fit: cover;
@@ -636,26 +732,26 @@
 }
 
 @media all and (max-width: 800px) {
+  .desc-container {
+    height: 62em;
+  }
+
   .desc-content {
     text-align: center;
     display: block;
-    padding: 1em;
     padding-right: 2em;
   }
 
   .desc-content img {
-    padding-top: 5em;
+    margin-top: 5em;
     width: 400px;
     height: 400px;
     object-fit: contain;
   }
 
-  .menu-container {
-    margin-top: -6em;
-  }
-
   .points-container {
     margin-top: -21.5em;
+    height: 105rem;
   }
 
   .points-title {
@@ -666,6 +762,10 @@
     position: relative;
     top: -40em;
     margin-top: 90vw;
+  }
+
+  .fs-content {
+    margin-top: -5em;
   }
 
   .fs-image img {
@@ -696,10 +796,6 @@
     height: 300px;
   }
 
-  .menu-container {
-    margin-top: -12em;
-  }
-
   .menu-content {
     position: relative;
     top: -45em;
@@ -708,6 +804,7 @@
 
   .points-container {
     margin-top: -24.5em;
+    height: 105rem;
   }
 
   .fs-container {
@@ -716,6 +813,18 @@
     height: 600px;
   }
 
+}
+
+@media all and (max-width: 596px) {
+  .specialty-content img {
+    position: relative;
+    top: -4.73em; 
+  }
+
+  .specialty-content h1 {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+  }
 }
 
 @media all and (max-width: 400px) {

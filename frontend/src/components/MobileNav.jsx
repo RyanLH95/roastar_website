@@ -31,13 +31,13 @@ const MobileNav = () => {
         // px to determine when change colour activates
           if (menuHome && window.scrollY >= 650) {
             setMenu(true);
-        } else if (menuAboutUs && window.scrollY >= 250) {
+        } else if (menuAboutUs && window.scrollY >= 280) {
             setMenu(true);
         } else if (menuShop && window.scrollY >= 0) {
             setMenu(true);
         } else if (menuIsMenu && window.scrollY >= 0) {
             setMenu(true);
-        } else if (menuContactUs && window.scrollY >= 0) {
+        } else if (menuContactUs && window.scrollY >= 180) {
             setMenu(true);
         } else if (menuCareers && window.scrollY >= 180) {
             setMenu(true);

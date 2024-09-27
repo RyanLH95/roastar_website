@@ -19,8 +19,8 @@ const Desc = () => {
             </h4>
           </div>
           <img 
-            src='../../../images/location_link_image.png'
-            width={600}
+            src='../../../images/roastar_social_image.png'
+            width={500}
           />
         </div>
       </div>

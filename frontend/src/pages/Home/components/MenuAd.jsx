@@ -6,7 +6,7 @@ const MenuAd = () => {
     <div className="menu-container">
       <img 
         src="../../../images/imageThree.png"
-        height={800}
+        height={900}
         width={1440}
       />
       <div className='menu-content'> 

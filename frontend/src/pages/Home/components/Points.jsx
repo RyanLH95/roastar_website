@@ -15,14 +15,14 @@ const Points = () => {
       <div className='points-content'>
         <div className='points-image'>
           <img 
-            src='../../../icon/Logo ROASTAR-lettermark.PNG'
+            src='../../../images/loyalty_card_back.png'
             width={400}
           />
         </div>
         <div className='points-text'>
           <h3>ROASTAR REWARDS</h3>
           <p>Pick up a points card at our shop and earn points for every coffee 
-            you buy here and earn yourself a free coffee on us!</p>
+            you buy and earn yourself a free coffee on us!</p>
         </div>
       </div>
     </div>

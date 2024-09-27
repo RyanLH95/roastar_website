@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { Badge, Box, IconButton } from '@mui/material'
 import { matchPath, useLocation, NavLink, useNavigate } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
@@ -16,7 +15,7 @@ const navigation = [
   {_id:105, title: 'CONTACT US', href: '/ContactUs'},
 ];
 
-const withouSidebarRoutes = ["/submit"];
+const withoutSidebarRoutes = ["/submit"];
 
 const Navbar = () => {
     const { pathname } = useLocation();
@@ -40,7 +39,7 @@ const Navbar = () => {
             setColour(true)
         } else if (isShop && window.scrollY >= 0) {
             setColour(true)
-        } else if (isContactUs && window.scrollY >= 0) {
+        } else if (isContactUs && window.scrollY >= 180) {
             setColour(true)
         } else if (isMenu && window.scrollY >= 0) {
             setColour(true)
@@ -99,7 +98,10 @@ const Navbar = () => {
                 }
               }}
             >
-              <button className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }>
+              <button 
+                className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }
+                
+              >
                 <ShoppingCart 
                   style={{
                     position: 'absolute', 

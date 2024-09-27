@@ -1,12 +1,14 @@
 import React from 'react'
-import Map from './components/Map'
+import Header from './components/Header'
+import Container from './components/Container'
 import '../../App.css'
 import './ContactUs.css'
 
 const ContactUs = () => {
   return (
     <div className='contact-us-container'>
-      <Map />
+      <Header />
+      <Container />
     </div>
   )
 }

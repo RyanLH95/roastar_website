@@ -15,7 +15,7 @@ html,body,#root {
 :root {
   --main-green: hsl(96, 24%, 44%);
   --main-beige: hsl(48, 54%, 89%);
-  --hover-beige: hsl(48, 64%, 78%);
+  --hover-beige: hsl(47, 48%, 73%);
   --main-black: rgb(34, 34, 34);
   --btn-green: hsl(152, 67%, 33%);
 }
@@ -98,7 +98,7 @@ html,body,#root {
 }
 
 .nav-list-mobile a:hover {
-  color: var(--main-green)
+  color: var(--main-green);
 }
 
 .nav-list-mobile input {
@@ -158,7 +158,7 @@ html,body,#root {
 /* this will transform all of the hamburger slices into a crossmark */
 .nav-list-mobile input:checked ~ span {
   opacity: 1;
-  transform: rotate(-43deg) translate(-2px, -2px) scale(.94, 1);
+  transform: rotate(-45deg) translate(-2px, -2px) scale(.94, 1);
   background: #232323;
 }
 
@@ -177,7 +177,7 @@ html,body,#root {
 
 .nav-list-mobile input:checked ~ span:nth-last-child(3) {
   opacity: 1;
-  transform: rotate(45deg) scale(.94, 1) translate(.5px, .5px);
+  transform: rotate(47deg) scale(.94, 1) translate( 0px, .5px);
 }
 
 .mobile-backdrop {
@@ -211,9 +211,9 @@ html,body,#root {
 }
 
 .active {
-  color: var(--main-black);
+  color: var(--main-green);
   text-decoration: underline;
-  text-underline-offset: 11.38px;
+  text-underline-offset: 11.1px;
   text-decoration-thickness: 2.8px;
   z-index: 1;
 }
@@ -452,6 +452,11 @@ html,body,#root {
   position: absolute;
 }
 
+.white {
+  position: absolute;
+  opacity: 0;
+}
+
 .green {
   z-index: 99;
   position: absolute; left: -1px;
@@ -467,7 +472,7 @@ html,body,#root {
 /* For Footer.jsx */
 .footer {
   width: 100vw;
-  height: 350px;
+  height: 400px;
   text-align: center;
   position: relative; 
   background-color: hsl(96, 24%, 44%);
@@ -487,7 +492,6 @@ html,body,#root {
 .footer-nav {
   position: relative; 
   top: -11em; 
-  left: 0px;
   text-align: left;
   float: right;
   display: grid;
@@ -557,6 +561,7 @@ html,body,#root {
 .socials {
   position: relative; 
   top: 20px;
+  left: -0.3em;
   text-align: left;
   display: flex;
   gap: 10px;
@@ -566,13 +571,9 @@ html,body,#root {
   color: white;
 }
 
-.facebook {
-  fill: white;
-}
-
 /* For Footer.jsx */
 .container, body, html {
-  height: 320rem;
+  height: 405rem; /* original - height: 330rem */
 }
 
 .about-us-container, body, html {
@@ -605,7 +606,11 @@ html,body,#root {
 }
 
 .contact-us-container, body, html {
-  height: 75.75rem;
+  height: 145rem;
+}
+
+.contact-us-container {
+  background-image: linear-gradient(var(--main-black), hsl(0, 0%, 100%));
 }
 
 .product-page-container, body, html {
@@ -623,12 +628,37 @@ html,body,#root {
   z-index: 120;
 }
 
-/* for mobile and tablet devices */
-@media all and (max-width: 1250px) {
-  .contact-us-container {
-    height: 115rem;
+/* media queries */
+@media (prefers-color-scheme: dark) {
+  .navbarbg {
+    background-color: hsla(0, 0%, 11%, 0.9);
+    box-shadow: 1px 1px 5px 1px hsla(0, 0%, 11%, 0.9);
+  }
+
+  .nav-list-green a {
+    color: white;
+  }
+
+  .beige {
+    opacity: 0;
+  }
+
+  .white {
+    opacity: 1;
+  }
+
+  .nav-list-mobile-green span {
+    background: white;
+
+  }
+
+  .cart-black {
+    color: white;
+    border: 1.5px solid white;
   }
 }
+
+/* for mobile and tablet devices */
 
 @media all and (min-width: 1000px) {
   .mobile-backdrop {
@@ -679,7 +709,7 @@ html,body,#root {
   
   .footer {
     position: relative;
-    height: 550px; 
+    height: 650px; 
     width: 100vw;
     left: 50vw;
     padding: 0 !important;
@@ -723,9 +753,10 @@ html,body,#root {
 
   .socials {
     position: relative;
-    gap: 20px;
+    gap: 0px;
     top: 1.5em;
-    left: -1em;
+    left: 0;
+    margin-right: 3.6em;
     justify-content: center;
   }
 
@@ -744,7 +775,7 @@ html,body,#root {
   }
 
   .container, body, html {
-    height: 395rem;
+    height: 485rem;
   }
 
   .about-us-container, body, html {
@@ -756,12 +787,8 @@ html,body,#root {
     width: 100vw;
   }
 
-  .contact-us-container, body, html {
-    height: 115rem;
-  }
-
   .careers-container, body, html {
-    height: 81rem;
+    height: 80rem;
   }
 
   .careers-container {
@@ -772,7 +799,7 @@ html,body,#root {
 
 @media all and (max-width: 800px) {
   .container, body, html {
-    height: 345rem;
+    height: 425rem;
   }
 
   .container {
@@ -780,7 +807,7 @@ html,body,#root {
   }
 
   .about-us-container, body, html {
-    height: 120rem;
+    height: 130rem;
   }
 
   .careers-container, body, html {
@@ -789,9 +816,6 @@ html,body,#root {
 }
 
 @media all and (max-width: 600px) {
-  .container, body, html {
-    height: 336rem;
-  }
   
   .careers-container, body, html {
     height: 90rem;
@@ -799,9 +823,6 @@ html,body,#root {
 }
 
 @media all and (max-width: 400px) {
-  .container, body, html {
-    height: 336rem;
-  }
   
   .about-us-container, body, html {
     height: 120rem;

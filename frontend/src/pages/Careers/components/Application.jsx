@@ -8,7 +8,7 @@ const Application = () => {
         <h2>JOIN THE TEAM</h2>
         <div className='careers-image'>
           <img 
-            src='../../../../images/imageOne.png'
+            src='../../../../images/slidethree.png'
             width={1000}
             height={300}
           />

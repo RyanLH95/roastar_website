@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import AppForm from './AppForm';
 

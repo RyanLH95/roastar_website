@@ -32,7 +32,7 @@ const Content = ({ handleClose }) => {
         className='close' 
         onClick={handleClose}
       >
-        <X size={40}/>
+        <X size={40} strokeWidth={1.1}/>
       </button>
       <motion.div 
         onClick={(e) => e.stopPropagation()}

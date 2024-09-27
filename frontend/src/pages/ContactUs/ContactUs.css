@@ -1,33 +1,163 @@
-/* For LocationPin.jsx */
-.maps {
-  background-color: var(--main-green);
-  height: 40vh; 
-  width: 100%;
-  position: absolute;
-}
-  
-.maps-title {
-  font-weight: 200;
-  color: white;
-  position: relative;
+.contact-us-header {
   text-align: center;
-  top: 3.5em;
-  left: 0vh;
+  padding-top: 8em;
+  height: 250px;
 }
-  
+
+.contact-us-header h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: var(--main-beige);
+  letter-spacing: 1.5px;
+}
+
+.cu-container {
+  background: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.cu-container h2 {
+  font-weight: 200;
+  color: hsl(0, 0%, 18%);
+}
+
+.form {
+  margin-top: 3em;
+}
+
+.form input:invalid[data-focused='true'] {
+  border-color: red;
+}
+
+.form input:invalid[data-focused='true'] ~ span {
+  color: red;
+  display: block;
+}
+
+.form select:invalid[data-focused='true'] {
+  border-color: red;
+}
+
+.form select:invalid[data-focused='true'] ~ span {
+  color: red;
+  display: block;
+}
+
+.form textarea:invalid[data-focused='true'] {
+  border-color: red;
+}
+
+.form textarea:invalid[data-focused='true'] ~ span {
+  color: red;
+  display: block;
+}
+
+.textbox input, .textbox select, .textbox textarea {
+  border: 3px solid var(--hover-beige);
+  width: 80%;
+  margin-bottom: 2em;
+  padding-left: 1em;
+  font-size: 1rem;
+}
+
+.textbox input, .textbox select {
+  height: 4em;
+}
+
+.textbox select {
+  cursor: pointer;
+}
+
+.textbox span {
+  display: block;
+  text-align: left;
+  font-size: 0.80rem;
+  margin-left: 10vw;
+  display: none;
+  position: relative;
+  top: -1.8em;
+  margin-bottom: -1em;
+}
+
+.textbox textarea {
+  padding-top: 1em;
+}
+
+.message-submit-btn {
+  background: var(--btn-green);
+  padding: 1rem;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.message-submit-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+  transform: scale(1) !important;
+}
+
+.message-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.sent-confirm {
+  margin-top: 3em;
+}
+
+.sent-confirm-text {
+  font-size: 2rem;
+  color: hsl(0, 0%, 18%);
+}
+
+/* For GooglMaps.jsx component */
+.map-container {
+  margin-top: 8em;
+}
+
+.map-container h1 {
+  color: var(--main-green);
+  font-size: 2.4rem;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5em;
+}
+
+.map-container h2 {
+  margin-bottom: 1em;
+}
+
+.google-maps {
+  display: flex;
+  position: relative;
+  top: 3em;
+  flex-direction: column;
+  margin-left: 9.4vw;
+  margin-right: 9.4vw;
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 54%);;
+}
+
+/*
 .card {
   border-radius: 5px;
   position: relative;
   height: 600px;
-  width: 80%;
+  width: 30rem;
   padding: 10px;
-  background-image: linear-gradient(to bottom,  #1c8d58 0%,#1c8d58 40%,#ffffff 40%,#ffffff 100%); /* hsl(152, 67%, 33%) */
+  background-image: linear-gradient(to bottom, #1c8d58 0%,#1c8d58 40%,#ffffff 40%,#ffffff 100%);
   box-shadow: 3px 5px 10px black;
+  text-align: center;
 }
-  
+
 .info-title, .form-title {
   font-weight: 200;
-  text-align: center;
 }
   
 .info-title {
@@ -66,193 +196,15 @@
 .socials-info a {
   color: white;
 }
+
+.form {
+  display: block;
+}
   
 .contact-card {
   position: relative; 
   top: 200px;
   z-index: 99;
-}
-  
-.google-map {
-  height: 38rem;
-  width: 80%;
-  display: flex;
-  position: relative;
-  top: 12rem;
-  left: 10vw;
-  gap: 100px;
-}
-  
-.pin {
-  display: flex;
-  align-items: center;
-  width: 580px;
-  color: var(--main-green);
-  position: sticky;
-}
-  
-.pin:hover {
-  cursor: pointer;
-}
-  
-.pin-icon {
-  fill: black;
-  font-size: 4rem !important;
-}
-  
-.pin-text {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 1.3em;
-  color: var(--main-blue);
-}
-  
-.email-form { 
-  text-align: center;
-  position: relative;
-  top: -40px;
-}
-
-.form input, .form textarea {
   display: block;
-  border: 2px solid rgb(179, 179, 179);
-  border-radius: 5px;
-  width: 50%;
-  position: relative; 
-  left: 8vw;
 }
-
-.form input {
-  position: relative;
-  top: -10px;
-  height: 40px;
-}
-
-.form .name-box {
-  position: relative;
-  top: -20px;;
-}
-
-.form-display {
-  display: none;
-}
-
-.send-btn {
-  cursor: pointer;
-  text-align: center;
-  border-radius: 8px;
-  border: none;
-  padding: 10px;
-  background: #1c8d58;
-  color: white;
-  margin-top: 1em;
-  position: relative;
-  left: 0em;
-  transition: background 300ms;
-}
-
-.send-btn:disabled {
-  transform: scale(1) !important;
-  cursor:default;
-  opacity: 0.5;
-}
-
-.send-btn:disabled:hover {
-  background: #1c8d58;
-}
-
-.send-btn:hover {
-  background: #23ad6c;
-  transition: background 300ms;
-}
-
-.send-btn:active {
-  transform: scale(0.98)
-}
-
-.sent-confirm {
-  position: inherit;
-  text-align: center;
-  top: -3em;
-  left: 0vw;
-}
-
-.sent-tick {
-  color: #1c8d58;
-  z-index: 2;
-}
-
-.message-sent {
-  position: relative;
-  font-size: 20px;
-  letter-spacing: 10px;
-  top: 20px;
-}
-  
-@media all and (max-width: 1250px) {
-  .email-form {
-    position: relative;
-    left: 7.5vw;
-    width: 100%;
-  }
-
-  .form input, .form textarea {
-    width: 60%;
-    position: relative; 
-    left: 8vw;
-  }
-
-  .card {
-    position: relative;
-    top: -10em;
-    width: 100%;
-  }
-
-  .company-info {
-    display: block;
-    position: relative; 
-    left: 1em;
-    text-align: center;
-  }
-
-  .form {
-    position: relative;
-  }
-
-  .google-map {
-    position: relative;
-    top: 20em;
-    display: block;
-  }
-
-  .google-maps {
-    position: relative;
-  }
-
-  .send-btn {
-    position: relative;
-    left: -7.5vw;
-  }
-
-  .message-sent {
-    position: inherit;
-    text-align: center;
-    top: -19em;
-    left: -7.5vw;
-  }
-}
-
-@media all and (max-width: 1000px) {
-  .email-form {
-    position: relative;
-  }
-}
-
-@media all and (max-width: 410px) {
-  .card {
-    position: relative;
-    left: -1.3em;
-    width: 90vw;
-  }
-}
+*/

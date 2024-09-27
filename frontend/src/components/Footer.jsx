@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import InstagramIcon  from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import { Link, useLocation } from 'react-router-dom'
 import { Instagram, Facebook, Copyright } from 'lucide-react'
 import '../App.css'
@@ -29,16 +31,21 @@ const Footer = () => {
         <div className='socials'>
           <p>
             <Link to='https://www.instagram.com/roastar.coffee/'>
-              <Instagram 
+              <InstagramIcon
                 className='insta'
+                style={{fontSize: '2.5rem'}}
               />
            </Link>
           </p>
           <p>
             <Link to='https://www.facebook.com/roastarcoffeeuk'>
-              <Facebook 
-                strokeWidth={0.7}
+              <FacebookIcon
                 className='facebook'
+                style={{
+                  fontSize: '2.7rem',
+                  position: 'relative',
+                  top: '-0.05em'
+                }}
              />
             </Link>
           </p>

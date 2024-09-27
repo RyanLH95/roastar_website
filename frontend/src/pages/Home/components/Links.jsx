@@ -14,9 +14,15 @@ const Links = () => {
       <h2>EXPLORE OUR STORE</h2>
       <p>In Shop, at Home or on the Go!</p>
       <div className='link-images'>
-        {/* leads to contact us page */}
+        {/* Link to contact us page (location section) */}
         <div className='image-one'>
-          <Link reloadDocument to='/ContactUs'>
+          {/* hash property is to identify id in GoogleMaps.jsx */}
+          <Link 
+            reloadDocument 
+            to={{
+              pathname: '/ContactUs',
+              hash: '#location'
+            }}>
             <img
               src='../../../images/location_link_image.png'
               width={300}
@@ -48,7 +54,7 @@ const Links = () => {
         <div className='image-three'>
           <Link reloadDocument to='/Shop'>
             <img
-              src='../../../images/shop_link_image.png'
+              src='../../../images/shop_items.png'
               width={300}
               height={300}
             />
