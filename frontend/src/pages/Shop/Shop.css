@@ -3,6 +3,8 @@
   padding-top: 3em;
   height: 250px;
   gap: 20px;
+  position: relative;
+  box-shadow: 1px 1px 10px 1px hsl(0, 0%, 73%);
 }
 
 .shop-header img {
@@ -13,7 +15,7 @@
   padding-top: 2em;
   font-size: 40px;
   font-weight: 200;
-  color: var(--main-beige);
+  color: white;
   letter-spacing: 2px;
 }
 
@@ -23,19 +25,15 @@
   height: 100%;
 }
 
-.product-content {
-  text-align: center;
-  padding: 3em;
-  padding-top: 1em;
-}
-
 .product-grid {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: space-around;
   row-gap: 20px;
-  column-gap: 1.33%;
+  padding: 1.5em;
+  column-gap: 2%;
+  margin-left: -0.6em;
 }
 
 .product-grid a {
@@ -44,13 +42,14 @@
 }
 
 .product-card {
+  margin-top: 3em;
   position: relative;
   border: 2px solid hsl(0, 0%, 0%, 10%);
   background-image: linear-gradient(1turn, hsl(0, 0%, 100%, 20%), hsla(0, 0%, 74%, 20%), hsl(0, 0%, 100%, 20%));
-  padding: 2rem;
+  padding: 0.5rem;
   padding-bottom: 2em;
   border-radius: 10px;
-  width: 18rem;
+  width: 20rem;
 }
 
 .product-card {
@@ -67,14 +66,8 @@
   object-fit: cover;
 }
 
-.product-info h3, 
-.product-info p, 
-.product-info button {
+.product-card p {
   margin-top: 1em;
-}
-
-.product-info h3 {
-  font-weight: 200;
 }
 
 .product-card button {
@@ -82,10 +75,12 @@
   cursor: pointer;
   border: none;
   background: none;
-  color: var(--main-green);
+  color: var(--main-black);
   font-weight: 400;
   font-size: 20px;
   transition: color 300ms;
+  position: relative;
+  left: 28%;
 }
 
 .product-card button:hover {

@@ -15,6 +15,7 @@ const ContactForm = () => {
   // To set focus on each input field and return error when field is not properly filled
   const [ focused, setFocused ] = React.useState({});
 
+  // Function that seperates each field for handling blur
   const handleBlur = (e) => {
     setFocused(prev => ({...prev, [e.target.name]: true}))
   }
@@ -28,9 +29,9 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = '';
-    const templateId = '';
-    const publicKey = '';
+    const serviceId = '' // 'service_x7kmtmx'; 
+    const templateId = '' // 'template_c4e69zm'; 
+    const publicKey = '' // 'Qq9N50jYGez_L1Hi6'; 
 
     // To create an object that contains template parameter
     const templateParams = {
@@ -61,14 +62,14 @@ const ContactForm = () => {
   return (
     <>
       {show ? (
-        <form className='form'>
+        <form onSubmit={handleSubmit} className='form'>
           <div className='textbox name'>
             <input
               name='from_name'
               value={name}
               type='text'
               placeholder='Your Name'
-              pattern='^[A-Za-z]{2,16}$'
+              pattern='^[A-Za-z]{3,16}$'
               onBlur={handleBlur}
               onChange={(e) => setName(e.target.value)}
               data-focused={isFocused('from_name').toString()}
@@ -93,15 +94,12 @@ const ContactForm = () => {
             <select
               name='from_subject'
               value={subject}
-              type='text'
-              pattern='^[A-Za-z]{2,16}$'
-              placeholder='What is your enquiry about?'
               onBlur={handleBlur}
               onChange={(e) => setSubject(e.target.value)}
               data-focused={isFocused('from_subject').toString()}
               required
             >
-              <option value=''>What is your message about?</option>
+              <option value=''>What is your enquiry about?</option>
               <option value='General'>General</option>
               <option value='Review'>Review</option>
               <option value='Business'>Business</option>
@@ -113,11 +111,9 @@ const ContactForm = () => {
             <textarea
               name='message'
               value={message}
-              type='text'
               cols="30"
               rows="15"
               minLength={100}
-              maxLength={300}
               placeholder='What is your message to us about? Any specifics, please add here.'
               onBlur={handleBlur}
               onChange={(e) => setMessage(e.target.value)}
@@ -130,8 +126,7 @@ const ContactForm = () => {
             <button 
               disabled={!name | !email | !subject | !message }
               className='message-submit-btn'
-              type='button'
-              onClick={(e) => handleSubmit(e)}
+              type='submit'
             >
               SUBMIT MESSAGE
             </button>
@@ -143,7 +138,8 @@ const ContactForm = () => {
             style={{color: 'var(--btn-green)'}}
             strokeWidth={0.4} 
             size={400}/>
-          <p className='sent-confirm-text'>Message Sent!</p>
+          <p className='sent-confirm-text'>Thank you for message!</p>
+          <p className='sent-confirm-text'>You will hear from us soon</p>
         </div>
       )}
     </>

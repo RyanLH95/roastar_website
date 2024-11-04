@@ -197,8 +197,9 @@
 
 .delivery-text h2 {
   color: black;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 2rem;
+  letter-spacing: 1.5px;
 }
 
 .delivery-text h3 {
@@ -453,7 +454,7 @@
     var(--main-beige) 100%
   );
   margin-top: -20.5em;
-  height: 100rem;
+  height: 70rem;
 }
 
 .points-title {
@@ -636,7 +637,6 @@
   .desc-content img {
     margin-top: 3em;
     position: relative;
-    left: 0.5em;
   }
 
   .desc-text {
@@ -661,7 +661,7 @@
   }
 
   .points-container {
-    height: 105rem;
+    height: 70rem;
   }
 
   .points-content {
@@ -746,12 +746,11 @@
     margin-top: 5em;
     width: 400px;
     height: 400px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .points-container {
     margin-top: -21.5em;
-    height: 105rem;
   }
 
   .points-title {
@@ -804,7 +803,6 @@
 
   .points-container {
     margin-top: -24.5em;
-    height: 105rem;
   }
 
   .fs-container {

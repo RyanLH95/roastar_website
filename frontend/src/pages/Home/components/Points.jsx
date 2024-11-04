@@ -12,19 +12,6 @@ const Points = () => {
           width={800}
         />
       </div>
-      <div className='points-content'>
-        <div className='points-image'>
-          <img 
-            src='../../../images/loyalty_card_back.png'
-            width={400}
-          />
-        </div>
-        <div className='points-text'>
-          <h3>ROASTAR REWARDS</h3>
-          <p>Pick up a points card at our shop and earn points for every coffee 
-            you buy and earn yourself a free coffee on us!</p>
-        </div>
-      </div>
     </div>
   )
 }

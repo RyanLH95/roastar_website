@@ -308,6 +308,11 @@
   transition: background 300ms;
 }
 
+.submit-btn:hover {
+  background: hsla(0, 0%, 92%, 0.3);
+  transition: background 300ms;
+}
+
 .submit-btn:disabled {
   cursor: default;
   opacity: 0.5;

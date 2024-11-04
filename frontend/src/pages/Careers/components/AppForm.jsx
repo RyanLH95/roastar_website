@@ -234,9 +234,7 @@ const AppForm = ({ handleClose }) => {
           >
             <button 
               disabled={!firstName | !lastName | !email | !phoneNumber | !job | !rightToWork | !resume }
-              type='button' 
               className='submit-btn'
-              onClick={(e) => handleSubmit(e)}
             >
               <span>SUBMIT</span>
             </button>

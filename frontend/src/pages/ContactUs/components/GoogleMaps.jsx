@@ -23,7 +23,7 @@ const GoogleMaps = () => {
       <p>8 East St, Bromley, BR1 1QX</p>
       {/* Map content */}
       <div  className='google-maps'>
-        <APIProvider apiKey={''}>
+        <APIProvider apiKey={'AIzaSyDUVwjF0wbf6ISGD8KaQBiRgAIKz0W6c4w'}>
           <Map 
             style={{width: '100%', height: '100vh'}}
             defaultCenter={position} 

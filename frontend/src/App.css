@@ -64,13 +64,13 @@ html,body,#root {
 .nav-list {
   gap: 50px;
   list-style-type: none;
-  justify-content: right;
+  justify-content: center; /* ORIGINAL - justify-content: right; */
   font-size: larger;
   display: flex;
   flex-direction: row;
   position: relative; 
   padding-top: 1.4em;
-  margin-right: 7em;
+  margin-left: 1em; /* ORIGINAL - margin-right: 7em; */
   transform: scale(1, 1.1);
   letter-spacing: 1.5px;
 }
@@ -78,7 +78,6 @@ html,body,#root {
 /* For @media-query all and (max-width: 1000px) */
 
 /* hamburger menu main div from MobileMenu.jsx */
-
 .nav-list-mobile {
   position: absolute;
   display: none;
@@ -491,7 +490,7 @@ html,body,#root {
 
 .footer-nav {
   position: relative; 
-  top: -11em; 
+  top: -12em; 
   text-align: left;
   float: right;
   display: grid;
@@ -573,19 +572,15 @@ html,body,#root {
 
 /* For Footer.jsx */
 .container, body, html {
-  height: 405rem; /* original - height: 330rem */
+  height: 375rem; /* original - height: 330rem */
 }
 
 .about-us-container, body, html {
   height: 135rem;
 }
 
-.about-us-container {
-  background-image: linear-gradient(var(--main-green), hsl(0, 0%, 100%));
-}
-
 .shop-container, body, html {
-  height: 80rem;
+  height: 105rem;
 }
 
 .shop-container {
@@ -775,7 +770,7 @@ html,body,#root {
   }
 
   .container, body, html {
-    height: 485rem;
+    height: 450rem;
   }
 
   .about-us-container, body, html {
@@ -799,7 +794,7 @@ html,body,#root {
 
 @media all and (max-width: 800px) {
   .container, body, html {
-    height: 425rem;
+    height: 395rem;
   }
 
   .container {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Badge, Box, IconButton } from '@mui/material'
-import { matchPath, useLocation, NavLink, useNavigate } from 'react-router-dom'
+import { matchPath, useLocation, NavLink } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import { shades } from '../theme.js'
 import Logo from './Logo.jsx'
@@ -35,9 +35,9 @@ const Navbar = () => {
 
           if (isHome && window.scrollY >= 650) {
             setColour(true)
-        } else if (isAboutUs && window.scrollY >= 280) {
+        } else if (isAboutUs && window.scrollY >= 1) {
             setColour(true)
-        } else if (isShop && window.scrollY >= 0) {
+        } else if (isShop && window.scrollY >= 1) {
             setColour(true)
         } else if (isContactUs && window.scrollY >= 180) {
             setColour(true)
@@ -100,7 +100,6 @@ const Navbar = () => {
             >
               <button 
                 className={`cart-btn ${colour ? 'cart-beige cart-black' : 'cart-beige'}` }
-                
               >
                 <ShoppingCart 
                   style={{

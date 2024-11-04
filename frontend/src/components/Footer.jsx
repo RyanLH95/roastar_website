@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='footer-container'>
         <div className='footer-address'>
           <img
-            src='../../../logo/Logo ROASTAR-white.PNG'
+            src='/logo/Logo ROASTAR-white.PNG'
             height={80}
             width={180}
           />
@@ -33,7 +33,7 @@ const Footer = () => {
             <Link to='https://www.instagram.com/roastar.coffee/'>
               <InstagramIcon
                 className='insta'
-                style={{fontSize: '2.5rem'}}
+                style={{fontSize: '2rem'}}
               />
            </Link>
           </p>
@@ -42,7 +42,7 @@ const Footer = () => {
               <FacebookIcon
                 className='facebook'
                 style={{
-                  fontSize: '2.7rem',
+                  fontSize: '2.2rem',
                   position: 'relative',
                   top: '-0.05em'
                 }}

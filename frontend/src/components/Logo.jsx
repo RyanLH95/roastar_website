@@ -19,9 +19,9 @@ const Logo = () => {
     const changeLogo = () => {
       if (logoHome && window.scrollY >= 650) {
         setLogo(true);
-      } else if (logoAboutUs && window.scrollY >= 280){
+      } else if (logoAboutUs && window.scrollY >= 1){
         setLogo(true);
-      } else if (logoShop && window.scrollY >= 0){
+      } else if (logoShop && window.scrollY >= 1){
         setLogo(true);
       } else if (logoMenu && window.scrollY >= 0){
         setLogo(true);
@@ -50,7 +50,7 @@ const Logo = () => {
         <NavLink reloadDocument to='/'>
           {/* :HOVER LOGO EFFECT */}
           <img 
-            src={logo ? "../../../../logo/Logo ROASTAR-green.PNG" : "../../../../logo/Logo ROASTAR-white.PNG"}
+            src={logo ? "/logo/Logo ROASTAR-green.PNG" : "/logo/Logo ROASTAR-white.PNG"}
             alt="roastar-logo green"
             className='roastar-logo green'
             height={50}
@@ -58,7 +58,7 @@ const Logo = () => {
           />
           {/* DAYTIME LOGO */}
           <img 
-            src={logo ? "../../../../logo/Logo ROASTAR-black.PNG" : "../../../../logo/Logo ROASTAR-beige.PNG"}
+            src={logo ? "/logo/Logo ROASTAR-black.PNG" : "/logo/Logo ROASTAR-beige.PNG"}
             alt="roastar-logo-black/beige"
             className='roastar-logo beige'
             height={50}
@@ -66,7 +66,7 @@ const Logo = () => {
           />
           {/* NIGHTIME LOGO / prefers-colors-scheme: dark */}
            <img 
-            src={logo ? "../../../../logo/Logo ROASTAR-white.PNG" : "../../../../logo/Logo ROASTAR-beige.PNG"}
+            src={logo ? "/logo/Logo ROASTAR-white.PNG" : "/logo/Logo ROASTAR-beige.PNG"}
             alt="roastar-logo-black/beige"
             className='roastar-logo white'
             height={50}
